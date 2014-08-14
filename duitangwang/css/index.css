@@ -76,8 +76,8 @@ body{background-color: #F1F2F3;}
 .l{float: left!important;display: inline;}
 #dt-carousel{width: 712px;height: 445px;background-position: center center;background-repeat: no-repeat;position: relative;overflow: hidden;background-color: white;}
 .dt-carousel-content{position: absolute;}
-.dt-carousel-item{position: relative;width: 712px;height: 445px;float: left;display: block;}
-.it1 a{background-image: url("../images/datu.jpeg");background-position: 0 0;}
+.dt-carousel-item{position: relative;width: 712px;height: 445px;float: left;display: none;}
+.it1 a{background-image: url("../images/datu1.jpeg");background-position: 0 0;}
 .it2 a{background-image: url("../images/datu2.jpeg");background-position: 0 0;}
 .it3 a{background-image: url("../images/datu3.jpeg");background-position: 0 0;}
 .it4 a{background-image: url("../images/datu4.jpeg");background-position: 0 0;}

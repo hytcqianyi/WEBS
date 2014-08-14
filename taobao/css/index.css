@@ -1,0 +1,10 @@
+*{margin: 0;padding: 0;}
+ul,li{list-style:none;}
+img{border:0;}
+
+#J_SiteNav{}
+.site-nav{width: auto;z-index: 10000;background-color: #f5f5f5;border-bottom: 1px solid #eee;}
+#J_SiteNavBd{}
+.site-nav-bd{width: auto;margin: 0 auto;height: 35px;background-color: #f5f5f5;-webkit-backface-visibility:hidden;min-width: 990px;max-width: 1190px;}
+
+

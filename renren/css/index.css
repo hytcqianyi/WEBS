@@ -1,7 +1,7 @@
 *{margin: 0;padding: 0;}
 ul,li{list-style:none;}
 img{border:0;}
-body{font-size: 9pt;font-family: Tahoma,Verdana,STHeiTi,simsun,sans-serif;}
+body{font-size: 9pt;font-family: Tahoma,Verdana,STHeiTi,simsun,sans-serif;position: relative;}
 
 
 
@@ -35,7 +35,7 @@ body{font-size: 9pt;font-family: Tahoma,Verdana,STHeiTi,simsun,sans-serif;}
 .clearfix{}
 .full-page-holder{width: 1349px;height: 696px;}
 .full-page{}
-.login-page{margin: 0 auto 20px;width: 980px;height: 696px;}
+.login-page{margin: 0 auto 20px;width: 980px;height:auto;}
 .side-column{float: left;width: 220px;margin-right: 35px;border: 1px solid #D4D4D4;border-bottom-color: #AAA;border-top: 0;height: 692px;box-shadow: 0 1px 1px #CCC;margin-top: -2px;position: relative;background-color: #ebf2fa;}
 .login-panel{}
 .login-form{padding: 35px 15px 15px 15px;}
@@ -85,7 +85,7 @@ body{font-size: 9pt;font-family: Tahoma,Verdana,STHeiTi,simsun,sans-serif;}
 
 
 /*内容右边*/
-.main-column{float: left;width: 658px;height: 696px;}
+.main-column{float: left;width: 658px;height: auto;}
 #mainRecommend{margin-top: 32px;height: 661px;}
 #ad100000000061{}
 .side-item-body{border: none!important;}
@@ -121,10 +121,71 @@ body{font-size: 9pt;font-family: Tahoma,Verdana,STHeiTi,simsun,sans-serif;}
 #moreIntro{}
 .click-open{background-image: url("../images/ico_new.png");background-repeat: no-repeat;background-position: 420px -28px;display: block;text-align: center;padding: 10px;background-color: #f1f6f9;text-decoration: none;color: #005eac;}
 .click-open span{color: #888;}
+#onclick{color: #005eac;cursor: pointer;}
 /*末尾*/
 #footer{width: 1349px;height: 191px;}
 .site-footer{background-color: #fff;position: relative;width: 980px;margin: 0 auto;border-top: 1px solid #cee1ee;padding-top: 10px;overflow: hidden;height: 180px;}
 .main{zoom:1;overflow: hidden;}
-.link{}
+.link{float: right;display: block;margin-right: -10px;width: 813px;}
+.link li{display: inline-block;list-style: none;margin-right: 3px;}
+.link li a{color: #005eac;text-decoration: none;}
+.link li span{color: #ccc;margin-left: 3px;}
+.copyright{float: left;color: #808080;display: block;width: auto!important;}
 
 .haoes{clear: both;color: #888;font-family: tahoma,mingliu;font-size: 11px;padding: 8px;background-color: #f7f7f7;margin-top: 15px;text-align: center;line-height: 25px;}
+.haoes p{line-height: 1.4em;}
+.haoes a{text-decoration: none;color: #808080;}
+.haoes a:hover{text-decoration: underline;}
+.company-name{display: block;}
+.company-name a{text-decoration: none;color: #808080;}
+.company-name a:hover{text-decoration: underline;}
+.special-add{}
+
+/*标题更多标签的下拉菜单*/
+#moredownWeb{position: absolute;top:49px;left: 936px;display: block;z-index: 10001;}
+.dropdown{background-color: #fff;width: 230px;}
+.menu-dropdown-border{border: 1px solid #323232;width: 228px;height: 160px;}
+.weblist{padding: 8px 0;width: 228px ;height:144px;}
+.clearfixN{list-style: none;padding-left: 15px;}
+.clearfixN li{float: left;width: 70px;height: 24px;line-height: 24px;}
+.clearfixN li a{display: block;outline: 0;color: #333;text-decoration: none;}
+.clearfixN li a:hover{text-decoration: underline;}
+
+
+/*中间的上拉菜单*/
+.more-intro{text-align: center;margin-bottom: 3px;width: 658px;height: 34px;}
+.more-intro a{color: #005eac;text-decoration: none;}
+.click-close{background-position: center -55px;height: 14px;display: block;background-image: url("../images/ico_new.png");background-repeat: no-repeat;text-align: center;padding: 10px;background-color: #f1f6f9;}
+
+.intro-main{padding:20px 0 0;width: 658px;height: 1223px;}
+.intro-title{position: relative;text-align: center;margin-bottom: 35px;width: 658px;height: 71px;}
+#fix-position{font-size: 32px;font-weight: bold;margin-bottom: 10px;}
+.intro-title p{font-size: 16px;color: #888;line-height: 1.4em;}
+.intro-title a{text-decoration: none;background-image: url("../images/btn.png");background-repeat: no-repeat;background-position: 0 -76px;display: block;width: 114px;height: 30px;line-height: 30px;text-align: center;font-weight: bold;color: #fff!important;position: absolute;right: 0;bottom: 0;}
+.intro-reg-btn{}
+
+.intro-list{overflow: hidden;position: relative;zoom:1;width: 658px;height: 1117px;}
+.intro-list li{list-style: none;bottom: -1px;position: relative;border-bottom: 1px solid #ddd;padding-top:20px;float: left;}
+.full-column{width: 658px;height: 183px;clear: both;padding-bottom: 0;}
+.login-message-ico{background-image: url("../images/intro-ico-new.png");background-repeat: no-repeat;background-position: 0 0;display: block;width: 45px;height: 41px;float: left;margin-right: 28px;vertical-align: middle;}
+.intro-content{float: left;display: block;padding-bottom: 20px;width: 584px;}
+.intro-word{float: left;width: 230px;padding-bottom: 15px;display: block;}
+.intro-word h3{font-size: 18px;font-weight: bold;margin-bottom: 10px;}
+.intro-word p{font-size: 14px;line-height: 24px;color: #666;}
+
+
+
+.left-mod{width: 350;height: 254px;}
+
+.login-profile-ico{background-position: 0 -40px;background-repeat: no-repeat;display: block;width: 45px;height: 41px;float: left;margin-right: 28px;background-image: url("../images/intro-ico-new.png");}
+.intro-wordN{border-right: 1px solid #DDD;padding-right: 25px;float: left;width: 230px;padding-bottom: 15px;height: 239px;}
+.intro-wordN h3{font-size: 18px;font-weight: bold;margin-bottom: 10px;}
+.intro-wordN p{font-size: 14px;line-height: 24px;color: #666;}
+.intro-wordN img{display: block;margin-top: 10px;vertical-align: middle;}
+
+.right-mod{width: 305;height: 254px;}
+.login-profile-ico2{background-position: 0 -81px;background-repeat: no-repeat;display: block;width: 45px;height: 41px;float: left;margin-right: 28px;background-image: url("../images/intro-ico-new.png");}
+.login-profile-ico3{background-position: 0 -120px;background-repeat: no-repeat;display: block;width: 45px;height: 41px;float: left;margin-right: 28px;background-image: url("../images/intro-ico-new.png");}
+.login-profile-ico4{background-position: 0 -158px;background-repeat: no-repeat;display: block;width: 45px;height: 41px;float: left;margin-right: 28px;background-image: url("../images/intro-ico-new.png");}
+.login-profile-ico5{background-position: 0 -195px;background-repeat: no-repeat;display: block;width: 45px;height: 41px;float: left;margin-right: 28px;background-image: url("../images/intro-ico-new.png");}
+.login-profile-ico6{background-position: 0 -237px;background-repeat: no-repeat;display: block;width: 45px;height: 41px;float: left;margin-right: 28px;background-image: url("../images/intro-ico-new.png");}

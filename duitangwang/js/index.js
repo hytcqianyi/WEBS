@@ -12,18 +12,6 @@ $(function(){
 	},function(){
 		$(".dt-menu").hide();
 	});
-});
-
-var n=1;
-function showitem(){
-	/*改变大框的位置*/
-	$(".dt-slider-content").animate({"left":"-"+(n*100)+"%"},1000);
-	n++;
-	if(n>6){n=1;}
-}
-
-
-$(function(){
 	$(".dt-slider-point").click(function(){
 		showitem();
 		// //先将所有置为空
@@ -41,24 +29,44 @@ $(function(){
 		// 	"background-position":"-1002px -240px"
 		// });
       });
-	});
+});
+
+var n=1;
+function showitem(){
+	/*改变大框的位置*/
+	$(".dt-slider-content").animate({"left":"-"+(n*100)+"%"},1000);
+	n++;
+	if(n>6){n=1;}
+}
+
+
 
 $(function(){
-	$(".dt-carousel-points").click(function(){
-		
-		//先将所有置为空
-		$(".dt-carousel-item").hide();
-		$(".dt-carousel-point").css({
-			"background-position":"-978px -240px"
-		});
 
-		//为选中的项赋值
-		var curTagId=$(this).attr("cId");
-		var curPParent=$(this).parent().parent().parent();
-		
-		curPParent.find(".it"+curTagId).show();
-		$(this).css({
-			"background-position":"-1002px -240px"
-		});
-      });
-	});
+  $(".dt-carousel-point").click(function(){
+  		currIndex=$(this).attr("picIndex");
+  		showFlashImage();
+
+  });
+  $(".dt-carousel-content").hover(function(){
+  	clearInterval(timeHandle);
+  },function(){
+  	timeHandle= setInterval("showFlashImage()",2000);
+  });
+  timeHandle= setInterval("showFlashImage()",2000);
+});
+
+var timeHandle;
+var currIndex=2;
+function showFlashImage(){
+	$(".dt-carousel-item").hide();//css("background-image","url(images/datu" + currIndex +".jpg)");
+	$(".it"+currIndex).show(500);
+	$(".dt-carousel-point").removeClass("cur");
+	$("#p"+ currIndex ).addClass("cur");
+	currIndex++;
+	if(currIndex==6){
+		currIndex=1;
+	}
+	
+	
+}
