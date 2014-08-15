@@ -1,0 +1,12 @@
+$(function(){
+      $(".menubdA").hover(function(){
+              $(".menubdAmore").show();
+      },function(){
+              $(".menubdAmore").hide();
+      });
+      $(".getmenu").hover(function(){
+              $(".getxinfengmore").show();
+      },function(){
+              $(".getxinfengmore").hide();
+      });
+});
