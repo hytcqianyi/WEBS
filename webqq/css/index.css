@@ -35,15 +35,88 @@ body{font-size: 16px;font-family: '微软雅黑','Helvetica Neue',Helvetica,Aria
 .mainpanelmid{width: 280px;height: 385px;overflow: scroll;background-color: #fff;}
 .chatting{width:260px;height:480px;}
 .friendInfo{width: 251px;height: 56px;padding: 2px 0 2px 10px;border-top: 1px solid #e3e3e3;border-left: 1px solid #ccc;border-right: 1px solid #ccc;background: rgb(245,245,245);}
-#friendInfo1{}
-#friendInfo2{}
-#friendInfo3{}
-#friendInfo4{}
-#friendInfo5{}
 
-.contact{}
-.find{}
-.setting{}
+.friendheadimg{display: block;width: 40px;height: 40px;float: left;margin: 10px 10px 6px 0;}
+.frienditem{float: left;height: 56px;width: 190px;}
+.friendheadimg1{background-image: url("../images/g.jpg");background-size: 40px 40px;background-repeat: no-repeat;}
+.nickname{line-height: 22px;height: 22px;padding: 6px 5px 0 5px;color: #000;display: block;}
+.msgtext{padding: 0 0 0 5px;line-height: 28px;font-size: 12px;color: #b6b6b6;display: block;}
+
+.friendheadimg2{background-image: url("../images/g (1).jpg");background-size: 40px 40px;background-repeat: no-repeat;}
+.friendheadimg3{background-image: url("../images/g (2).jpg");background-size: 40px 40px;background-repeat: no-repeat;}
+.friendheadimg4{background-image: url("../images/g (3).jpg");background-size: 40px 40px;background-repeat: no-repeat;}
+.friendheadimg5{background-image: url("../images/g (4).jpg");background-size: 40px 40px;background-repeat: no-repeat;}
+.friendheadimg6{background-image: url("../images/g (5).jpg");background-size: 40px 40px;background-repeat: no-repeat;}
+.friendheadimg7{background-image: url("../images/g (6).jpg");background-size: 40px 40px;background-repeat: no-repeat;}
+.friendheadimg8{background-image: url("../images/g (7).jpg");background-size: 40px 40px;background-repeat: no-repeat;}
+
+/*联系人*/
+.contact{width:262px;height: auto;min-height: 365px;background-color: #fff;}
+.containtop{width: 262px;height: 36px;}
+.menberTab{list-style: none;}
+.normal{border-bottom: 2px solid #ccc;width: 62.5px;height: 15px;padding: 10px 12px 10px 12px;box-shadow: 10px 0 0 -9px #ccc;float: left;text-align: center;line-height: 15px;cursor: pointer;} 
+.active{border-bottom: 2px solid #0aa7ff;color:#0aa7ff;}
+.noraml2{box-shadow:0 0 0 0;}
+
+.containbottom{width: 260px;height: 366px;}
+.conbotline{border-bottom: 1px solid #e3e3e3;width: 260px;height: 38px;} 
+.conbainline{background-image: url("../images/open_arrow.png");width: 204px;height: 16px;padding: 10px 28px 12px 28px;display: inline-block;background-repeat: no-repeat;background-size: 14px 14px;background-position: 12px 15px;}
+.conacount{float: right;display: inline-block;font-size: 12px;color: gray;}
+
+.groupbox{width: 260px;height: 366px;display: none;}
+.groupimg1{background-image: url("../images/getface.jpg");}
+
+.taolunbot{width: 260px;height: 366px;display: none;}
+
+/*发现*/
+.find{width: 262px;background-color: #D3D6DB;height: auto;min-height: 93px;}
+.find li{width: 84.7px;height: 91px;border: 1px solid #eceef2;float: left;border-bottom-color: #c1c7d2;border-right-color: #c1c7d2;cursor: pointer;}
+.findicon1{background-image: url("../images/plugin_icon_qzone.jpg");display: block;width: 100%;height: 100%;background-repeat: no-repeat;width: 60px;height: 60px;background-size: 90%;margin: 10px auto 0;}
+.find li a{width: 100%;height: 19px;line-height: 19px;font-size: 13px;text-align: center;display: block;color: #000;}
+.findicon2{background-image: url("../images/plugin_icon_qmail.jpg");display: block;width: 100%;height: 100%;background-repeat: no-repeat;width: 60px;height: 60px;background-size: 90%;margin: 10px auto 0;}
+.findicon3{background-image: url("../images/plugin_icon_qq_portal.png");display: block;width: 100%;height: 100%;background-repeat: no-repeat;width: 60px;height: 60px;background-size: 90%;margin: 10px auto 0;}
+
+
+/*设置*/
+.setting{width: 245px;height: auto;padding: 10px 9px 10px 9px;background-color: #fff;min-height: 365px;overflow: hidden;}
+.setting li{width: 245px;}
+.setting1{height: 80px;margin-bottom: 10px;border: 1px solid #afc8e2;border-radius: 5px;}
+.set1{width: 238px;height: 58px;padding: 10px;}
+.setheadpic{width: 40px;height: 40px;margin: 8px;float: left;text-decoration: none;}
+.set1info{width: 150px;float: left;}
+.set1nickname{height: 30px;line-height: 30px;font-size: 1.4em;color: #000;display: block;}
+.set1num{height: 10px;line-height: 10px;font-size: 13px;color: #7f7f7f;display: block;padding-top: 8px;}
+.set1state{width: 22px;height: 20px;margin: 30px 0 0 0;float: left;position: relative;}
+.statemore{}
+.set1default{background-image: url("../images/state_sprite.gif");width: 10px;height: 10px;display: block;float: left;background-repeat: no-repeat;background-position: 0 0 ;}
+.set1dropdowm{background-image: url("../images/state_sprite.gif");width: 10px;height: 10px;display: block;float: left;background-repeat: no-repeat;background-position: -162px 4px ;}
+.stateul{width: 70px;height: 140px;border: 1px solid #000;background-color: #fff;position: absolute;top: 20px;left: -50px;}
+.stateul li{width: 64px;height: 12px;padding:4px 3px 4px 3px;cursor: pointer;}
+.stateul li span{font-size: 12px;display: inline-block;vertical-align: baseline;float: left;height: 15px;line-height: 12px;margin-left: 2px;}
+.state1{background-image: url("../images/state_sprite.gif");width: 10px;height: 10px;display: inline-block;float: left;text-decoration: none;}
+.state2{background-image: url("../images/state_sprite.gif");width: 10px;height: 10px;display: inline-block;float: left;text-decoration: none;background-position: -72px 0;}
+.state3{background-image: url("../images/state_sprite.gif");width: 10px;height: 10px;display: inline-block;float: left;text-decoration: none;background-position: -18px 0;}
+.state4{background-image: url("../images/state_sprite.gif");width: 10px;height: 10px;display: inline-block;float: left;text-decoration: none;background-position: -36px 0;}
+.state5{background-image: url("../images/state_sprite.gif");width: 10px;height: 10px;display: inline-block;float: left;text-decoration: none;background-position: -108px 0;}
+.state6{background-image: url("../images/state_sprite.gif");width: 10px;height: 10px;display: inline-block;float: left;text-decoration: none;background-position: -54px 0;}
+.state7{background-image: url("../images/state_sprite.gif");width: 10px;height: 10px;display: inline-block;float: left;text-decoration: none;background-position: -90px 0;}
+
+.setting2{height: 66px;margin: 20px 0 20px 0;border: 1px solid #afc8e2;border-radius: 5px;}
+.set2Info{width: 238px;height: 44px;padding: 10px;}
+.set2sign{color: #666;font-size: 16px;}
+.set2signcon{color: #000;font-size: 16px;}
+
+.setting3{height: 38px;margin: 20px 0 20px 0;border: 1px solid #afc8e2;border-radius: 5px;}
+.set3Info{width: 225px;height: 16px;padding: 10px 10px 10px 10px;}
+.mescon{color: #000;font-size: 16px;}
+.setmes{background-image: url("../images/open_arrow (2).png");width: 20px;height: 20px;margin: 0 0 0 10px;float: right;display: block;}
+
+.aboutQQ{height: 112px;}
+.aboutQQtxt{width: 226px;height: 16px;padding: 10px;border-bottom: 1px solid #afc8e2;}
+.aboutQQconspe{color: #a1a1a1;}
+.aboutQQrow{width: 228px;height: 16px;padding: 10px;}
+
+.setquit{background-color: #E23624;line-height: 38px;font-size: 16px;color: #fff;display: block;width: 100%;height: 100%;border-radius: 5px;text-align: center;}
 
 .mainpanelbottom{width: 280px;height: 50px;background-image: linear-gradient(#555,#222);border-bottom-left-radius: 7px;border-bottom-right-radius: 7px;}
 .mainpanelbottom ul{width: 100%;height: 100%;}
