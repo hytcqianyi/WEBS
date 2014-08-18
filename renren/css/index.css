@@ -35,7 +35,7 @@ body{font-size: 9pt;font-family: Tahoma,Verdana,STHeiTi,simsun,sans-serif;positi
 .clearfix{}
 .full-page-holder{width: 1349px;height: 696px;}
 .full-page{}
-.login-page{margin: 0 auto 20px;width: 980px;height:auto;}
+.login-page{margin: 0 auto 0px;width: 980px;height:auto;}
 .side-column{float: left;width: 220px;margin-right: 35px;border: 1px solid #D4D4D4;border-bottom-color: #AAA;border-top: 0;height: 692px;box-shadow: 0 1px 1px #CCC;margin-top: -2px;position: relative;background-color: #ebf2fa;}
 .login-panel{}
 .login-form{padding: 35px 15px 15px 15px;}

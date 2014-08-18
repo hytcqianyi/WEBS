@@ -55,7 +55,17 @@ img{border:0;}
 .introductionMid{width: 1000px;margin: 0 auto;height: 70px;margin: 0 auto;}
 .basicintro{width: 148px;height: 70px;border-right: 1px solid #ccc;float: left;display: block;position: relative;font-size: 20px;text-align: center;font-family: 微软雅黑;line-height: 70px;}
 .basicintro:hover{background-color: #4F9CEE;}
-.basiclogo{width: 25px;position:absolute;top:15px;height: 70px;display: block;float: left;}
+.basiclogo{width: 30px;position:absolute;top:24px;height: 70px;display: block;float: left;}
+.logoA{background-image: url("../images/all.png");background-repeat: no-repeat;background-position: 1px -82px;}
+.logoB{background-image: url("../images/all.png");background-repeat: no-repeat;background-position: 1px -434px;}
+.logoC{background-image: url("../images/all.png");background-repeat: no-repeat;background-position: 0px -171px;}
+.logoD{background-image: url("../images/all.png");background-repeat: no-repeat;background-position: 0px -249px;}
+.logoE{background-image: url("../images/all.png");background-repeat: no-repeat;background-position: 0px -345px;}
+.logoF{background-image: url("../images/all.png");background-repeat: no-repeat;background-position: 0px -1px;}
+
+
+
+
 .basicinfo{width: 120px;height: 70px;display: block;float: right;}
 .basicinfo a{text-decoration: none;color: #666;}
 .basicinfo a:hover{color: white;}
@@ -64,6 +74,7 @@ img{border:0;}
 .moreinfo{width: 100px;height: 70px;display: block;}
 .moreinfo a{text-decoration: none;color: #666;}
 .moreinfo a:hover{color: white;}
+.fan{background-image: url("../images/all.png");background-repeat: no-repeat;background-position: 0 -592px;display: block;width: 10px;}
 
 /*大框架*/
 #contentwrap{width:1137px;height:6150px;margin: 0 auto 0 auto;border: 1px solid #e5e5e5;background-color: white;}
