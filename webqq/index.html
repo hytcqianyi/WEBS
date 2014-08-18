@@ -37,36 +37,36 @@
             </div>
             <div class="mainpanelmid">
                 <!-- 会话 -->
-                <div class="chatting" style="display:none;">
-                    <div class="friendInfo" id="friendInfo01">
+                <div class="chatting" style="display:block;" isopen="false">
+                    <div class="friendInfo" id="friendInfo01" isopen="false">
                         <a href="#" class="friendheadimg friendheadimg1"></a>
                         <div class="frienditem">
                             <span class="nickname" id="nickname1">西瓜籽、つ</span>
                             <span class="msgtext">一直在走自己的路，没动摇。</span>
                         </div>
                     </div>
-                    <div class="friendInfo" id="friendInfo02">
+                    <div class="friendInfo" id="friendInfo02" isopen="false">
                         <a href="#" class="friendheadimg friendheadimg2"></a>
                         <div class="frienditem">
                             <span class="nickname" id="nickname2">_如若当初ゝ</span>
                             <span class="msgtext">一直在走自己的路，没动摇。</span>
                         </div>
                     </div>
-                    <div class="friendInfo" id="friendInfo03">
+                    <div class="friendInfo" id="friendInfo03" isopen="false">
                         <a href="#" class="friendheadimg friendheadimg3"></a>
                         <div class="frienditem">
                             <span class="nickname" id="nickname3">╭颜汐ベ</span>
                             <span class="msgtext">小嘛小儿郎丫，顶着太阳上学堂</span>
                         </div>
                     </div>
-                    <div class="friendInfo" id="friendInfo04">
+                    <div class="friendInfo" id="friendInfo04" isopen="false">
                         <a href="#" class="friendheadimg friendheadimg4"></a>
                         <div class="frienditem">
                             <span class="nickname" id="nickname4">  詠遠bù離開_ _ </span>
                             <span class="msgtext">小嘛小儿郎丫，顶着太阳上学堂</span>
                         </div>
                     </div>
-                    <div class="friendInfo" id="friendInfo05">
+                    <div class="friendInfo" id="friendInfo05" isopen="false">
                         <a href="#" class="friendheadimg friendheadimg5"></a>
                         <div class="frienditem">
                             <span class="nickname" id="nickname5">青木</span>
@@ -96,7 +96,7 @@
                     </div>
                 </div>
                 <!-- 联系人 -->
-                <div class="contact" style="display:none;">
+                <div class="contact" style="display:none;" isopen="false">
                     <div class="containtop">
                         <ul id="menberTab">
                             <li class="normal active" id="goodfriend">好友</li>
@@ -104,14 +104,14 @@
                             <li class="normal normal2" id="taolun">讨论组</li>
                         </ul>
                     </div>
-                    <ul class="containbottom" style="display:none;">
+                    <ul class="containbottom" >
                         <li class="conbotline conbotline1">
                             <div class="conbainline">
                                 <span class>我的好友A</span>
                                 <span class="conacount">2/3</span>
                             </div>
                         </li>
-                        <ul class="haoyou1" style="display:none;">
+                        <ul class="haoyou1" style="display:none;" isopen="false">
                             <li class>
                                 <div class="friendInfo" id="friendInfo1">
                                     <a href="#" class="friendheadimg friendheadimg1"></a>
@@ -146,7 +146,7 @@
                                 <span class="conacount">3/4</span>
                             </div>
                         </li>
-                        <ul class="haoyou2" style="display:none;">
+                        <ul class="haoyou2" style="display:none;" isopen="false">
                             <li class>
                                 <div class="friendInfo" id="friendInfo1">
                                     <a href="#" class="friendheadimg friendheadimg1"></a>
@@ -190,7 +190,7 @@
                                 <span class="conacount">1/2</span>
                             </div>
                         </li>
-                        <ul class="haoyou3" style="display:none;">
+                        <ul class="haoyou3" style="display:none;" isopen="false">
                              <li class>
                                 <div class="friendInfo" id="friendInfo1">
                                     <a href="#" class="friendheadimg friendheadimg1"></a>
@@ -199,8 +199,8 @@
                                       <span class="msgtext">一直在走自己的路，没动摇。</span>
                                     </div>
                                 </div>
-                            </li>
-                            <li>
+                             </li>
+                             <li>
                                 <div class="friendInfo" id="friendInfo02">
                                     <a href="#" class="friendheadimg friendheadimg2"></a>
                                     <div class="frienditem">
@@ -208,7 +208,7 @@
                                        <span class="msgtext">一直在走自己的路，没动摇。</span>
                                     </div>
                                 </div>
-                            </li>
+                             </li>
                         </ul>
                     </ul>
                     <ul class="groupbox">
@@ -234,7 +234,7 @@
                     <div class="taolunbot"></div>
                 </div>
                 <!-- 发现 -->
-                <div class="find" style="display:none;">
+                <div class="find" style="display:none;" isopen="false">
                     <li>
                         <span class="findicon1"></span>
                         <a href="#">QQ空间</a>
@@ -249,7 +249,7 @@
                     </li>
                 </div>
                 <!-- 设置 -->
-                <ul class="setting">
+                <ul class="setting" style="display:none;" isopen="false">
                     <li class="setting1">
                         <div class="set1">
                             <a href="#" class="setheadpic"><img src="images/touxiang.jpg"></a>
@@ -292,7 +292,7 @@
                             <i class="setmes"></i>
                         </div>
                     </li>
-                    <li class="setting3 aboutQQ">
+                    <li class="setting3 aboutQQ" style="display:none;" isopen="false">
                         <div class="aboutQQtxt">
                             <span class="aboutQQcon aboutQQconspe">当前版本 </span>
                             <span class="aboutQQcon">V1.0</span>
@@ -342,9 +342,160 @@
     	<!-- 相关消息设置 -->
     	<div class="messageset"></div>
     	<!-- 更换背景图 -->
-    	<div class="changebg"></div>
+    	<div class="changebg">
+            <div class="changepre"></div>
+            <div class="changenext"></div> 
+        </div>
     	<!-- 最小化 -->
     	<div class="chatmin"></div>
+    </div>
+    <div class="talkbox ui-draggable" id="talkboxfriendInfo01">
+        <div class="talk" style="height:206px;">
+            <div class="talkboxtop ui-draggable-handle">
+                <div class="talktopdropdowm"><span class="talktopdropdowmpic"></span></div>
+                <div class="talktopnickname"><span class="talktopnntxt">_如若当初ゝ</span></div>
+                <div class="talktopmin"><span class="talktopclosetxt">最小化</span></div>
+                <div class="talktopclose"><span close="friendInfo01" class="talktopclosetxt">关闭</span></div>
+            </div>
+            <div class="talkboxmiddle" style="height:116px;"></div>
+            <div class="talkboxbottom">
+                <div class="talkbottombq"><span class="talkboxbpic"></span></div>
+                <div class="talktopnickname talkboxbtxtbox">
+                    <input id="textarea" type="text">
+                </div>
+                <div class="talkboxbsend"><div class="sendtext">发送</div></div>
+            </div>
+        </div>
+        <div class="talkboxfaceimg" view="no"  style="display: block;">
+             <div class="faceimgtop">
+                <ul class="faceimg1">
+                    <li class="faceItem item1">
+                        <i title="微笑" txt="[微笑]" class="facetxt" style="border:0px;"></i>
+                        <i title="撇嘴" txt="[撇嘴]" class="facetxt"></i>
+                        <i title="色" txt="[色]" class="facetxt"></i>
+                        <i title="发呆" txt="[发呆]" class="facetxt"></i>
+                        <i title="得意" txt="[得意]" class="facetxt"></i>
+                        <i title="流泪" txt="[流泪]" class="facetxt"></i>
+                        <i title="害羞" txt="[害羞]" class="facetxt"></i>
+                        <i title="闭嘴" txt="[闭嘴]" class="facetxt"></i>
+                        <i title="睡" txt="[睡]" class="facetxt"></i>
+                        <i title="大哭" txt="[大哭]" class="facetxt"></i>
+                        <i title="尴尬" txt="[尴尬]" class="facetxt"></i>
+                        <i title="发怒" txt="[发怒]" class="facetxt"></i>
+                        <i title="调皮" txt="[调皮]" class="facetxt"></i>
+                        <i title="呲牙" txt="[呲牙]" class="facetxt"></i>
+                        <i title="惊讶" txt="[惊讶]" class="facetxt"></i>
+                        <i title="难过" txt="[难过]" class="facetxt"></i>
+                        <i title="酷" txt="[酷]" class="facetxt"></i>
+                        <i title="冷汗" txt="[冷汗]" class="facetxt"></i>
+                        <i title="抓狂" txt="[抓狂]" class="facetxt"></i>
+                        <i title="吐" txt="[吐]" class="facetxt"></i>
+                        <i title="delKey" class="del"></i> 
+                    </li>
+                    <li class="faceItem  faceItem2 item2">
+                        <i title="偷笑" txt="[偷笑]" class="facetxt"></i>
+                        <i title="可爱" txt="[可爱]" class="facetxt"></i>
+                        <i title="白眼" txt="[白眼]" class="facetxt"></i>
+                        <i title="傲慢" txt="[傲慢]" class="facetxt"></i>
+                        <i title="饥饿" txt="[饥饿]" class="facetxt"></i>
+                        <i title="困" txt="[困]" class="facetxt"></i>
+                        <i title="惊恐" txt="[惊恐]" class="facetxt"></i>
+                        <i title="流汗" txt="[流汗]" class="facetxt"></i>
+                        <i title="憨笑" txt="[憨笑]" class="facetxt"></i>
+                        <i title="大兵" txt="[大兵]" class="facetxt"></i>
+                        <i title="奋斗" txt="[奋斗]" class="facetxt"></i>
+                        <i title="咒骂" txt="[咒骂]" class="facetxt"></i>
+                        <i title="疑问" txt="[疑问]" class="facetxt"></i>
+                        <i title="嘘" txt="[嘘]" class="facetxt"></i>
+                        <i title="晕" txt="[晕]" class="facetxt"></i>
+                        <i title="折磨" txt="[折磨]" class="facetxt"></i>
+                        <i title="衰" txt="[衰]" class="facetxt"></i>
+                        <i title="骷髅" txt="[骷髅]" class="facetxt"></i>
+                        <i title="敲打" txt="[敲打]" class="facetxt"></i>
+                        <i title="再见" txt="[再见]" class="facetxt"></i>
+                        <i title="delKey" class="del"></i> 
+
+                    </li>
+                    <li class="faceItem  faceItem2 item3">
+                         <i title="擦汗" txt="[擦汗]" class="facetxt"></i>
+                         <i title="抠鼻" txt="[抠鼻]" class="facetxt"></i>
+                         <i title="鼓掌" txt="[鼓掌]" class="facetxt"></i>
+                         <i title="糗大了" txt="[糗大了]" class="facetxt"></i>
+                         <i title="坏笑" txt="[坏笑]" class="facetxt"></i>
+                         <i title="左哼哼" txt="[左哼哼]" class="facetxt"></i>
+                         <i title="右哼哼" txt="[右哼哼]" class="facetxt"></i>
+                         <i title="哈欠" txt="[哈欠]" class="facetxt"></i>
+                         <i title="鄙视" txt="[鄙视]" class="facetxt"></i>
+                         <i title="委屈" txt="[委屈]" class="facetxt"></i>
+                         <i title="快哭了" txt="[快哭了]" class="facetxt"></i>
+                         <i title="阴险" txt="[阴险]" class="facetxt"></i>
+                         <i title="亲亲" txt="[亲亲]" class="facetxt"></i>
+                         <i title="吓" txt="[吓]" class="facetxt"></i>
+                         <i title="可怜" txt="[可怜]" class="facetxt"></i>
+                         <i title="菜刀" txt="[菜刀]" class="facetxt"></i>
+                         <i title="西瓜" txt="[西瓜]" class="facetxt"></i>
+                         <i title="啤酒" txt="[啤酒]" class="facetxt"></i>
+                         <i title="篮球" txt="[篮球]" class="facetxt"></i>
+                         <i title="乒乓" txt="[乒乓]" class="facetxt"></i>
+                         <i title="delKey" class="del"></i> 
+                    </li>
+                    <li class="faceItem  faceItem2 item4">
+                        <i title="弱" txt="[弱]" class="facetxt"></i>
+                        <i title="握手" txt="[握手]" class="facetxt"></i>
+                        <i title="胜利" txt="[胜利]" class="facetxt"></i>
+                        <i title="抱拳" txt="[抱拳]" class="facetxt"></i>
+                        <i title="勾引" txt="[勾引]" class="facetxt"></i>
+                        <i title="拳头" txt="[拳头]" class="facetxt"></i>
+                        <i title="差劲" txt="[差劲]" class="facetxt"></i>
+                        <i title="爱你" txt="[爱你]" class="facetxt"></i>
+                        <i title="NO" txt="[NO]" class="facetxt"></i>
+                        <i title="OK" txt="[OK]" class="facetxt"></i>
+                        <i title="爱情" txt="[爱情]" class="facetxt"></i>
+                        <i title="飞吻" txt="[飞吻]" class="facetxt"></i>
+                        <i title="跳跳" txt="[跳跳]" class="facetxt"></i>
+                        <i title="发抖" txt="[发抖]" class="facetxt"></i>
+                        <i title="怄火" txt="[怄火]" class="facetxt"></i>
+                        <i title="转圈" txt="[转圈]" class="facetxt"></i>
+                        <i title="磕头" txt="[磕头]" class="facetxt"></i>
+                        <i title="回头" txt="[回头]" class="facetxt"></i>
+                        <i title="跳绳" txt="[跳绳]" class="facetxt"></i>
+                        <i title="挥手" txt="[挥手]" class="facetxt"></i>
+                        <i title="delKey" class="del"></i>
+                    </li>
+                    <li class="faceItem  faceItem2 item5">
+                        <i title="激动" txt="[激动]" class="facetxt"></i>
+                        <i title="街舞" txt="[街舞]" class="facetxt"></i>
+                        <i title="献吻" txt="[献吻]" class="facetxt"></i>
+                        <i title="左太极" txt="[左太极]" class="facetxt"></i>
+                        <i title="右太极" txt="[右太极]" class="facetxt"></i>
+                        <i title="双喜" txt="[双喜]" class="facetxt"></i>
+                        <i title="鞭炮" txt="[鞭炮]" class="facetxt"></i>
+                        <i title="灯笼" txt="[灯笼]" class="facetxt"></i>
+                        <i title="发财" txt="[发财]" class="facetxt"></i>
+                        <i title="K歌" txt="[K歌]" class="facetxt"></i>
+                        <i title="购物" txt="[购物]" class="facetxt"></i>
+                        <i title="邮件" txt="[邮件]" class="facetxt"></i>
+                        <i title="帅" txt="[帅]" class="facetxt"></i>
+                        <i title="喝彩" txt="[喝彩]" class="facetxt"></i>
+                        <i title="祈祷" txt="[祈祷]" class="facetxt"></i>
+                        <i title="爆筋" txt="[爆筋]" class="facetxt"></i>
+                        <i title="棒棒糖" txt="[棒棒糖]" class="facetxt"></i>
+                        <i title="喝奶" txt="[喝奶]" class="facetxt"></i>
+                        <i title="下面" txt="[下面]" class="facetxt"></i>
+                        <i title="香蕉" txt="[香蕉]" class="facetxt"></i>
+                        <i title="delKey" class="del"></i>
+                    </li>
+                </ul>
+             </div>
+             <div class="btnfwarp">
+                <li class="btnfwarpnor btnf1 btnfselected"></li>
+                <li class="btnfwarpnor btnf2"></li>
+                <li class="btnfwarpnor btnf3"></li>
+                <li class="btnfwarpnor btnf4"></li>
+                <li class="btnfwarpnor btnf5"></li>
+                <li class="btnfwarpnor btnf6"></li>
+             </div>
+        </div>
     </div>
 </body>
 </html>
