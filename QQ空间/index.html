@@ -58,10 +58,10 @@
      											<a href="#" ><i class="iconshare"></i></a>
      											<a href="#" class="appname">分享</a>
      										</li>
-                                            <li class="menuitem">
-                                            	<a href="#" ><i class="icontimeline"></i></a>
+                                                       <li class="menuitem">
+                                                         	<a href="#" ><i class="icontimeline"></i></a>
      											<a href="#" class="appname">时光轴</a>
-                                            </li>
+                                                       </li>
      										<li class="menuitem">
      											<a href="#" ><i class="iconvideo"></i></a>
      											<a href="#" class="appname">视频</a>
@@ -86,14 +86,310 @@
      							</div>
      						</div>
      					</li>
-     					<li class="navlist" id="tb-friend"></li>
-     					<li class="navlist" id="tb-app"></li>
-     					<li class="navlist" id="tb-dress"></li>
+     					<li class="navlist" id="tb-friend">
+                                   <div class="navlistinner">
+                                       <a id="aMyFriends" class="friendlink a-link">
+                                         <i class="uiicon iconfriend"></i>
+                                         <span>好友</span>
+                                         <i class="dropdownarrow"></i>
+                                       </a>
+                                   </div>
+                                   <div class="navdropdown friendsdropdown"></div>
+                              </li>
+     					<li class="navlist" id="tb-app">
+                                   <div class="navlistinner">
+                                       <a id="aAppstore" class="applicationlink a-link">
+                                         <i class="uiicon iconapplication"></i>
+                                         <span>应用</span>
+                                         <i class="dropdownarrow"></i>
+                                       </a>
+                                   </div>
+                                   <div class="navdropdown friendsdropdown"></div>
+                              </li>
+     					<li class="navlist" id="tb-dress">
+                                   <div class="navlistinner">
+                                       <a id="aMall" class="dressuplink a-link">
+                                         <i class="uiicon icondressup"></i>
+                                         <span>装扮</span>
+                                         <i class="dropdownarrow"></i>
+                                       </a>
+                                   </div>
+                                   <!-- <div class="navdropdown friendsdropdown"></div> -->
+                              </li>
      				</ul>
+                         <div class="userinfo">
+                              <a href="#" class="user-home">
+                                   <img class="user-avatar" src="images/30.jpg">
+                                   <span class="user-name textoverflow">竹路轻尘</span>
+                              </a>
+                              <a href="#" id="tb_logout" class="logout-new">
+                                   <i class="ui-icon icon-logout"></i>
+                              </a>
+                              <div id="tb_setting_li" class="user-setting">
+                                   <i id="tb_setting_i" class="drop-down-arrow"></i>
+                              </div>
+                              <a href="#" id="tb_vip_li" class="vip-setting">
+                                   <i class="ui-icon icon-vip"></i>
+                              </a>
+                         </div>
+                         <div class="topsearch">
+                              <div class="search-box">
+                                   <input class="search-input" type="text" placeholder="用户/应用">
+                                   <a href="#" class="search-button">
+                                        <i class="ui-icon icon-search"></i>
+                                   </a>
+                              </div>
+                         </div>
+                         <div class="music-container" id="tb_music_li">
+                              <div class="music-panel">
+                                   <a href="#" class="music-play">
+                                        <i class="ui-icon ico-music-play"></i>
+                                   </a>
+                                   <b class="music-dynamic">
+                                        <i class="ui-icon ico-music-dynamic"></i>
+                                   </b>
+                              </div>
+                         </div>
      			</div>
-     			<div class="topfixextend"></div>
+     			<div class="topfixextend">
+                         <a href="#" id="speed_signal_btn" class="icon-speed icon-speed-2"></a>
+                    </div>
      		</div>
      	</div>
+     </div>
+     <div class="background-container" id="layBackground">
+          <div class="layout-content">
+               <div class="layout-head anti-color">
+                    <div class="layout-head-inner" id="headContainer">
+                         <!-- <div class="layout-dynamic-banner">
+                              <div class="layout-dynmic-inner">
+                                   <div class="dy-dot dy-dot-star"></div>
+                                   <div class=""></div>
+                              </div>
+                         </div> -->
+                         <div class="head-info"></div>
+                         <div class="head-name">
+                              <span class="user-nameA textoverflow">竹路轻尘</span>
+                              <span class="user-vip-info">
+                                   <a href="#" class="f_user_vip qz_ichotclick">
+                                        <i class="qz_vip_icon_l qz_vip_icon_l_gray_0"></i>
+                                   </a>
+                                   <a href="#" class="qz-btn-vip qz-btn-vip-open"></a>
+                              </span>
+                         </div>
+                         <!-- 挂件 -->
+                         <div class="layout-shop-item" id="QZ_Shop_Items_Container">
+                              <div id="menuContainer" class="shop-item">
+                                   <div class="headnav">
+                                        <ul class="head-nav-menu">
+                                             <li class="menu_item_N1">
+                                                  <span class="arr"></span>
+                                                  <a href="#">主页</a>
+                                             </li>
+                                             <li class="menu_item_N1">
+                                                  <span class="arr"></span>
+                                                  <a href="#">日志</a>
+                                             </li>
+                                             <li class="menu_item_N1">
+                                                  <span class="arr"></span>
+                                                  <a href="#">相册</a>
+                                             </li>
+                                             <li class="menu_item_N1">
+                                                  <span class="arr"></span>
+                                                  <a href="#">留言板</a>
+                                             </li>
+                                             <li class="menu_item_N1">
+                                                  <span class="arr"></span>
+                                                  <a href="#">说说</a>
+                                             </li>
+                                             <li class="menu_item_N1">
+                                                  <span class="arr"></span>
+                                                  <a href="#">个人档</a>
+                                             </li>
+                                             <li class="menu_item_N1">
+                                                  <span class="arr"></span>
+                                                  <a href="#">音乐</a>
+                                             </li>
+                                             <li class="menu_item_N1">
+                                                  <span class="arr"></span>
+                                                  <a href="#">时光轴</a>
+                                             </li>
+                                             <li class="menu_item_N1">
+                                                  <span class="arr"></span>
+                                                  <a href="#">更多</a>
+                                             </li>
+                                        </ul>
+                                   </div>
+                              </div>
+                         </div>
+                         <div class="actions profile-hd-actions" id="like_button_pannel">
+                              <span class="btn-head btn-head-like">
+                                   <a href="#" class="lnk-left" id="view_like_list">
+                                        <s class="ui-icon sp-btn-like"></s>
+                                        <span class="txt">赞(1)</span>
+                                        <!-- <span class="txt message-num none"></span> -->
+                                   </a>
+                                   <s class="ui-icon sp-btn-split"></s>
+                                   <a href="#" class="lnk-right">
+                                        <span class="txt">求赞</span>
+                                   </a>
+                              </span>
+                         </div>
+                    </div>
+               </div>
+               <div class="layout-nav">
+                    <div class="layout-nav-inner">
+                         <div class="head-avatar">
+                              <a href="#" id="QM_OwnerInfo_ModifyIcon">
+                                   <div class="head-dress"></div>
+                                   <img src="images/100.jpg" class="touxiang" id="QM_OwnerInfo_Icon">
+                                  
+                              </a>
+                         </div>
+                    </div>
+               </div>
+               <div class="layout-background">
+                    <div class="layout-body">
+                         <div id="pageContent" class="layout-page clearfix">
+                              <div id="main_feed_container" class="col-main">
+                                   <div class="col-main-feed">
+                                        <div id="QM_Mood_Poster_Container">
+                                             <div class="qutu the_worlds_end"></div>
+                                             <div class="qutu the_worlds_end"></div>
+                                             <div class="qz-poster  bg b-test" id="QM_Mood_Poster_Inner">
+                                                  <div class="qz-poster-inner">
+                                                       <div class="qz-poster-bd">
+                                                            <div class="qz-poster-editor-cont">
+                                                                 <div class="qz-inputer bor2">
+                                                                      <div idprefix="$1">
+                                                                           <div class="textinput"><input value="说点什么吧" style="width:400px;height:60px;"></div>
+                                                                      </div>
+                                                                 </div>
+                                                                 <div class="qz-poster-attach-side">
+                                                                      <div class="attach">
+                                                                           <div class="item item-pic">
+                                                                                <a href="#" class="pic">
+                                                                                     <i class="icon icon-pic"></i>
+                                                                                </a>
+                                                                           </div>
+                                                                           <div class="item item-other">
+                                                                                <a href="#" class="other">
+                                                                                     <i class="icon icon-other"></i>
+                                                                                </a>
+                                                                           </div>
+                                                                           <div class="item item-funny">
+                                                                                <a href="#" class="funny">
+                                                                                     <i class="icon icon-funny"></i>
+                                                                                </a>
+                                                                           </div>
+                                                                      </div>
+                                                                 </div>
+                                                                 <div class="qimg-trigger qimg-trigger-collapsed">
+                                                                      <a href="#" class="trigger"></a>
+                                                                 </div>
+                                                            </div>
+                                                       </div>
+                                                       <div class="qz-poster-ft">
+                                                                 <div class="qz-poster-biao">
+                                                                      <div class="qzaddons">
+                                                                           <a class="emot c_tx3">
+                                                                                <i class="icon-emot"></i>
+                                                                                <i class="icon-red-dot"></i>
+                                                                           </a>
+                                                                           <a class="at c_tx3">
+                                                                                <i class="icon-at"></i>
+                                                                           </a>
+                                                                           <a class="topic c_tx3">
+                                                                                <i class="icon-topic"></i>
+                                                                           </a>
+                                                                      </div>
+                                                                 </div>
+                                                                 <div class="qz-poster-sync">
+                                                                      <div class="sync-nuts">
+                                                                           <a class="sync-qq">
+                                                                                <i class="icon-qq"></i>
+                                                                           </a>
+                                                                           <a class="sync-weibo">
+                                                                                <i class="icon-weibo"></i>
+                                                                           </a>
+                                                                           <div class="set-audience">
+                                                                                <span class="dividor">|</span>
+                                                                                <span class="private-label">可见范围:</span>
+                                                                                <a class="audience">
+                                                                                     <span class="text-place">所有人</span>
+                                                                                     <b class="trigbox"></b>
+                                                                                </a>
+                                                                           </div>
+                                                                      </div>
+                                                                 </div>
+                                                                 <div class="op">
+                                                                      <a href="#" class="btn-post">
+                                                                           <span class="txt1">发表</span>
+                                                                      </a>
+                                                                 </div>
+                                                       </div>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                        <div class="fn-feed-mod feed-past-years-mod" id="today_lastyear_v2">
+                                             <div class="fn-feed-mod-bd">
+                                                  <div class="past-years-summary">
+                                                     <div class="user-list">
+                                                       <a class="q_namecard"><img src="images/namecard1.jpg"></a>
+                                                       <a class="q_namecard"><img src="images/namecard2.jpg"></a>
+                                                       <a class="q_namecard"><img src="images/namecard3.jpg"></a>
+                                                       <a class="q_namecard"><img src="images/namecard4.jpg"></a>
+                                                       <a class="q_namecard"><img src="images/namecard5.jpg"></a>
+                                                       <a class="q_namecard"><img src="images/namecard6.png"></a>
+                                                       <a class="q_namecard"><img src="images/namecard7.jpg"></a>
+                                                     </div>
+                                                     <div class="info-box">
+                                                       <span class="info-txt">那年今日，他们有精彩动态</span>
+                                                       <a href="#" class="more">
+                                                            <i class="icon-arrow-right"></i>
+                                                       </a>
+                                                     </div>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                        <div id="feed_friend">
+                                             <div class="fn-feed-control-v2">
+                                                  <div class="control-inner">
+                                                       <div class="feed-control-tab">
+                                                            <a class="item-on item-on-slt">
+                                                                 <span id="feed_hover_text">全部动态</span>
+                                                                 <i class="icon-feed-down"></i>
+                                                            </a>
+                                                            <div class="tab-bubble">
+                                                                 <div class="bubble-i">
+                                                                      <div class="op-list">
+                                                                           <a class="itemslt itemsltN">全部动态</a>
+                                                                           <a class="itemslt">相册</a>
+                                                                           <a class="itemslt">日志</a>
+                                                                      </div>
+                                                                 </div>
+                                                            </div>
+                                                       </div>
+                                                       <div class="feed-control-tab-op"></div>
+                                                  </div>
+                                             </div>
+                                             <div class="fn-feed-container"></div>
+                                        </div>
+                                        <div id="feed_me" ckass="none"></div>
+                                        <div id="feed_sdc" ckass="none"></div>
+                                   </div> 
+                                   <div class="col-main-sidebar"></div>
+                              </div>
+                              <div id="care_friend_container" class="col-main none"></div>
+                              <div id="app_right_container" class="col-main none"></div>
+                              <div id="leftMenu" class="col-menu"></div>
+                         </div>
+                         <div id="pageApp" class="layout-app mod_wrap none"></div>
+                         <div id="page3rdApp" class="layout-app none" style="min-height:750px;"></div>
+                    </div>
+                    <div class="layout-copyright"></div>
+               </div>
+          </div>
      </div>
      <div id="content"></div>
      <div id="footer"></div>
