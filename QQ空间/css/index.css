@@ -6,7 +6,7 @@ body{font-family: '微软雅黑';font-size: 12px;}
 
 /*标题框*/
 #topnav{height: 41px;background-color: #333;}
-.topfixinner{position: fixed;z-index: 500px;width: 100%;top: 0;left: 0;height: 41px;color: #bababa;box-shadow: 0 1px 0 rgba(0,0,0,.2);background-color: #1f1f1f;}
+.topfixinner{position: fixed;z-index: 500;width: 100%;top: 0;left: 0;height: 41px;color: #bababa;box-shadow: 0 1px 0 rgba(0,0,0,.2);background-color: #1f1f1f;}
 .topfixcontainer{position: relative;height: 41px;z-index: 550;}
 
 .topfixwrap{width: 980px;margin: 0 auto;position: relative;}
@@ -26,7 +26,7 @@ body{font-family: '微软雅黑';font-size: 12px;}
 .a-link{}
 .navlistinner a{position: relative;display: inline-block;padding: 0 10px 0 33px;line-height: 40px;text-decoration: none;cursor: pointer;margin-top: 1px;}
 
-#tb-index{display: block;}
+#tb-index{display: inline-block;}
 .iconhomepage{background-image: url("../images/3532.png");background-position: -740px -100px;}
 .uiicon{display: inline-block;background-repeat: no-repeat;font-size: 0;overflow: hidden;}
 .dropdownarrow{width: 0;height: 0;font-size: 0;border-width: 3px;border-style: solid dashed dashed dashed;border-left-color: transparent;border-right-color: transparent;border-bottom-color: transparent;line-height: 0;position: absolute;top: 19px;right: 0px;border-top-color: #fff;}
@@ -63,6 +63,44 @@ body{font-family: '微软雅黑';font-size: 12px;}
 .friendlink{padding-right: 20px;}
 .uiicon{width: 16px;height: 16px;position: absolute;} 
 .iconfriend{background-image: url("../images/3532.png");background-position:-740px -75px; }
+
+.friendsdropdown{display: block;}
+.side-areaH{width: 77px;padding-left: 0;height: 310px;background-color: white;float: left;border-left: #a6a6a6 1px solid;border-top: #fff 1px solid;border-bottom: #a6a6a6 1px solid;position: relative;}
+.friends-link{position: absolute;top: 30px;left: 24px;width: 50px;display: block;}
+.link-icon{display: block;width: 48px;height: 48px;border: #e2e2e2 1px solid;background-color: #fafafa;border-radius: 3px;box-shadow: 0 1px 1px rgba(0,0,0,.1);cursor: pointer;color: #333;text-decoration: none;}
+.icon-friends{background-image: url("../images/5541.png");background-position: -189px -102px;display: block;width: 24px;height: 24px;margin: 12px auto;}
+.link-text{display: block;text-align: center;margin-top: 8px;cursor: pointer;color: #333;text-decoration: none;}
+
+.friends-relation{position: absolute;top: 121px;left: 24px;width: 50px;display: block;}
+.icon-relation{width: 16px;height: 16px;margin: 16px auto;background-image: url("../images/icenter.png");background-position: -287px -34px;display: block;font-style: normal;font-weight: normal;}
+
+.main-areaH{width: 417px;float: left;border-right: #a6a6a6 1px solid;border-top: #a6a6a6 1px solid;border-bottom: #a6a6a6 1px solid;position: relative;height: 310px;background-color: white;padding-left: 24px;}
+.mod-friends-topbar{margin: 30px 30px 20px 0;border-left: #e9e9e9 1px solid;padding-left: 30px;height: 260px;}
+.friendinner{position: relative;height: 100%;}
+.friendhd{height: 37px;}
+.friendhd h3{line-height: 24px;font-weight: normal;font-size: 100%;}
+.friends-search-topbar{top: 0;width: 126px;height: 23px;border-radius: 2px;font-size: 0;position: absolute;right: 0;border: 1px #e0e0e0 solid;background-color: #fafafa;z-index: 9;}
+.friends-results-topbar{display: none;top: 24px;z-index: 8;color: #3f3f3f;width: 354px;position: absolute;right: 0;border: 1px #e0e0e0 solid;background-color: #fafafa;}
+#friend_search_input{margin-left: 10px;width: 86px;height: 15px;line-height: 15px;margin-top: 4px;margin-bottom: 4px;font-size: 12px;border: 0;background-color: transparent;vertical-align: top;}
+.friends-results-topba button{width: 30px;text-align: center;padding: 0;cursor: pointer;border: 0;height: 25px;background-color: transparent;vertical-align: top;font-family: punctuation,\5FAE\8F6F\96C5\9ED1;font-size: inherit;font-weight: inherit;}
+.sp-top-search{width: 16px;height: 16px;background-image: url("../images/5541.png");background-position: -338px -35px;}
+.sp-top-search{vertical-align: top;margin-top: 1px;cursor: pointer;display: inline-block;background-repeat: no-repeat;font-size: 0;overflow: hidden;}
+
+.friendbd{}
+.friends-list-topbar{margin-right: -35px;}
+.friends-list-topbar li{float: left;display: inline;width: 70px;height: 105px;overflow: hidden;margin: 0 25px 0 0;text-align: center;}
+.friends-list-topbar li a{cursor: pointer;color: #333;}
+.picN{display: block;width: 70px;height: 70px;overflow: hidden;position: relative;margin-bottom: 8px;}
+.picN img{border-radius: 3px;width: 70px;height: 70px;border: 0;}
+.ellipsis{display: block;
+width: 100%;height: 20px;overflow: hidden;line-height: 20px;color: #FFF;border-radius: 0 0 3px 3px;position: absolute;left: 0;bottom: 0;background: -webkit-linear-gradient(top,rgba(255,255,255,0) 0,rgba(0,0,0,.7) 100%);white-space: nowrap;word-wrap: normal;text-overflow: ellipsis;max-width: 100%;}
+.num{display: block;width: 100%;height: 16px;line-height: 16px;}
+.icon-relate{width: 13px;height: 13px;vertical-align: -2px;background-image: url("../images/icenter.png");background-position: -287px -51px;margin-right: -5px;}
+
+
+.friendft{position: absolute;left: 0;bottom: -8px;white-space: nowrap;}
+
+
 
 /*应用*/
 #aAppstore{position: relative;display: inline-block;padding: 0 10px 0 33px;line-height: 40px;text-decoration: none;cursor: pointer;margin-top: 1px;color: #fff;}
@@ -486,6 +524,7 @@ body{font-family: '微软雅黑';font-size: 12px;}
 .col-menu{float: right;width: 170px;}
 .mod-side-nav{margin-bottom: 12px;border-radius: 3px;color: #333;border: 1px #d9d9d9 solid;background-color: #fff;}
 #tab_menu_list{height: 227px;}
+#tab_menu_list2{height: 264px;}
 .sn-list{padding: 2px 0;position: relative;list-style: none;}
 .sn-list li{position: relative;width: 100%;padding-right: 29px;margin-left: -29px;margin-top: 1px;margin-bottom: 1px;height: 36px;}
 .current{color: #8c8c8c;}
@@ -506,13 +545,57 @@ body{font-family: '微软雅黑';font-size: 12px;}
 .feed10{background-position: -840px -175px;}
 .feed11{background-position: -890px 0;}
 .feed12{background-position: -840px -125px;}
+
+.sp-popularize{vertical-align: top;width: 16px;height: 16px;background-image: url("../images/icenter.png");display: inherit;background-repeat: no-repeat;font-size: 0;overflow: hidden;}
+.feed13{background-position: -304px 0;}
+.feed14{background-position: -865px -175px;}
+.feed15{background-position: -840px -175px;}
+.feed16{background-position: -865px -25px;}
+
 .qz-right{float: right;margin-right: 10px;padding-left: 14px;}
 .qz-main{overflow: hidden;display:block;}
 .sn-title{font-weight: bold;display: inline-block;white-space: nowrap;word-wrap: normal;overflow: hidden;text-overflow: ellipsis;max-width: 7em;}
 .sn-title2{font-weight: normal;display: inline-block;white-space: nowrap;word-wrap: normal;overflow: hidden;text-overflow: ellipsis;max-width: 7em;}
 
 #tab_switch{zoom:1;display: block;padding: 1px 0;text-align: center;color: #333;background-color: #fafafa;border-top: 1px #e6e6e6 solid;text-decoration: none;cursor: auto;}
+#tab_switch2{zoom:1;display: block;padding: 1px 0;text-align: center;color: #333;background-color: #fafafa;border-top: 1px #e6e6e6 solid;text-decoration: none;cursor: auto;}
+
 .sp-nav-l-down{vertical-align: middle;width: 16px;height: 16px;background-image: url("../images/3532.png");background-position: -890px -150px;display: inline-block;background-repeat: no-repeat;font-size: 0;overflow: hidden;}
+#tab_hide_list{display: none;}
+#tab_hide_list2{display: none;}
+
+.collet_box{}
+.sns_icenter{height: auto;overflow: hidden;}
+.gg-qz-icenter{width: 168px;border-radius: 3px;overflow: hidden;margin-bottom: 12px;background-color: #fff;border: #d9d9d9 1px solid;}
+.mod-tuwen{padding: 4px;overflow: hidden;}
+#gdtApprecTitle{margin-top: 6px;margin-bottom: 9px;overflow: hidden;font-size: 100%;}
+.main{position: relative;}
+
+.ft{margin: 9px 0 8px;height: 16px;overflow: hidden;}
+.ft a{text-decoration: none;color: #5d7895;}
+.ft a:hover{text-decoration: underline;}
+
+.mod-play-app{padding: 4px 0 4px 10px;overflow: hidden;}
+.mod-play-app h3{height: 30px;line-height: 30px;overflow: hidden;width: 150px;font-size: 100%;}
+.main{width: 155px;overflow: hidden;}
+.main ul{height: auto;overflow: hidden;width: 155px;}
+._js_frd_row{height: 50px;width: 153px;overflow: hidden;margin-bottom: 10px;float: left;}
+#applogo{float: left;height: 50px;width: 50px;overflow: hidden;text-decoration: none;color: #5d7895;display: block;}
+#applogo img{width: 50px;height: 50px;}
+.appinfo{float: left;margin-left: 5px;width: 93px;height: 50px;overflow: hidden;}
+.app-name{white-space: nowrap;overflow: hidden;height: 15px;}
+.app-name a{text-decoration: none;color:#5d7895; cursor: pointer;}
+.app-name a:hover{text-decoration: underline;}
+.playdata{height: 33px;margin-top: 2px;overflow: hidden;width: 93px;}
+.playdata2{height: 33px;margin-top: 2px;overflow: hidden;width: 93px;}
+.number{display: block;}
+.number2{display: block;}
+.gb_bt2{margin-top: 5px;height: 18px;padding-bottom: 0;padding: 0 10px;display: none;border-width: 1px;border-style: solid;text-align: center;line-height: 18px;overflow: hidden;color: #fff;border: 1px solid #4798d6;background-color: #5caae6;background-position: 0 0!important;text-decoration: none;}
+.gb_bt1{margin-top: 5px;height: 18px;padding-bottom: 0;padding: 0 10px;display: none;border-width: 1px;border-style: solid;text-align: center;line-height: 18px;overflow: hidden;color: #fff;border: 1px solid #4798d6;background-color: #5caae6;background-position: 0 0!important;text-decoration: none;}
+
+.main3{position: relative;}
+
+
 
 
 

@@ -3,6 +3,7 @@ $(function(){
           $(this).find(".navdropdown").show();
 	},function(){
           $(this).find(".navdropdown").hide();
+         
 	});
 
 	$(".textinput").hover(function(){
@@ -152,5 +153,28 @@ $(function(){
 			$("#sidebar-ic-fixed").css("position", "fixed");
 		}
 	});
-	$("#tab_switch").hover(function(){},function(){});
+	$("#tab_switch").click(function(){
+		     $("#tab_switch").hide();
+             $("#tab_hide_list").show();
+	
+	});
+	$("#tab_switch2").click(function(){
+		     $("#tab_switch2").hide();
+             $("#tab_hide_list2").show();
+	
+	});
+	$(".playdata").hover(function(){
+           $(".number").hide();
+		   $(".gb_bt1").show();
+	},function(){
+		   $(".number").show();
+		   $(".gb_bt1").hide();
+	});
+	$(".playdata2").hover(function(){
+           $(".number2").hide();
+		   $(".gb_bt2").show();
+	},function(){
+		   $(".number2").show();
+		   $(".gb_bt2").hide();
+	});
 });
