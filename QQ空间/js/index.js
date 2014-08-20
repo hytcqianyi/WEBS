@@ -69,5 +69,88 @@ $(function(){
            $("#QM_friendship_care_me").hide();
            $("#QM_friendship_care_who").show();
 	});
-	
+	$(".deletevisitor").hover(function(){
+          $(".deleteoption").show();
+	},function(){
+          $(".deleteoption").hide();
+	});
+	$(".item1").hover(function(){
+          $(".item11").show();
+	},function(){
+          $(".item11").hide();
+	});
+	$(".item2").hover(function(){
+          $(".item22").show();
+	},function(){
+          $(".item22").hide();
+	});
+	$(".item3").hover(function(){
+          $(".item33").show();
+	},function(){
+          $(".item33").hide();
+	});
+	$(".item4").hover(function(){
+          $(".item44").show();
+	},function(){
+          $(".item44").hide();
+	});
+	$(".item5").hover(function(){
+          $(".item55").show();
+	},function(){
+          $(".item55").hide();
+	});
+	$(".item6").hover(function(){
+          $(".item66").show();
+	},function(){
+          $(".item66").hide();
+	});
+	$(".item7").hover(function(){
+          $(".item77").show();
+	},function(){
+          $(".item77").hide();
+	});
+	$(".item8").hover(function(){
+          $(".item88").show();
+	},function(){
+          $(".item88").hide();
+	});
+	$(".item9").hover(function(){
+          $(".item99").show();
+	},function(){
+          $(".item99").hide();
+	});
+
+	$(".title").click(function(){
+		$(".title").css({"font-weight":"bold","color":"black"});
+		$(".visitYou").css({"font-weight":"normal","color":"#5d7895"});
+		$(".refuseYou").css({"font-weight":"normal","color":"#5d7895"});
+        $(".visitMeContainer").show();
+        $(".visitYouContainer").hide();
+        $(".refuseYouContainer").hide();
+	});
+	$(".visitYou").click(function(){
+		$(".title").css({"font-weight":"normal","color":"#5d7895"});
+		$(".visitYou").css({"font-weight":"bold","color":"black"});
+		$(".refuseYou").css({"font-weight":"normal","color":"#5d7895"});
+        $(".visitMeContainer").hide();
+        $(".visitYouContainer").show();
+        $(".refuseYouContainer").hide();
+	});
+	$(".refuseYou").click(function(){
+		$(".title").css({"font-weight":"normal","color":"#5d7895"});
+		$(".visitYou").css({"font-weight":"normal","color":"#5d7895"});
+		$(".refuseYou").css({"font-weight":"bold","color":"black"});
+        $(".visitMeContainer").hide();
+        $(".visitYouContainer").hide();
+        $(".refuseYouContainer").show();
+	});
+	$(window).scroll(function(){
+		var scrolls = $(this).scrollTop();
+		// alert(scrolls);
+		if( scrolls>1800)
+		{
+			$("#sidebar-ic-fixed").css("position", "fixed");
+		}
+	});
+	$("#tab_switch").hover(function(){},function(){});
 });
