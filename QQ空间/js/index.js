@@ -5,6 +5,25 @@ $(function(){
           $(this).find(".navdropdown").hide();
          
 	});
+	$("#tb-friend").hover(function(){
+          $(this).find(".navdropdown").show();
+	},function(){
+          $(this).find(".navdropdown").hide();
+         
+	});
+	
+	$("#tb-app").hover(function(){
+          $(this).find(".navdropdown").show();
+	},function(){
+          $(this).find(".navdropdown").hide();
+         
+	});
+	$("#tb-dress").hover(function(){
+          $(this).find(".navdropdown").show();
+	},function(){
+          $(this).find(".navdropdown").hide();
+         
+	});
 
 	$(".textinput").hover(function(){
 		$(".qz-poster-ft").show();
@@ -176,5 +195,180 @@ $(function(){
 	},function(){
 		   $(".number2").show();
 		   $(".gb_bt2").hide();
+	});
+	$(".app1").hover(function(){
+             $(this).find(".del-btn").show();
+	},function(){
+             $(this).find(".del-btn").hide();
+	});
+	$(".app2").hover(function(){
+             $(this).find(".del-btn").show();
+	},function(){
+             $(this).find(".del-btn").hide();
+	});
+	$(".app3").hover(function(){
+             $(this).find(".del-btn").show();
+	},function(){
+             $(this).find(".del-btn").hide();
+	});
+	$(".app4").hover(function(){
+             $(this).find(".del-btn").show();
+	},function(){
+             $(this).find(".del-btn").hide();
+	});
+	$(".app5").hover(function(){
+             $(this).find(".del-btn").show();
+	},function(){
+             $(this).find(".del-btn").hide();
+	});
+	$(".app6").hover(function(){
+             $(this).find(".del-btn").show();
+	},function(){
+             $(this).find(".del-btn").hide();
+	});
+	$(".app7").hover(function(){
+             $(this).find(".del-btn").show();
+	},function(){
+             $(this).find(".del-btn").hide();
+	});
+	$(".app8").hover(function(){
+             $(this).find(".del-btn").show();
+	},function(){
+             $(this).find(".del-btn").hide();
+	});
+	$(".app9").hover(function(){
+             $(this).find(".del-btn").show();
+	},function(){
+             $(this).find(".del-btn").hide();
+	});
+	$(".app10").hover(function(){
+             $(this).find(".del-btn").show();
+	},function(){
+             $(this).find(".del-btn").hide();
+	});
+	$(".app11").hover(function(){
+             $(this).find(".del-btn").show();
+	},function(){
+             $(this).find(".del-btn").hide();
+	});
+	$(".app12").hover(function(){
+             $(this).find(".del-btn").show();
+	},function(){
+             $(this).find(".del-btn").hide();
+	});
+	$(".app13").hover(function(){
+             $(this).find(".del-btn").show();
+	},function(){
+             $(this).find(".del-btn").hide();
+	});
+	$(".app14").hover(function(){
+             $(this).find(".del-btn").show();
+	},function(){
+             $(this).find(".del-btn").hide();
+	});
+	$(".app15").hover(function(){
+             $(this).find(".del-btn").show();
+	},function(){
+             $(this).find(".del-btn").hide();
+	});
+	$(".link1").click(function(){
+		$(".js-dress-list1").show();
+		$(".js-dress-list2").hide();
+		$(".js-dress-list3").hide();
+		$(".js-dress-list4").hide();
+	});
+	$(".link2").click(function(){
+		$(".js-dress-list1").hide();
+		$(".js-dress-list2").show();
+		$(".js-dress-list3").hide();
+		$(".js-dress-list4").hide();
+	});
+	$(".link3").click(function(){
+		$(".js-dress-list1").hide();
+		$(".js-dress-list2").hide();
+		$(".js-dress-list3").show();
+		$(".js-dress-list4").hide();
+	});
+	$(".link4").click(function(){
+		$(".js-dress-list1").hide();
+		$(".js-dress-list2").hide();
+		$(".js-dress-list3").hide();
+		$(".js-dress-list4").show();
+	});
+	$(".music-container").hover(function(){
+             $(this).find(".music-play").css("background-color","#e4e4e4");
+             $(this).find(".ico-music-play").css("background-position","-790px -150px");
+             $(this).find(".music-dynamic").css("background-color","#e4e4e4");       
+             $(this).find(".ico-music-dynamic").css("background-position","-790px -175px");
+	},function(){
+             $(this).find(".music-play").css("background-color","");
+             $(this).find(".ico-music-play").css("background-position","");
+             $(this).find(".music-dynamic").css("background-color","");
+             $(this).find(".ico-music-dynamic").css("background-position","");
+	});
+	$("#tb_setting_li").hover(function(){
+           $(this).parent().parent().find(".user-drop-down").show();
+	},function(){
+           $(this).parent().parent().find(".user-drop-down").hide();
+	});
+	$(".vip-setting").hover(function(){
+           $(this).parent().parent().find(".vip-drop-down").show();
+	},function(){
+           $(this).parent().parent().find(".vip-drop-down").hide();
+	});
+	$(".qz-poster-bd").click(function(){
+		$(".qz-poster-ft").show();
+		return false;
+	});
+	$(document).click(function(){
+		$(".qz-poster-ft").hide();
+	});
+	$(".emot").hover(function(){
+          $(".icon-emot").css("background-position","-464px -75px");
+	},function(){
+          $(".icon-emot").css("background-position","");
+	});
+	$(".at").hover(function(){
+          $(".icon-at").css("background-position","-464px -125px");
+	},function(){
+          $(".icon-at").css("background-position","");
+	});
+	$(".topic").hover(function(){
+          $(".icon-topic").css("background-position","-464px -175px");
+	},function(){
+          $(".icon-topic").css("background-position","");
+	});
+	$(".allside1").hover(function(){
+		$(".allsidepic1").css("background-position","-615px -25px");
+		$(".allside1").css("background-color","#f0f0f0");
+	},function(){
+        $(".allsidepic1").css("background-position","");
+		$(".allside1").css("background-color","");
+	});
+	$(".allside2").hover(function(){
+		$(".allsidepic2").css("background-position","-615px -75px");
+		$(".allside2").css("background-color","#f0f0f0");
+	},function(){
+        $(".allsidepic2").css("background-position","");
+		$(".allside2").css("background-color","");
+	});
+	$(".allside3").hover(function(){
+		$(".allsidepic3").css("background-position","-615px -125px");
+		$(".allside3").css("background-color","#f0f0f0");
+	},function(){
+        $(".allsidepic3").css("background-position","");
+		$(".allside3").css("background-color","");
+	});
+    $(".allside4").hover(function(){
+		$(".allsidepic4").css("background-position","-615px -175px");
+		$(".allside4").css("background-color","#f0f0f0");
+	},function(){
+        $(".allsidepic4").css("background-position","");
+		$(".allside4").css("background-color","");
+	});
+	$(".audience").hover(function(){
+        $(".allpeople").show();
+	},function(){
+        $(".allpeople").hide();
 	});
 });
