@@ -371,4 +371,72 @@ $(function(){
 	},function(){
         $(".allpeople").hide();
 	});
+        
+/*最右边第一个向左向右转换的幻灯片*/
+        BgIndex=1;
+   $(".p_prev").click(function(){
+		BgIndex--;
+		if(BgIndex==0)
+		{
+			BgIndex=3;
+		}
+		$(".QM_allsee_Body").hide();
+		$(".Body"+BgIndex).show();
+		
+	});
+	$(".p_next").click(function(){
+		BgIndex++;
+		if(BgIndex==4)
+		{
+			BgIndex=1;
+		}
+		$(".QM_allsee_Body").hide();
+		$(".Body"+BgIndex).show();
+		
+	});
+	/*最右边第二个向左向右转换的幻灯片*/
+        PrIndex=1;
+   $(".p_prev").click(function(){
+		PrIndex--;
+		if(PrIndex==0)
+		{
+			PrIndex=3;
+		}
+		$(".QM_present_Body").hide();
+		$(".present"+PrIndex).show();
+		
+	});
+	$(".p_next").click(function(){
+		PrIndex++;
+		if(PrIndex==4)
+		{
+			PrIndex=1;
+		}
+		$(".QM_present_Body").hide();
+		$(".present"+PrIndex).show();
+		
+	});
+    /*最右边第三个向左向右转换的幻灯片*/
+        FkIndex=1;
+   $(".prev3").click(function(){
+		FkIndex--;
+		if(FkIndex==0)
+		{
+			FkIndex=2;
+		}
+		$(".QM_fangke_Body").hide();
+		$(".fangke"+FkIndex).show();
+		
+	});
+	$(".next3").click(function(){
+		FkIndex++;
+		if(FkIndex==3)
+		{
+			FkIndex=1;
+		}
+		$(".QM_fangke_Body").hide();
+		$(".fangke"+FkIndex).show();
+		
+	});
+
 });
