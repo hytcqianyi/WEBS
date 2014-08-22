@@ -171,6 +171,11 @@ $(function(){
 		{
 			$("#sidebar-ic-fixed").css("position", "fixed");
 		}
+		else 
+		{
+
+			$("#sidebar-ic-fixed").css("position", "");
+		}
 	});
 	$("#tab_switch").click(function(){
 		     $("#tab_switch").hide();
@@ -438,5 +443,69 @@ $(function(){
 		$(".fangke"+FkIndex).show();
 		
 	});
-
+      
+      /*当鼠标点到回复框架的拾货转换另外一种形式的对话框*/
+      $(".poster1").click(function(){
+      	 $(".poster1").hide();
+      	 $(".wrap1").show();
+      	 return false
+      });
+     $(document).click(function(){
+     	 $(".poster1").show();
+		$(".wrap1").hide();
+	});
+     $(".poster2").click(function(){
+      	 $(".poster2").hide();
+      	 $(".wrap2").show();
+      	 return false
+      });
+     $(document).click(function(){
+     	 $(".poster2").show();
+		$(".wrap2").hide();
+	});
+       $(".poster3").click(function(){
+      	 $(".poster3").hide();
+      	 $(".wrap3").show();
+      	 return false
+      });
+     $(document).click(function(){
+     	 $(".poster3").show();
+		$(".wrap3").hide();
+	});
+     $(".poster4").click(function(){
+      	 $(".poster4").hide();
+      	 $(".wrap4").show();
+      	 return false
+      });
+     $(document).click(function(){
+     	 $(".poster4").show();
+		$(".wrap4").hide();
+	});
+     $(".poster5").click(function(){
+      	 $(".poster5").hide();
+      	 $(".wrap5").show();
+      	 return false
+      });
+     $(document).click(function(){
+     	 $(".poster5").show();
+		$(".wrap5").hide();
+	});
+     $(".poster6").click(function(){
+      	 $(".poster6").hide();
+      	 $(".wrap6").show();
+      	 return false
+      });
+     $(document).click(function(){
+     	 $(".poster6").show();
+		$(".wrap6").hide();
+	});
+     $(".poster7").click(function(){
+      	 $(".poster7").hide();
+      	 $(".wrap7").show();
+      	 return false
+      });
+     $(document).click(function(){
+     	 $(".poster7").show();
+		$(".wrap7").hide();
+	});
 });
