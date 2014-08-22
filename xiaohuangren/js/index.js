@@ -29,4 +29,29 @@ $(function(){
         },function(){
                 $(".logoF").css("background-position","");
         });
+        $(".more").hover(function(){
+                 $(".con-list").show();
+        },function(){
+                 $(".con-list").hide();
+        });
+        $(".ca1").hover(function(){
+                 $(".subnav1").show();
+        },function(){
+                 $(".subnav1").hide();
+        });
+         $(".ca2").hover(function(){
+                 $(".subnavspecial").show();
+        },function(){
+                 $(".subnavspecial").hide();
+        });
+         $(".ca3").hover(function(){
+                 $(".subnavplay").show();
+        },function(){
+                 $(".subnavplay").hide();
+        });
+         $(".ca4").hover(function(){
+                 $(".ubnavusergroup").show();
+        },function(){
+                 $(".ubnavusergroup").hide();
+        });
 });

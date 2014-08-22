@@ -83,7 +83,7 @@
                         </div>
                     </div>
                 </li>
-                <li id="menumobile"><div class="menubdA"><a href="#">手机逛淘宝</a></div></li>
+                <li id="menumobile"><div class="menubdB"><a href="#">手机逛淘宝</a></div></li>
             </ul>
             <ul id="headermidRight">
                <li class="menuhome"><div class="menuhd"><a href="#" class="h">淘宝网首页</a></div></li>
@@ -91,6 +91,16 @@
                   <div class="menuhd">
                       <a href="#" id="taobao">我的淘宝</a>
                       <span class="xia"></span>
+                  </div>
+                  <div class="menuhdr1">
+                    <div class="menuhdr1panel">
+                      <a href="#">已买到的宝贝</a>
+                      <a href="#">爱逛街</a>
+                      <a href="#">拾货</a>
+                      <a href="#">我的足迹</a>
+                      <a href="#">我的上新</a>
+                       <a href="#">新欢</a>
+                    </div>
                   </div>
                </li>
                <li class="gouwuche">
@@ -101,6 +111,16 @@
                      </a>
                      <span class="xia"></span>
                   </div>
+                  <div class="menuhdr2">
+                    <div class="menuhdr2panel">
+                      <div class="mincartft">
+                        <p>
+                          您购物车里还没有任何宝贝。
+                          <a href="#">查看我的购物车</a>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
                </li>
                <li class="shoucangjia">
                   <div class="menuhd">
@@ -109,6 +129,12 @@
                        <span  id="shoucang">收藏夹</span>
                     </a>
                     <span class="xia"></span>
+                  </div>
+                  <div class="menuhdr3">
+                    <div class="menuhdr3panel">
+                      <a href="#">收藏的宝贝</a>
+                      <a href="#">收藏的店铺</a>
+                    </div>
                   </div>
                </li>
                <li class="shangpin">
@@ -121,6 +147,15 @@
                  <div class="menuhd">
                      <a href="#" id="zhongxin">卖家中心</a>
                      <span class="xia"></span>
+                 </div>
+                 <div class="menuhdr4">
+                     <div class="menhdr4panel">
+                        <a href="#">免费开店</a>
+                        <a href="#">已卖出的宝贝</a>
+                        <a href="#">出售中的宝贝</a>
+                        <a href="#">卖家服务市场</a>
+                        <a href="#">卖家培训中心</a>
+                     </div>
                  </div>
                </li>
                <li class="lianxi">
@@ -143,13 +178,92 @@
     <div id="headerB">
         <article>
             <div class="Blogo">
-                
+                <a href="#" class="Btblogo" title="我的淘宝"><img src="images/mytaobao.png"></a>
             </div>
-            <nav class="Bnav"></nav>
-            <a href="#" id="Bnavside"></a>
+            <nav class="Bnav">
+              <ul id="B_MainNav">
+                <li><a href="#">首页</a></li>
+                <li><a href="#">个人主页</a></li>
+                <li class="B_NavSubTrigger">
+                  <a href="#" class="B_nav_parent">账户设置<i><em></em><s></s></i></a>
+                </li>
+                <li><a href="#" class="B_nav_parent">消息</a></li>
+              </ul>
+              <div class="search">
+                <div class="search-panel">
+                  <form class="search-panel-focused">
+                    <div class="search-button">
+                      <button class="btn-search">搜 索</button>
+                    </div>
+                    <div class="search-panel-fields">
+                      <div class="search-combobox">
+                        <div class="search-combobox-input-wrap">
+                          <input  id="p">
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </nav>
         </article>
     </div>
-    <div id="content"></div>
+    <div id="content">
+      <div id="mytaobao_panel">
+        <!-- 内容的右侧 -->
+        <div class="col_main"></div>
+
+        <!-- 内容的左侧 -->
+        <div class="col_sub">
+          <aside class="mt_menu">
+            <div class="mt-menu-tree">
+              <dl class="mt-menu-item">
+                <dt class="mytrade">我的交易</dt>
+                <dd><a href="#">我的购物车</a></dd>
+                <dd class="mt-menu-sub">
+                  <b class="mt-indicator">-</b>
+                  <a id="bought">已买到的宝贝</a>
+                  <ul class="mt-menu-sub-content cont1" isopen="false">
+                    <li id="paimai"><a href="#">我的拍卖</a></li>
+                    <li id="jipiao"><a href="#">机票酒店保险</a></li>
+                    <li id="caipiao"><a href="#">我的彩票</a></li>
+                    <li id="gamebuy"><a href="#">我的游戏</a></li>
+                    <li id="ebookbuy"><a href="#">我的电子书</a></li>
+                    <li id="finance"><a href="#">我的理财</a></li>
+                    <li id="trade1688"><a href="#">我的1688订单</a></li>
+                  </ul>
+                </dd>
+                <dd id="boughtShop"><a href="#">购买过的店铺</a></dd>
+                <dd id="favourite"><a href="#">我的收藏</a></dd>
+                <dd id="point"><a href="#">我的积分</a></dd>
+                <dd id="gotBonus"><a href="#">我的优惠信息</a></dd>
+                <dd id="myRate"><a href="#">评价管理</a></dd>
+                <dd id="mt-menu-sub">
+                  <b class="mt-indicator2">+</b>
+                  <a id="bought">退款维权</a>
+                  <ul class="mt-menu-sub-content cont2">
+                    <li id="refundList"><a href="#">退款管理</a></li>
+                    <li id="rightManager"><a href="#">售后管理</a></li>
+                    <li id="rulesManager"><a href="#">投诉管理</a></li>
+                    <li id="postedSuit"><a href="#">举报管理</a></li>
+                    <li id="leaveWord"><a href="#">咨询/回复</a></li>
+                  </ul>
+                </dd>
+                <dd><a href="#">我的足迹<i class="icon-new"></i></a></dd>
+              </dl>
+              <dl class="mt-menu-item">
+                <dt>最近访问</dt>
+                <dd><a href="#">淘宝我帮你</a></dd>
+                <dd><a href="#">夜淘宝</a></dd>
+                <dd><a href="#">淘金币</a></dd>
+                <dd><a href="#">品牌街</a></dd>
+              </dl>
+            </div>
+          </aside>
+        </div>
+      </div>
+      <div id="content_bottom"></div>
+    </div>
     <div id="footer"></div>
 </body>
 </html>
