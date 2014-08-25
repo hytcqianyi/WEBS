@@ -1,33 +1,438 @@
 $(function(){
-	$("#tb-index").hover(function(){
-          $(this).find(".navdropdown").show();
-	},function(){
-          $(this).find(".navdropdown").hide();
-         
+	//弹出我的主页，好友，应用，装扮窗口,为什么要分成两部分写？因为当菜单下拉恢复原状态不需要延迟时间
+	$("#tb-index,#tb-friend,#tb-app,#tb-dress").each(function(){
+	    var that = $(this);
+	    that.hoverDelay({
+            outDuring: 500,/*点击时反映的延迟秒数*/
+            hoverEvent: function(){/*触发时间*/
+              that.find(".navdropdown").stop().slideDown(250);/*下拉的时间*/
+       /*hover一次就向时间中加入一个下拉事件，经过他就会闪，stop（）就是停止当前队列中的时间，然后执行后面的slideDown的事件*/
+              that.find(".a-link").addClass("current");/*增加一个类，使点击的那个div的css式样改变*/
+            },
+            outEvent: function(){
+            }
+        });
 	});
-	$("#tb-friend").hover(function(){
-          $(this).find(".navdropdown").show();
-	},function(){
-          $(this).find(".navdropdown").hide();
-         
+	$("#tb-index,#tb-friend,#tb-app,#tb-dress").each(function(){
+	    var that = $(this);
+	    that.hoverDelay({
+            outDuring: 0,
+            hoverEvent: function(){
+            },
+            outEvent: function(){
+            	that.find(".a-link").removeClass("current");
+                that.find(".navdropdown").stop().slideUp(150);/*下拉菜单往上收缩的时间*/
+            }
+        });
 	});
-	
-	$("#tb-app").hover(function(){
-          $(this).find(".navdropdown").show();
-	},function(){
-          $(this).find(".navdropdown").hide();
-         
+	//弹出设置，黄钻窗口
+	$("#tb_setting_li").each(function(){
+	    var that = $(this);
+	    that.hoverDelay({
+            outDuring: 100,
+            hoverEvent: function(){
+              that.find(".user-drop-down").stop().slideDown(250);
+              that.css("background-color","#fff");
+              that.find(".drop-down-arrow").css("background-position","-715px -75px");
+            },
+            outEvent: function(){
+            	that.css("background-color","");
+            	that.find(".drop-down-arrow").css("background-position","");
+            	that.find(".user-drop-down").stop().slideUp(150);
+            }
+        });
 	});
-	$("#tb-dress").hover(function(){
-          $(this).find(".navdropdown").show();
-	},function(){
-          $(this).find(".navdropdown").hide();
-         
+	$("#tb_vip_li").each(function(){
+	    var that = $(this);
+	    that.hoverDelay({
+            outDuring: 0,
+            hoverEvent: function(){
+            	that.find(".vip-drop-down").stop().slideDown(250);
+            	that.css("background-color","#fff");
+            },
+            outEvent: function(){
+            	that.css("background-color","");
+                that.find(".vip-drop-down").stop().slideUp(150);
+            }
+        });
 	});
 
-	$(".textinput").hover(function(){
+
+	//显示发表说说框子的底部选项
+	$(".textinput").click(function(){
 		$(".qz-poster-ft").show();
+		return false;
 	});
+	//发表说说
+	$("#QM_Mood_Poster_Inner .op").click(function(){
+		var content=$("#QM_Mood_Poster_Inner").find(".textinput").val();
+		/*定义一个类content，获取发表框中写的内容*/
+	 /*val语法：若字符串内出现非数字字符，那么只转换非数字字符前面的部分；若字符串的首字符不是数字符号，则返回数值零，但忽略前导空格。*/
+		if(content!="" && content!=null){
+			var nowTime=new Date();
+			var hour=nowTime.getHours()<10?"0"+nowTime.getHours():nowTime.getHours();
+			var minute=nowTime.getMinutes()<10?"0"+nowTime.getMinutes():nowTime.getMinutes();
+			$(this).find("a").attr("href","#feed_friend");
+			var html="";
+			html+='<li class="f-single f-s-s">';
+			html+=' <div class="f-aside">';
+			html+='<div class="f-user-pto">';
+			html+='<a class="gerenlogo">';
+			html+=' <img src="images/100.jpg" width="50px" height="50px">';
+			html+='</a>';
+			html+='</div>';
+			html+='<div class="f-user-info">';
+			html+='<div class="f-nick">';
+			html+='<a class="f-name">竹路轻尘</a>';
+			html+='</div>';
+			html+='<div class="info-detail">';
+			html+='<span class=" ui-mr8 state">'+hour+':'+minute+'</span>';
+			html+='</div>';
+			html+='</div>';
+			html+='</div>';
+			html+='<div class="f-wrap">';
+			html+='<div class="f-item">';
+			html+='<div class="f-info">'+content;
+			html+='</div>';
+			html+=' <div class="qz_summary">';
+			html+=' <div class="f-op-wrap">';
+			html+=' <p class="f-detail">';
+			html+=' <a class=" qz_btn_reply1 itemN">';
+			html+='<i class="ui-icon icon-comment"></i>';
+			html+='评论</a>';
+			html+=' <span class="item-line">|</span>'; 
+			html+='<a class=" qz_btn_reply2 itemN">';  
+			html+='<i class="ui-icon icon-forward"></i>';  
+			html+=' 转发';  
+			html+='</a>';  
+			html+='<span class="item-line">|</span>';  
+			html+=' <a class=" qz_btn_reply3 itemN">';  
+			html+='<i class="ui-icon icon-praise"></i>';  
+			html+=' 赞';  
+			html+=' </a>';  
+			html+=' <span class="item-line">|</span>';  
+			html+='<a class=" qz_btn_reply4 itemN">';  
+			html+=' <i class="ui-icon icon-collect"></i>';  
+			html+='</a>';   
+			html+='<span class="item-line">|</span>';  
+			html+='<a class="itemN item-sp">';                                                        
+			html+=' <i class="ui-icon icon-more"></i>';  
+			html+='</a>';  
+			html+='</p>';  
+			html+='<div class="mod-comments">';  
+			html+=' <div class="mod-commnets-poster poster1" >';  
+			html+='<div class="comments-poster-bd">';  
+			html+='<div class="comments-box">';  
+			html+='<div class="textinputN" placeholder="我也说一句">';      
+			html+='<a class="c_tx3">我也说一句</a> ';     
+			html+='</div>';     
+			html+='<div class="mod-insert-img bor2">';     
+			html+=' <a class="btn-insert-img bg">';                       
+			html+='<i class="icon-camera-16"></i>';     
+			html+='</a>';     
+			html+=' <div class="btn-insert-imgXL">';     
+			html+=' <div class="imgXLL">';     
+			html+=' <i class="imgXLLcamera"></i>';     
+			html+='  <span class="imgXLLwordA">本地</span>';      
+			html+='</div>';  
+			html+='<div class="imgXLR">';  
+			html+='<i class="imgXLLphoto"></i>';                   
+			html+=' <span class="imgXLLwordB">相册</span>';  
+			html+=' </div>';  
+			html+='</div>';  
+			html+=' </div>';    
+			html+=' <div class="mod-quick-comment bor2">';   
+			html+='<a class="btn-quick-comment bg">';                      
+			html+='<i class="icon-flash"></i>';   
+			html+='</a>';   
+			html+='</div>';   
+			html+='</div>';   
+			html+='</div>';                              
+			html+=' </div>';   
+			html+='<div class="comment-box-wrap wrap1">';   
+			html+=' <div class="qz-poster-active">';   
+			html+=' <div class="qz-poster-inner">';   
+			html+='<div class="qz-poster-hf">';   
+			html+='<div class="qz-poster-editor-cont">';   
+			html+='<div class="qz-input bor2">';   
+			html+='<div idprefix="$6">';   
+			html+='  <textarea class="textinput replytext"></textarea>';   
+			html+='</div>';       
+			html+='</div>';   
+			html+='<div class="qz-poster-attach-sider">';                         
+			html+='<div class="item item-pict">';   
+			html+='<a href="#" class="pic">';   
+			html+='<i class="icon icon-pic"></i>';   
+			html+='</a>';   
+			html+='</div>';   
+			html+='</div> ';   
+			html+='</div>';   
+			html+='</div>';   
+			html+='<div class="qz-poster-fb">';     
+			html+=' <div class="qz-poster-attach">';    
+			html+='<div class="qzaddons">';                        
+			html+='<a href="javascript:void(0);" class="emot c_tx3">';    
+			html+='<i class="icon-emot"></i>';    
+			html+=' <i class="icon-red-dot"></i>';    
+			html+=' </a>';    
+			html+='<a href="javascript:void(0);" class="at c_tx3">';    
+			html+='<i class="icon-at"></i>';    
+			html+=' </a>';    
+			html+=' </div>';  
+			html+='</div>';    
+			html+='<div class="qz-poster-synctalk">';    
+			html+='<div class="sync-nutstalk">';
+			html+='<span class="ui-checkbox ">';    
+			html+='<div  class="checkboxStyle"></div>';    
+			html+='<i>私密评论</i>';
+			html+='</span>';    
+			html+='</div>';    
+			html+='</div> ';
+			html+='<div class="op">';    
+			html+='<a href="javascript:void(0)" class="btn-post">';    
+			html+='<i class="icon-loading"></i>';   
+			html+=' <span class="txtfb">发表</span>';    
+			html+='</a>';  
+			html+='  </div>';    
+			html+=' </div>';  
+			html+='</div>';    
+			html+='</div>';  
+			html+='</div>';    
+			html+='</div> '; 
+			html+=' </div>'; 
+			html+=' </div>';                                                                   
+			html+='</div>'; 
+			html+='</li>'; 
+			$("#feed_friend_list").prepend(html);
+			$("#QM_Mood_Poster_Inner").find(".textinput").val("");
+		}else{
+			return false;
+		}
+	});
+
+	$(document).on("click",".qz_btn_reply1",function(){
+		$(this).parent().parent().find(".mod-commnets-poster").hide();
+		$(this).parent().parent().find(".comment-box-wrap").show();
+		return false;
+	});
+
+	//选中复选框
+	$(document).on("click",".checkboxStyle",function(){
+		var checkboxvalue=$(this).attr("value");
+		if(checkboxvalue=="notchecked"){
+			$(this).css({"background-position":"-440px -150px"});
+			$(this).attr("value","checked");
+		}else{
+			$(this).css("background-position","");
+			$(this).attr("value","notchecked");
+		}
+	});
+	//回复说说
+	$(document).on("click",".comment-box-wrap .qz-poster-fb .op",function(){
+		var replyContent=$(this).parent().parent().find(".textinput").val();
+		if(replyContent!=""){
+			var html="";
+			var ppppp=$(this).parent().parent().parent().parent().parent();
+			var nowTime=new Date();
+			var hour=nowTime.getHours()<10?"0"+nowTime.getHours():nowTime.getHours();
+			var minute=nowTime.getMinutes()<10?"0"+nowTime.getMinutes():nowTime.getMinutes();
+			if(ppppp.find(".Maincomments-list").attr("class")==null){
+				html+='<div class="comments-list Maincomments-list">';
+                html+='  <ul class="comments-listul">';
+                html+='<li class="comments-item">';
+				html+='<div class="comments-item-bd comments-item-bbd">';
+				html+='<div class="ui-avatar"><a href="#"><img src="images/100.jpg"></a></div>';
+				html+='<div class="comments-content">';
+				html+='&nbsp;';
+				html+=' <a href="#" class="c_tx">竹路轻尘 </a>';
+				html+='&nbsp;:&nbsp;'+replyContent;
+				html+=' <div class="comments-op">';
+				html+='<span class="ui-mr10 state">'+hour+':'+minute+'</span>';
+				html+=' <a class="act-reply"></a>';
+				html+='</div>';
+				html+='</div>';
+				html+='</div>';
+				html+='</li>';
+				html+='</ul>';
+				html+='</div>';
+				ppppp.prepend(html);
+			}else{
+     		    html+='<li class="comments-item">';
+				html+='<div class="comments-item-bd comments-item-bbd">';
+				html+='<div class="ui-avatar"><a href="#"><img src="images/100.jpg"></a></div>';
+				html+='<div class="comments-content">';
+				html+='&nbsp;';
+				html+=' <a href="#" class="c_tx">竹路轻尘 </a>';
+				html+='&nbsp;:&nbsp;'+replyContent;
+				html+=' <div class="comments-op">';
+				html+='<span class="ui-mr10 state">'+hour+':'+minute+'</span>';
+				html+=' <a class="act-reply"></a>';
+				html+='</div>';
+				html+='</div>';
+				html+='</div>';
+				html+='</li>';
+				ppppp.find(".Maincomments-list .comments-listul").append(html);
+			}	
+		}
+		$(this).parent().parent().find(".textinput").val("")
+	});
+
+	//回复的回复框
+	$(document).on("click",".act-reply",function(){
+		$(".comment-box-wrap").hide();
+      	$(".mod-commnets-poster").hide();
+		if($(this).parent().parent().parent().parent().find(".comment-box-swrap").attr("class")==null){
+			var html="";                                         
+			html+='<div class="comment-box-swrap">';
+			html+='<div class="qz-poster-active">';
+			html+='<div class="qz-poster-inner">';
+			html+='<div class="qz-poster-hf">';
+			html+='<div class="qz-poster-editor-cont">';
+			html+='<div class="qz-input bor2">';
+			html+='<div idprefix="$6">';
+			html+='<textarea class="textinput replytext"></textarea>';
+			html+=' </div>';
+			html+='</div>';
+			html+='</div>';
+			html+='</div>';
+			html+='<div class="qz-poster-fb">';
+			html+='<div class="qz-poster-attach">';
+			html+='<div class="qzaddons">';
+			html+='<a href="javascript:void(0);" class="emot c_tx3">';
+			html+=' <i class="icon-emot"></i>';
+			html+='<i class="icon-red-dot"></i>';
+			html+='</a>';
+			html+='  <a href="javascript:void(0);" class="at c_tx3">';
+			html+=' <i class="icon-at"></i>';
+			html+='</a>';
+			html+='</div>';
+			html+=' </div>';
+			html+='<div class="op">';
+			html+=' <a href="javascript:void(0)" class="btn-post">';
+			html+=' <i class="icon-loading"></i>';
+			html+='  <span class="txtfb">发表</span>';
+			html+='</a>';
+			html+=' </div>';
+			html+='</div>';
+			html+='</div>';
+			html+=' </div>';
+			html+='</div>';
+			$(this).parent().parent().parent().parent().find(".comments-item-bbd").append(html);
+			$(this).parent().parent().parent().parent().find(".comment-box-swrap").show();
+		}else{
+			$(this).parent().parent().parent().parent().find(".comment-box-swrap").show();
+		}
+		return false;
+	});
+	//回复的回复框
+	$(document).on("click",".act-replyS",function(){
+		$(".comment-box-wrap").hide();
+      	$(".mod-commnets-poster").hide();
+		if($(this).parent().parent().parent().parent().parent().parent().parent().parent().find(".comment-box-swrap").attr("class")==null){
+			var html="";                                         
+			html+='<div class="comment-box-swrap">';
+			html+='<div class="qz-poster-active">';
+			html+='<div class="qz-poster-inner">';
+			html+='<div class="qz-poster-hf">';
+			html+='<div class="qz-poster-editor-cont">';
+			html+='<div class="qz-input bor2">';
+			html+='<div idprefix="$6">';
+			html+='<textarea class="textinput replytext"></textarea>';
+			html+=' </div>';
+			html+='</div>';
+			html+='</div>';
+			html+='</div>';
+			html+='<div class="qz-poster-fb">';
+			html+='<div class="qz-poster-attach">';
+			html+='<div class="qzaddons">';
+			html+='<a href="javascript:void(0);" class="emot c_tx3">';
+			html+=' <i class="icon-emot"></i>';
+			html+='<i class="icon-red-dot"></i>';
+			html+='</a>';
+			html+='  <a href="javascript:void(0);" class="at c_tx3">';
+			html+=' <i class="icon-at"></i>';
+			html+='</a>';
+			html+='</div>';
+			html+=' </div>';
+			html+='<div class="op">';
+			html+=' <a href="javascript:void(0)" class="btn-post">';
+			html+=' <i class="icon-loading"></i>';
+			html+='  <span class="txtfb">发表</span>';
+			html+='</a>';
+			html+=' </div>';
+			html+='</div>';
+			html+='</div>';
+			html+=' </div>';
+			html+='</div>';
+			$(this).parent().parent().parent().parent().parent().parent().parent().parent().find(".comments-item-bbd").append(html);
+			$(this).parent().parent().parent().parent().parent().parent().parent().parent().find(".comment-box-swrap").show();
+		}else{
+			$(this).parent().parent().parent().parent().parent().parent().parent().parent().find(".comment-box-swrap").show();
+		}
+		return false;
+	});
+	$(document).on("click",".comment-box-swrap",function(){
+		$(".mod-commnets-poster").hide();
+		$(this).show();
+		return false;
+	});
+
+	//回复的回复
+	$(document).on("click",".comment-box-swrap .qz-poster-fb .op",function(){
+		var replyContent=$(this).parent().parent().find(".replytext").val();
+		if(replyContent!=""){
+			var html="";
+			var ppppp=$(this).parent().parent().parent().parent().parent();
+			var nowTime=new Date();
+			var hour=nowTime.getHours()<10?"0"+nowTime.getHours():nowTime.getHours();
+			var minute=nowTime.getMinutes()<10?"0"+nowTime.getMinutes():nowTime.getMinutes();
+			if(ppppp.find(".comments-list").attr("class")==null){
+				html+='<div class="comments-list mod-comments-sub">';
+                html+='  <ul>';
+                html+='<li class="comments-item">';
+				html+='<div class="comments-item-bd">';
+				html+='<div class="ui-avatar"><a href="#"><img src="images/100.jpg"></a></div>';
+				html+='<div class="comments-content">';
+				html+='&nbsp;';
+				html+=' <a href="#" class="c_tx">竹路轻尘 </a>';
+				html+='&nbsp;:&nbsp;'+replyContent;
+				html+=' <div class="comments-op">';
+				html+='<span class="ui-mr10 state">'+hour+':'+minute+'</span>';
+				html+=' <a class="act-reply act-replyS"></a>';
+				html+='</div>';
+				html+='</div>';
+				html+='</div>';
+				html+='</li>';
+				html+='</ul>';
+				html+='</div>';
+				ppppp.append(html);
+				$(".mod-commnets-poster").show();
+				ppppp.find(".comment-box-swrap").remove();
+			}else{
+     		    html+='<li class="comments-item">';
+				html+='<div class="comments-item-bd">';
+				html+='<div class="ui-avatar"><a href="#"><img src="images/100.jpg"></a></div>';
+				html+='<div class="comments-content">';
+				html+='&nbsp;';
+				html+=' <a href="#" class="c_tx">竹路轻尘 </a>';
+				html+='&nbsp;:&nbsp;'+replyContent;
+				html+=' <div class="comments-op">';
+				html+='<span class="ui-mr10 state">'+hour+':'+minute+'</span>';
+				html+=' <a class="act-reply act-replyS"></a>';
+				html+='</div>';
+				html+='</div>';
+				html+='</div>';
+				html+='</li>';
+				ppppp.find(".comments-list ul").append(html);
+				$(".mod-commnets-poster").show();
+				ppppp.find(".comment-box-swrap").remove();
+			}
+		}
+	});
+
+
+
+
 	$(".item-on").hover(function(){
 		$(".tab-bubble").show();
 	},function(){
@@ -45,25 +450,10 @@ $(function(){
            $(".icon-set").css("background-position","")
 	});
 
-	$(".qz_btn_reply1").hover(function(){
-		$(".qz_btn_reply1").css("border","1px solid #d9d9d9");
+	$(".f-detail .itemN").hover(function(){
+		$(this).css("border","1px solid #d9d9d9");
 	},function(){
-        $(".qz_btn_reply1").css("border","")
-	});
-	$(".qz_btn_reply2").hover(function(){
-		$(".qz_btn_reply2").css("border","1px solid #d9d9d9");
-	},function(){
-        $(".qz_btn_reply2").css("border","")
-	});
-	$(".qz_btn_reply3").hover(function(){
-		$(".qz_btn_reply3").css("border","1px solid #d9d9d9");
-	},function(){
-        $(".qz_btn_reply3").css("border","")
-	});
-	$(".qz_btn_reply4").hover(function(){
-		$(".qz_btn_reply4").css("border","1px solid #d9d9d9");
-	},function(){
-        $(".qz_btn_reply4").css("border","")
+        $(this).css("border","")
 	});
 	$(".item-sp").hover(function(){
 		$(".item-sp").css("border","1px solid #d9d9d9");
@@ -94,50 +484,10 @@ $(function(){
 	},function(){
           $(".deleteoption").hide();
 	});
-	$(".item1").hover(function(){
-          $(".item11").show();
+	$(".user-item").hover(function(){
+          $(this).find(".deletevisitor").show();
 	},function(){
-          $(".item11").hide();
-	});
-	$(".item2").hover(function(){
-          $(".item22").show();
-	},function(){
-          $(".item22").hide();
-	});
-	$(".item3").hover(function(){
-          $(".item33").show();
-	},function(){
-          $(".item33").hide();
-	});
-	$(".item4").hover(function(){
-          $(".item44").show();
-	},function(){
-          $(".item44").hide();
-	});
-	$(".item5").hover(function(){
-          $(".item55").show();
-	},function(){
-          $(".item55").hide();
-	});
-	$(".item6").hover(function(){
-          $(".item66").show();
-	},function(){
-          $(".item66").hide();
-	});
-	$(".item7").hover(function(){
-          $(".item77").show();
-	},function(){
-          $(".item77").hide();
-	});
-	$(".item8").hover(function(){
-          $(".item88").show();
-	},function(){
-          $(".item88").hide();
-	});
-	$(".item9").hover(function(){
-          $(".item99").show();
-	},function(){
-          $(".item99").hide();
+          $(this).find(".deletevisitor").hide();
 	});
 
 	$(".title").click(function(){
@@ -177,12 +527,12 @@ $(function(){
 			$("#sidebar-ic-fixed").css("position", "");
 		}
 	});
-	$("#tab_switch").click(function(){
+	$("#tab_switch").mouseover(function(){
 		     $("#tab_switch").hide();
              $("#tab_hide_list").show();
 	
 	});
-	$("#tab_switch2").click(function(){
+	$("#tab_switch2").mouseover(function(){
 		     $("#tab_switch2").hide();
              $("#tab_hide_list2").show();
 	
@@ -201,104 +551,16 @@ $(function(){
 		   $(".number2").show();
 		   $(".gb_bt2").hide();
 	});
-	$(".app1").hover(function(){
+
+	$(".tb_recent_app_list li").hover(function(){
              $(this).find(".del-btn").show();
 	},function(){
              $(this).find(".del-btn").hide();
 	});
-	$(".app2").hover(function(){
-             $(this).find(".del-btn").show();
-	},function(){
-             $(this).find(".del-btn").hide();
-	});
-	$(".app3").hover(function(){
-             $(this).find(".del-btn").show();
-	},function(){
-             $(this).find(".del-btn").hide();
-	});
-	$(".app4").hover(function(){
-             $(this).find(".del-btn").show();
-	},function(){
-             $(this).find(".del-btn").hide();
-	});
-	$(".app5").hover(function(){
-             $(this).find(".del-btn").show();
-	},function(){
-             $(this).find(".del-btn").hide();
-	});
-	$(".app6").hover(function(){
-             $(this).find(".del-btn").show();
-	},function(){
-             $(this).find(".del-btn").hide();
-	});
-	$(".app7").hover(function(){
-             $(this).find(".del-btn").show();
-	},function(){
-             $(this).find(".del-btn").hide();
-	});
-	$(".app8").hover(function(){
-             $(this).find(".del-btn").show();
-	},function(){
-             $(this).find(".del-btn").hide();
-	});
-	$(".app9").hover(function(){
-             $(this).find(".del-btn").show();
-	},function(){
-             $(this).find(".del-btn").hide();
-	});
-	$(".app10").hover(function(){
-             $(this).find(".del-btn").show();
-	},function(){
-             $(this).find(".del-btn").hide();
-	});
-	$(".app11").hover(function(){
-             $(this).find(".del-btn").show();
-	},function(){
-             $(this).find(".del-btn").hide();
-	});
-	$(".app12").hover(function(){
-             $(this).find(".del-btn").show();
-	},function(){
-             $(this).find(".del-btn").hide();
-	});
-	$(".app13").hover(function(){
-             $(this).find(".del-btn").show();
-	},function(){
-             $(this).find(".del-btn").hide();
-	});
-	$(".app14").hover(function(){
-             $(this).find(".del-btn").show();
-	},function(){
-             $(this).find(".del-btn").hide();
-	});
-	$(".app15").hover(function(){
-             $(this).find(".del-btn").show();
-	},function(){
-             $(this).find(".del-btn").hide();
-	});
-	$(".link1").click(function(){
-		$(".js-dress-list1").show();
-		$(".js-dress-list2").hide();
-		$(".js-dress-list3").hide();
-		$(".js-dress-list4").hide();
-	});
-	$(".link2").click(function(){
-		$(".js-dress-list1").hide();
-		$(".js-dress-list2").show();
-		$(".js-dress-list3").hide();
-		$(".js-dress-list4").hide();
-	});
-	$(".link3").click(function(){
-		$(".js-dress-list1").hide();
-		$(".js-dress-list2").hide();
-		$(".js-dress-list3").show();
-		$(".js-dress-list4").hide();
-	});
-	$(".link4").click(function(){
-		$(".js-dress-list1").hide();
-		$(".js-dress-list2").hide();
-		$(".js-dress-list3").hide();
-		$(".js-dress-list4").show();
+	$(".topic-link").mouseover(function(){
+		var num=$(this).attr("class").split("link link")[1];
+		$(".dress-list").hide();
+		$(".js-dress-list"+num).show();
 	});
 	$(".music-container").hover(function(){
              $(this).find(".music-play").css("background-color","#e4e4e4");
@@ -311,35 +573,23 @@ $(function(){
              $(this).find(".music-dynamic").css("background-color","");
              $(this).find(".ico-music-dynamic").css("background-position","");
 	});
-	$("#tb_setting_li").hover(function(){
-           $(this).parent().parent().find(".user-drop-down").show();
-	},function(){
-           $(this).parent().parent().find(".user-drop-down").hide();
-	});
-	$(".vip-setting").hover(function(){
-           $(this).parent().parent().find(".vip-drop-down").show();
-	},function(){
-           $(this).parent().parent().find(".vip-drop-down").hide();
-	});
+
 	$(".qz-poster-bd").click(function(){
 		$(".qz-poster-ft").show();
 		return false;
 	});
-	$(document).click(function(){
-		$(".qz-poster-ft").hide();
-	});
 	$(".emot").hover(function(){
-          $(".icon-emot").css("background-position","-464px -75px");
+          $(".icon-emot").css("background-position","-465px -75px");
 	},function(){
           $(".icon-emot").css("background-position","");
 	});
 	$(".at").hover(function(){
-          $(".icon-at").css("background-position","-464px -125px");
+          $(".icon-at").css("background-position","-465px -125px");
 	},function(){
           $(".icon-at").css("background-position","");
 	});
 	$(".topic").hover(function(){
-          $(".icon-topic").css("background-position","-464px -175px");
+          $(".icon-topic").css("background-position","-465px -175px");
 	},function(){
           $(".icon-topic").css("background-position","");
 	});
@@ -444,68 +694,53 @@ $(function(){
 		
 	});
       
-      /*当鼠标点到回复框架的拾货转换另外一种形式的对话框*/
-      $(".poster1").click(function(){
-      	 $(".poster1").hide();
-      	 $(".wrap1").show();
+      /*当鼠标点到回复框架的时候转换另外一种形式的对话框*/
+      $(document).on("click",".mod-commnets-poster,.comment-box-wrap",function(){
+      	 $(this).parent().parent().find(".comment-box-wrap").show();
+      	 $(this).parent().parent().find(".mod-commnets-poster").hide();
+      	 $(this).parent().parent().find(".textinput").focus();
       	 return false
       });
      $(document).click(function(){
-     	 $(".poster1").show();
-		$(".wrap1").hide();
+     	$(".comment-box-wrap").hide();
+     	$(".qz-poster-ft").hide();
+     	$(".comment-box-swrap").remove();
+      	$(".mod-commnets-poster").show();
+      	
 	});
-     $(".poster2").click(function(){
-      	 $(".poster2").hide();
-      	 $(".wrap2").show();
-      	 return false
-      });
-     $(document).click(function(){
-     	 $(".poster2").show();
-		$(".wrap2").hide();
-	});
-       $(".poster3").click(function(){
-      	 $(".poster3").hide();
-      	 $(".wrap3").show();
-      	 return false
-      });
-     $(document).click(function(){
-     	 $(".poster3").show();
-		$(".wrap3").hide();
-	});
-     $(".poster4").click(function(){
-      	 $(".poster4").hide();
-      	 $(".wrap4").show();
-      	 return false
-      });
-     $(document).click(function(){
-     	 $(".poster4").show();
-		$(".wrap4").hide();
-	});
-     $(".poster5").click(function(){
-      	 $(".poster5").hide();
-      	 $(".wrap5").show();
-      	 return false
-      });
-     $(document).click(function(){
-     	 $(".poster5").show();
-		$(".wrap5").hide();
-	});
-     $(".poster6").click(function(){
-      	 $(".poster6").hide();
-      	 $(".wrap6").show();
-      	 return false
-      });
-     $(document).click(function(){
-     	 $(".poster6").show();
-		$(".wrap6").hide();
-	});
-     $(".poster7").click(function(){
-      	 $(".poster7").hide();
-      	 $(".wrap7").show();
-      	 return false
-      });
-     $(document).click(function(){
-     	 $(".poster7").show();
-		$(".wrap7").hide();
-	});
-});
+ });
+
+
+
+
+
+
+
+
+
+/*定义一个类hoverDelay*/
+(function($){
+    $.fn.hoverDelay = function(options){
+        var defaults = {
+            hoverDuring: 200,
+            outDuring: 200,
+            hoverEvent: function(){
+                $.noop();
+            },
+            outEvent: function(){
+                $.noop();    
+            }
+        };
+        var sets = $.extend(defaults,options || {});
+        var hoverTimer, outTimer;
+        return $(this).each(function(){
+            $(this).hover(function(){
+                clearTimeout(outTimer);
+                hoverTimer = setTimeout(sets.hoverEvent, sets.hoverDuring);
+            },function(){
+                clearTimeout(hoverTimer);
+                outTimer = setTimeout(sets.outEvent, sets.outDuring);
+            });    
+        });
+    }      
+})(jQuery);

@@ -211,7 +211,1576 @@
     <div id="content">
       <div id="mytaobao_panel">
         <!-- 内容的右侧 -->
-        <div class="col_main"></div>
+        <div class="col_main">
+          <div class="main-wrap">
+            <div class="main-content">
+              <div class="trade-remind">
+                <ul class="list">
+                  <li class="selected first">
+                    <a href="#" class="link">
+                      <span>所有订单</span>
+                      <i class="interval">|</i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="link">
+                      <span class="link-other">待付款</span>
+                      <em class="tm-h">0</em>
+                      <i class="interval">|</i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="link">
+                      <span class="link-other">待发货</span>
+                      <em class="tm-h">0</em>
+                      <i class="interval">|</i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="link">
+                      <span class="link-other">待收货</span>
+                      <em class="tm-h">0</em>
+                      <i class="interval">|</i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="link">
+                      <span class="link-other">待评价</span>
+                      <em class="tm-h">0</em>
+                      <i class="interval">|</i>
+                    </a>
+                  </li>
+                  <li id="last">
+                    <a href="#" id="orderRecyleBin">订单回收站</a>
+                  </li>
+                </ul>
+                <div class="wrap-line">
+                  <span class="line"></span>
+                </div>
+              </div>
+              <div class="searchbar">
+                <form class="bought-search">
+                  <div class="simple">
+                    <input type="text" class="auction-title" size="50" value maxlength="30" placeholder="输入商品标题或订单号进行搜索">
+                    <span class="search-btn">
+                      <button class="MakePoint">订单搜索</button>
+                    </span>
+                    <span class="search-opt">
+                      <a href="#" class="show-whole">
+                        更多筛选条件
+                        <img src="images/xiala.jpg">
+                        <!-- <i id="xiala"><em></em><span></span></i> -->
+                      </a>
+                    </span>
+                  </div>
+                  <div id="MoreControl" isopen="false" style="display:none;">
+                    <ul>
+                      <li class="col1">
+                        <label>订单类型：</label>
+                        <div id="component" class="bf-select">
+                          <div id="component630">保险订单</div>
+                          <div class="bf-select-dropdown">
+                            <div class="bf-select-dropdown-inner"></div>
+                          </div>
+                        </div>
+                        <!-- <select name="queryBizType" class="J_NiceSelect"></select> -->
+                      </li>
+                      <li class="col2">
+                        <label>成交时间：</label>
+                        <input type="text" size="10" id="trade-time">
+                        到
+                        <input type="text" size="10" id="trade-time">
+                      </li>
+                      <li class="col3">
+                        <label> 卖家昵称：</label>
+                        <input type="text" size="15" id="nickname">
+                      </li>
+                      <li class="col1">
+                        <label>评价状态：</label>
+                        <div id="component" class="bf-select">
+                          <div id="component630">全部</div>
+                          <div class="bf-select-dropdown">
+                            <div class="bf-select-dropdown-inner"></div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="col2">
+                        <label>交易状态：</label>
+                        <div id="component" class="bf-select">
+                          <div id="component">全部</div>
+                          <div class="bf-select-dropdown">
+                            <div class="bf-select-dropdown-inner"></div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="col3">
+                        <label>售后服务：</label>
+                        <div id="component" class="bf-select">
+                          <div id="component630">全部</div>
+                          <div class="bf-select-dropdown">
+                            <div class="bf-select-dropdown-inner"></div>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                    <button id="SearchBox_Submmit">搜索</button>
+                  </div>
+                </form>
+                <p class="consume-tip">
+                  <a href="#" class="other">【每天戳这儿签到有礼】不看你就亏大了！更新喽~</a>
+                </p>
+              </div>
+              <div class="bought-list">
+                <form id="BoughtListForm">
+                  <table class="bought-table" id="BoughtTable">
+                    <thead>
+                      <tr class="col-name">
+                        <th class="baobei">宝贝</th>
+                        <th class="price">单价(元)</th>
+                        <th class="quantity">数量</th>
+                        <th class="item-operate">商品操作</th>
+                        <th class="amount">实付款(元)</th>
+                        <th class="trade-status">
+                          <div class="trade-status">
+                            <!-- <div id="ks-component2175">
+                              <div id="ks-content-ks-component2175">交易状态</div>
+                              <div class="bf-select-dropdown">
+                                <div class="bf-select-dropdown-inner"></div>
+                              </div>
+                            </div> -->
+                            <select id="TradeStatusHandle">
+                              <option data-msg="交易状态" value="ALL">交易状态</option>
+                              <option data-msg="等待买家付款" value="NOT_PAID">等待买家付款</option>
+                              <option data-msg="买家已付款" value="PAID">买家已付款</option>
+                              <option data-msg="卖家已发货" value="SEND">卖家已发货</option>
+                              <option data-msg="交易成功" value="SUCCESS">交易成功</option>
+                              <option data-msg="交易关闭" value="DROP">交易关闭</option>
+                              <option data-msg="退款中的订单" value="REFUNDING">退款中的订单</option>
+                            </select>
+                          </div>
+                        </th>
+                        <th class="trade-operate">交易操作</th>
+                      </tr>
+                      <tr class="sep-row"></tr>
+                      <tr class="toolbar toolbar-top">
+                        <td colspan="7">
+                          <div class="operates">
+                            <label><input type="checkbox" class="J_AllSelector">全选</label>
+                            <a href="javascript:void(0)" class="J_CombinPay">合并付款</a>
+                            <a href="javascript:void(0)" class="J_CombinAgentPay">合并代付</a>
+                            <a href="javascript:void(0)" class="J_BatchReceive">批量确认收货</a>
+                          </div>
+                          <div class="paging-box paging-simple">
+                            <div class="paging-previous-grey">
+                              <span class="paging-arrow paging-arrow-left-grey"></span>
+                            </div>
+                            <a href="" class="paging-next">
+                              下一页
+                              <span class="paging-arrow paging-arrow-right-orange"></span>
+                            </a>
+                          </div>
+                        </td>
+                      </tr>
+                    </thead>
+                    <tbody class="mainOrder723505153175048successorder">
+                      <tr class="sep-row"><td colspan="7"></td></tr>
+                      <tr class="order-hd">
+                        <td class="first">
+                          <div class="summary">
+                            <span><input type="checkbox" class="J_Selector selector"></span>
+                            <span class="dealtime">2014-07-08</span>
+                            <span class="number last-item">
+                              订单号：
+                              <em>723505153175048</em>
+                            </span>
+                          </div>
+                        </td>
+                        <td class="column" colspan="2">
+                          <span class="g-u"><a href="#"><img src="images/tianmao.png"></a></span>
+                          <a href="#" class="J_MakePoint">畅纳话费专营店</a>
+                        </td>
+                        <td class="column">
+                          <span class="ww-light">
+                            <a href="#" class="ww-inline ww-online"><!-- <span>旺旺在线</span> --></a>
+                          </span>
+                        </td>
+                        <td class="last" colspan="3">
+                          <div class="share-delete-makepoint">
+                            <a href="#" class="J_ShareSNS"></a>
+                            <a href="#" class="J_DelOrder"></a>
+                            <a href="#" class="J_MakePoints"></a>
+                          </div>
+                        </td>
+                       </tr>
+                       <tr id="item723505153175048" class="order-bd">
+                         <td class="baobei">
+                           <a href="#" class="pic"><img src="images/pic1.jpg"></a>
+                           <div class="desc">
+                             <p class="baobei-name">
+                               <a href="#" class="J_MakePoint">【闪电发货】江苏移动话费充值20元自动快充 秒充 即时到账</a>
+                             </p>
+                             <div class="spec"></div>
+                             <span class="good-icons">
+                               <a href="#"  class="icons icons1"></a>
+                               <a href="#"  class="icons icons2"></a>
+                               <a href="#"  class="icons icons3"></a>
+                             </span>
+                           </div>
+                         </td>
+                         <td class="price"><i class="special-num">19.88</i></td>
+                         <td class="quantity"><i class="special-num">1</i></td>
+                         <td class="item-operate">
+                           <a href="javascript:void(0)" class="J_ApplyRepayTrigger">申请售后</a>
+                           <a href="javascript:void(0)" class="J_tousuweiquan">投诉卖家</a>
+                         </td>
+                         <td class="amount">
+                           <p><em class="real-price special-num">19.88</em></p>
+                           <p class="post-type">(自动充值)</p>
+                         </td>
+                         <td class="trade-status">
+                           <a href="#" class="J_MakePoint status">交易成功</a>
+                           <span><a href="#" class="detail-link J_MakePoint">订单详情</a></span>
+                         </td>
+                         <td class="trade-operate">
+                           <a href="#">追加评论</a>
+                           <a href="#">再次购买</a>
+                         </td>
+                       </tr>
+                    </tbody>
+                    <tbody class="mainOrder723462725125048successorder">
+                       <tr class="sep-row"><td colspan="7"></td></tr>
+                       <tr class="order-hd">
+                        <td class="first">
+                          <div class="summary">
+                            <span><input type="checkbox" class="J_Selector selector"></span>
+                            <span class="dealtime">2014-07-07</span>
+                            <span class="number last-item">
+                              订单号：
+                              <em>723462725125048</em>
+                            </span>
+                          </div>
+                        </td>
+                        <td class="column" colspan="2">
+                          <span class="g-u"><a href="#"><img src="images/tianmao.png"></a></span>
+                          <a href="#" class="J_MakePoint">苹果林数码</a>
+                        </td>
+                        <td class="column">
+                          <span class="ww-light">
+                            <a href="#" class="ww-inline ww-online"><!-- <span>旺旺在线</span> --></a>
+                          </span>
+                        </td>
+                        <td class="last" colspan="3">
+                          <div class="share-delete-makepoint">
+                            <a href="#" class="J_ShareSNS"></a>
+                            <a href="#" class="J_Resale"></a>
+                            <a href="#" class="J_DelOrder"></a>
+                            <a href="#" class="J_MakePoints"></a>
+                          </div>
+                        </td>
+                       </tr>
+                       <tr id="item723462725125048" class="order-bd">
+                         <td class="baobei">
+                           <a href="#" class="pic"><img src="images/pic2.jpg"></a>
+                           <div class="desc">
+                             <p class="baobei-name">
+                               <a href="#" class="J_MakePoint">苹果4s手机壳最新款 正品iphone4s手机壳苹果4手机壳软壳硅胶套潮 [交易快照]</a>
+                             </p>
+                             <div class="spec">
+                               <span>颜色分类: 湖蓝色</span>
+                             </div>
+                             <span class="good-icons">
+                               <a href="#" class="icon4"><img src="images/icon4.png"></a>
+                             </span>
+                           </div>
+                         </td>
+                         <td class="price">
+                           <em class="origin-price special-num">19.88</em>
+                           <i class="special-num">9.90</i>
+                         </td>
+                         <td class="quantity"><i class="special-num">1</i></td>
+                         <td class="item-operate">
+                           <a href="javascript:void(0)" class="J_ApplyRepayTrigger">申请售后</a>
+                           <a href="javascript:void(0)" class="J_tousuweiquan">投诉卖家</a>
+                         </td>
+                         <td class="amount">
+                           <p><em class="real-price special-num">9.90</em></p>
+                           <p class="post-type"></p>
+                           <p>(含运费:<i class="special-num">0.00</i>)</p>
+                         </td>
+                         <td class="trade-status">
+                           <a href="#" class="J_MakePoint status">交易成功</a>
+                           <span><a href="#" class="detail-link J_MakePoint">订单详情</a></span>
+                           <a href="#" class="view-logistics J_MakePoint">查看物流</a>
+                           <div class="remark-status"><a href="#">双方已评</a></div>
+                         </td>
+                         <td class="trade-operate">
+                           <a href="#">追加评论</a>
+                           <a href="#">再次购买</a>
+                         </td>
+                       </tr>
+                    </tbody>
+                    <tbody class="mainOrder722627856695048successorder">
+                       <tr class="sep-row"><td colspan="7"></td></tr>
+                       <tr class="order-hd">
+                        <td class="first">
+                          <div class="summary">
+                            <span><input type="checkbox" class="J_Selector selector"></span>
+                            <span class="dealtime">2014-07-06</span>
+                            <span class="number last-item">
+                              订单号：
+                              <em>722627856695048</em>
+                            </span>
+                          </div>
+                        </td>
+                        <td class="column" colspan="2">
+                          <!-- <span class="g-u"><a href="#"><img src="images/tianmao.png"></a></span> -->
+                          <a href="#" class="J_MakePoint">时代衣架</a>
+                        </td>
+                        <td class="column">
+                          <span class="ww-light">
+                            <a href="#" class="ww-inline ww-online"><!-- <span>旺旺在线</span> --></a>
+                          </span>
+                        </td>
+                        <td class="last" colspan="3">
+                          <div class="share-delete-makepoint">
+                            <a href="#" class="J_ShareSNS"></a>
+                            <a href="#" class="J_Resale"></a>
+                            <a href="#" class="J_DelOrder"></a>
+                            <a href="#" class="J_MakePoints"></a>
+                          </div>
+                        </td>
+                       </tr>
+                       <tr id="item722627856695048" class="order-bd">
+                         <td class="baobei">
+                           <a href="#" class="pic"><img src="images/pic3.jpg"></a>
+                           <div class="desc">
+                             <p class="baobei-name">
+                               <a href="#" class="J_MakePoint">超值巨献 20支包邮原木色防滑实木衣架 酒店/服装店木质衣架批发 [交易快照]</a>
+                             </p>
+                             <div class="spec">
+                               <span>颜色分类: 原木色凹槽款-44.5</span>
+                               <span>数量选择: 20个</span>
+                             </div>
+                             <span class="good-icons">
+                               <a href="#" class="icon4"><img src="images/icon4.png"></a>
+                             </span>
+                           </div>
+                         </td>
+                         <td class="price">
+                           <!-- <em class="origin-price special-num">19.88</em> -->
+                           <i class="special-num">48.00</i>
+                         </td>
+                         <td class="quantity"><i class="special-num">1</i></td>
+                         <td class="item-operate">
+                           <a href="javascript:void(0)" class="J_ApplyRepayTrigger">申请售后</a>
+                           <a href="javascript:void(0)" class="J_tousuweiquan">投诉卖家</a>
+                         </td>
+                         <td class="amount">
+                           <p><em class="real-price special-num">48.00</em></p>
+                           <p class="post-type"></p>
+                           <p>(含运费:<i class="special-num">0.00</i>)</p>
+                         </td>
+                         <td class="trade-status">
+                           <a href="#" class="J_MakePoint status">交易成功</a>
+                           <span><a href="#" class="detail-link J_MakePoint">订单详情</a></span>
+                           <a href="#" class="view-logistics J_MakePoint">查看物流</a>
+                           <div class="remark-status"><a href="#">双方已评</a></div>
+                         </td>
+                         <td class="trade-operate">
+                           <a href="#">追加评论</a>
+                           <a href="#">再次购买</a>
+                         </td>
+                       </tr>
+                    </tbody>
+                    <tbody class="mainOrder719507687725048successorder">
+                       <tr class="sep-row"><td colspan="7"></td></tr>
+                       <tr class="order-hd">
+                        <td class="first">
+                          <div class="summary">
+                            <span><input type="checkbox" class="J_Selector selector"></span>
+                            <span class="dealtime">2014-07-04</span>
+                            <span class="number last-item">
+                              订单号：
+                              <em>719507687725048</em>
+                            </span>
+                          </div>
+                        </td>
+                        <td class="column" colspan="2">
+                          <!-- <span class="g-u"><a href="#"><img src="images/tianmao.png"></a></span> -->
+                          <a href="#" class="J_MakePoint">诚意书店</a>
+                        </td>
+                        <td class="column">
+                          <span class="ww-light">
+                            <a href="#" class="ww-inline ww-online"><!-- <span>旺旺在线</span> --></a>
+                          </span>
+                        </td>
+                        <td class="last" colspan="3">
+                          <div class="share-delete-makepoint">
+                            <a href="#" class="J_ShareSNS"></a>
+                            <a href="#" class="J_Resale"></a>
+                            <a href="#" class="J_DelOrder"></a>
+                            <a href="#" class="J_MakePoints"></a>
+                          </div>
+                        </td>
+                       </tr>
+                       <tr id="item719507687725048" class="order-bd">
+                         <td class="baobei">
+                           <a href="#" class="pic"><img src="images/pic4.jpg"></a>
+                           <div class="desc">
+                             <p class="baobei-name">
+                               <a href="#" class="J_MakePoint">正版包邮!注册会计师教材2014 CPA教材 全国统一教材 单本 赠课件 [交易快照]</a>
+                             </p>
+                             <span class="good-icons">
+                               <a href="#" class="icon4"><img src="images/icon4.png"></a>
+                             </span>
+                           </div>
+                         </td>
+                         <td class="price">
+                           <!-- <em class="origin-price special-num">19.88</em> -->
+                           <i class="special-num">25.00</i>
+                         </td>
+                         <td class="quantity"><i class="special-num">1</i></td>
+                         <td class="item-operate">
+                           <a href="javascript:void(0)" class="J_ApplyRepayTrigger">申请售后</a>
+                           <a href="javascript:void(0)" class="J_tousuweiquan">投诉卖家</a>
+                         </td>
+                         <td class="amount">
+                           <p><em class="real-price special-num">25.00</em></p>
+                           <p class="post-type"></p>
+                           <p>(含运费:<i class="special-num">0.00</i>)</p>
+                         </td>
+                         <td class="trade-status">
+                           <a href="#" class="J_MakePoint status">交易成功</a>
+                           <span><a href="#" class="detail-link J_MakePoint">订单详情</a></span>
+                           <a href="#" class="view-logistics J_MakePoint">查看物流</a>
+                           <div class="remark-status"><a href="#">双方已评</a></div>
+                         </td>
+                         <td class="trade-operate">
+                           <a href="#">追加评论</a>
+                           <a href="#">再次购买</a>
+                         </td>
+                       </tr>
+                    </tbody>
+                    <tbody class="mainOrder716352573835048successorder">
+                       <tr class="sep-row"><td colspan="7"></td></tr>
+                       <tr class="order-hd">
+                        <td class="first">
+                          <div class="summary">
+                            <span><input type="checkbox" class="J_Selector selector"></span>
+                            <span class="dealtime">2014-07-04</span>
+                            <span class="number last-item">
+                              订单号：
+                              <em>719507687725048</em>
+                            </span>
+                          </div>
+                        </td>
+                        <td class="column" colspan="2">
+                          <!-- <span class="g-u"><a href="#"><img src="images/tianmao.png"></a></span> -->
+                          <a href="#" class="J_MakePoint">数码存储小子</a>
+                        </td>
+                        <td class="column">
+                          <span class="ww-light">
+                            <a href="#" class="ww-inline ww-online"><!-- <span>旺旺在线</span> --></a>
+                          </span>
+                        </td>
+                        <td class="last" colspan="3">
+                          <div class="share-delete-makepoint">
+                            <a href="#" class="J_ShareSNS"></a>
+                            <a href="#" class="J_Resale"></a>
+                            <a href="#" class="J_DelOrder"></a>
+                            <a href="#" class="J_MakePoints"></a>
+                          </div>
+                        </td>
+                       </tr>
+                       <tr id="item719507687725048" class="order-bd">
+                         <td class="baobei">
+                           <a href="#" class="pic"><img src="images/pic5.jpg"></a>
+                           <div class="desc">
+                             <p class="baobei-name">
+                               <a href="#" class="J_MakePoint">正版包邮!注册会计师教材2014 CPA教材 全国统一教材 单本 赠课件 [交易快照]</a>
+                             </p>
+                             <div class="spec">
+                               <span>颜色分类: 黄橙橙</span>
+                             </div>
+                             <span class="good-icons">
+                               <a href="#" class="icon4"><img src="images/icon4.png"></a>
+                             </span>
+                           </div>
+                         </td>
+                         <td class="price">
+                           <em class="origin-price special-num">38.00</em>
+                           <i class="special-num">24.90</i>
+                         </td>
+                         <td class="quantity"><i class="special-num">1</i></td>
+                         <td class="item-operate">
+                           <a href="javascript:void(0)" class="J_ApplyRepayTrigger">申请售后</a>
+                           <a href="javascript:void(0)" class="J_tousuweiquan">投诉卖家</a>
+                         </td>
+                         <td class="amount">
+                           <p><em class="real-price special-num">29.90</em></p>
+                           <p class="post-type"></p>
+                           <p>(含运费:<i class="special-num">5.00</i>)</p>
+                         </td>
+                         <td class="trade-status">
+                           <a href="#" class="J_MakePoint status">交易成功</a>
+                           <span><a href="#" class="detail-link J_MakePoint">订单详情</a></span>
+                           <a href="#" class="view-logistics J_MakePoint">查看物流</a>
+                           <div class="remark-status"><a href="#">双方已评</a></div>
+                         </td>
+                         <td class="trade-operate">
+                           <a href="#">追加评论</a>
+                           <a href="#">再次购买</a>
+                         </td>
+                       </tr>
+                    </tbody>
+                    <tbody class="mainOrder716312247515048successorder">
+                       <tr class="sep-row"><td colspan="7"></td></tr>
+                       <tr class="order-hd">
+                        <td class="first">
+                          <div class="summary">
+                            <span><input type="checkbox" class="J_Selector selector"></span>
+                            <span class="dealtime">2014-07-01</span>
+                            <span class="number last-item">
+                              订单号：
+                              <em>716312247515048</em>
+                            </span>
+                          </div>
+                        </td>
+                        <td class="column" colspan="2">
+                          <!-- <span class="g-u"><a href="#"><img src="images/tianmao.png"></a></span> -->
+                          <a href="#" class="J_MakePoint">九块九数码科技</a>
+                        </td>
+                        <td class="column">
+                          <span class="ww-light">
+                            <a href="#" class="ww-inline ww-online"><!-- <span>旺旺在线</span> --></a>
+                          </span>
+                        </td>
+                        <td class="last" colspan="3">
+                          <div class="share-delete-makepoint">
+                            <a href="#" class="J_ShareSNS"></a>
+                            <a href="#" class="J_Resale"></a>
+                            <a href="#" class="J_DelOrder"></a>
+                            <a href="#" class="J_MakePoints"></a>
+                          </div>
+                        </td>
+                       </tr>
+                       <tr id="item716312247515048" class="order-bd">
+                         <td class="baobei">
+                           <a href="#" class="pic"><img src="images/pic6.jpg"></a>
+                           <div class="desc">
+                             <p class="baobei-name">
+                               <a href="#" class="J_MakePoint">电脑桌儿童学习桌床上书桌懒人桌床上餐桌可折叠多功能电脑桌包邮 [交易快照]</a>
+                             </p>
+                             <div class="spec">
+                               <span>颜色分类: 海底世界-大号</span>
+                             </div>
+                             <span class="good-icons">
+                               <a href="#" class="icon4"><img src="images/icon4.png"></a>
+                             </span>
+                           </div>
+                         </td>
+                         <td class="price">
+                           <em class="origin-price special-num">26.60</em>
+                           <i class="special-num">15.80</i>
+                         </td>
+                         <td class="quantity"><i class="special-num">1</i></td>
+                         <td class="item-operate">
+                           <a href="javascript:void(0)" class="J_ApplyRepayTrigger">申请售后</a>
+                           <a href="javascript:void(0)" class="J_tousuweiquan">投诉卖家</a>
+                         </td>
+                         <td class="amount">
+                           <p><em class="real-price special-num">15.80</em></p>
+                           <p class="post-type"></p>
+                           <p>(含运费:<i class="special-num">0.00</i>)</p>
+                         </td>
+                         <td class="trade-status">
+                           <a href="#" class="J_MakePoint status">交易成功</a>
+                           <span><a href="#" class="detail-link J_MakePoint">订单详情</a></span>
+                           <a href="#" class="view-logistics J_MakePoint">查看物流</a>
+                           <div class="remark-status"><a href="#">双方已评</a></div>
+                         </td>
+                         <td class="trade-operate">
+                           <a href="#">追加评论</a>
+                           <a href="#">再次购买</a>
+                         </td>
+                       </tr>
+                    </tbody>
+                    <tbody class="mainOrder703658256295048successorder">
+                       <tr class="sep-row"><td colspan="7"></td></tr>
+                       <tr class="order-hd">
+                        <td class="first">
+                          <div class="summary">
+                            <span><input type="checkbox" class="J_Selector selector"></span>
+                            <span class="dealtime">2014-06-21</span>
+                            <span class="number last-item">
+                              订单号：
+                              <em>703658256295048</em>
+                            </span>
+                          </div>
+                        </td>
+                        <td class="column" colspan="2">
+                          <!-- <span class="g-u"><a href="#"><img src="images/tianmao.png"></a></span> -->
+                          <a href="#" class="J_MakePoint">乐扣品牌回</a>
+                        </td>
+                        <td class="column">
+                          <span class="ww-light">
+                            <a href="#" class="ww-inline ww-online"><!-- <span>旺旺在线</span> --></a>
+                          </span>
+                        </td>
+                        <td class="last" colspan="3">
+                          <div class="share-delete-makepoint">
+                            <a href="#" class="J_ShareSNS"></a>
+                            <a href="#" class="J_Resale"></a>
+                            <a href="#" class="J_DelOrder"></a>
+                            <a href="#" class="J_MakePoints"></a>
+                          </div>
+                        </td>
+                       </tr>
+                       <tr id="item703658256295048" class="order-bd">
+                         <td class="baobei">
+                           <a href="#" class="pic"><img src="images/pic7.jpg"></a>
+                           <div class="desc">
+                             <p class="baobei-name">
+                               <a href="#" class="J_MakePoint">正品乐扣乐扣收纳箱牛津布整理箱钢架收纳盒整理盒特大号有盖包邮 [交易快照]</a>
+                             </p>
+                             <div class="spec">
+                               <span>颜色分类: 双视窗橙色规格: 【66L】</span>
+                             </div>
+                             <span class="good-icons">
+                               <a href="#" class="icon4"><img src="images/icon4.png"></a>
+                             </span>
+                           </div>
+                         </td>
+                         <td class="price">
+                           <em class="origin-price special-num">38.29</em>
+                           <i class="special-num">26.80</i>
+                         </td>
+                         <td class="quantity"><i class="special-num">1</i></td>
+                         <td class="item-operate">
+                           <a href="javascript:void(0)" class="J_ApplyRepayTrigger">申请售后</a>
+                           <a href="javascript:void(0)" class="J_tousuweiquan">投诉卖家</a>
+                         </td>
+                         <td class="amount">
+                           <p><em class="real-price special-num">26.80</em></p>
+                           <p class="post-type"></p>
+                           <p>(含运费:<i class="special-num">0.00</i>)</p>
+                         </td>
+                         <td class="trade-status">
+                           <a href="#" class="J_MakePoint status">交易成功</a>
+                           <span><a href="#" class="detail-link J_MakePoint">订单详情</a></span>
+                           <a href="#" class="view-logistics J_MakePoint">查看物流</a>
+                           <div class="remark-status"><a href="#">双方已评</a></div>
+                         </td>
+                         <td class="trade-operate">
+                           <a href="#">追加评论</a>
+                           <a href="#">再次购买</a>
+                         </td>
+                       </tr>
+                    </tbody>
+                    <tbody class="mainOrder652066188935048successorder">
+                       <tr class="sep-row"><td colspan="7"></td></tr>
+                       <tr class="order-hd">
+                        <td class="first">
+                          <div class="summary">
+                            <span><input type="checkbox" class="J_Selector selector"></span>
+                            <span class="dealtime">2014-05-13</span>
+                            <span class="number last-item">
+                              订单号：
+                              <em>652066188935048</em>
+                            </span>
+                          </div>
+                        </td>
+                        <td class="column" colspan="2">
+                          <!-- <span class="g-u"><a href="#"><img src="images/tianmao.png"></a></span> -->
+                          <a href="#" class="J_MakePoint">wengzewu1</a>
+                        </td>
+                        <td class="column">
+                          <span class="ww-light">
+                            <a href="#" class="ww-inline ww-online"><!-- <span>旺旺在线</span> --></a>
+                          </span>
+                        </td>
+                        <td class="last" colspan="3">
+                          <div class="share-delete-makepoint">
+                            <a href="#" class="J_ShareSNS"></a>
+                            <a href="#" class="J_Resale"></a>
+                            <a href="#" class="J_DelOrder"></a>
+                            <a href="#" class="J_MakePoints"></a>
+                          </div>
+                        </td>
+                       </tr>
+                       <tr id="item652066188935048" class="order-bd">
+                         <td class="baobei">
+                           <a href="#" class="pic"><img src="images/pic8.jpg"></a>
+                           <div class="desc">
+                             <p class="baobei-name">
+                               <a href="#" class="J_MakePoint">包邮12生肖多/哆啦a梦公仔机器猫手办摆件玩偶叮当猫创意生日礼物 [交易快照]</a>
+                             </p>
+                             <div class="spec">
+                               <span>颜色分类: 12生肖哆啦a梦大小或花色: 自用的，无须包装</span>
+                             </div>
+                             <span class="good-icons">
+                               <a href="#" class="icon4"><img src="images/icon4.png"></a>
+                             </span>
+                           </div>
+                         </td>
+                         <td class="price">
+                          <!--  <em class="origin-price special-num">38.29</em> -->
+                           <i class="special-num">56.00</i>
+                         </td>
+                         <td class="quantity"><i class="special-num">1</i></td>
+                         <td class="item-operate">
+                           <a href="javascript:void(0)" class="J_ApplyRepayTrigger">申请售后</a>
+                           <a href="javascript:void(0)" class="J_tousuweiquan">投诉卖家</a>
+                         </td>
+                         <td class="amount">
+                           <p><em class="real-price special-num">56.00</em></p>
+                           <p class="post-type"></p>
+                           <p>(含运费:<i class="special-num">0.00</i>)</p>
+                         </td>
+                         <td class="trade-status">
+                           <a href="#" class="J_MakePoint status">交易成功</a>
+                           <span><a href="#" class="detail-link J_MakePoint">订单详情</a></span>
+                          <!--  <a href="#" class="view-logistics J_MakePoint">查看物流</a> -->
+                           <div class="remark-status"><a href="#">双方已评</a></div>
+                         </td>
+                         <td class="trade-operate">
+                           <a href="#">追加评论</a>
+                           <a href="#">再次购买</a>
+                         </td>
+                       </tr>
+                    </tbody>
+                    <tbody  class="mainOrder652066188935048successorder">
+                       <tr class="sep-row"><td colspan="7"></td></tr>
+                       <tr class="order-hd">
+                        <td class="first">
+                          <div class="summary">
+                            <span><input type="checkbox" class="J_Selector selector"></span>
+                            <span class="dealtime">2014-05-13</span>
+                            <span class="number last-item">
+                              订单号：
+                              <em>652066188935048</em>
+                            </span>
+                          </div>
+                        </td>
+                        <td class="column" colspan="2">
+                          <!-- <span class="g-u"><a href="#"><img src="images/tianmao.png"></a></span> -->
+                          <a href="#" class="J_MakePoint">wengzewu1</a>
+                        </td>
+                        <td class="column">
+                          <span class="ww-light">
+                            <a href="#" class="ww-inline ww-online"><!-- <span>旺旺在线</span> --></a>
+                          </span>
+                        </td>
+                        <td class="last" colspan="3">
+                          <div class="share-delete-makepoint">
+                            <a href="#" class="J_ShareSNS"></a>
+                            <a href="#" class="J_Resale"></a>
+                            <a href="#" class="J_DelOrder"></a>
+                            <a href="#" class="J_MakePoints"></a>
+                          </div>
+                        </td>
+                       </tr>
+                       <tr id="item652066188935048" class="order-bd">
+                         <td class="baobei">
+                           <a href="#" class="pic"><img src="images/pic8.jpg"></a>
+                           <div class="desc">
+                             <p class="baobei-name">
+                               <a href="#" class="J_MakePoint">包邮12生肖多/哆啦a梦公仔机器猫手办摆件玩偶叮当猫创意生日礼物 [交易快照]</a>
+                             </p>
+                             <div class="spec">
+                               <span>颜色分类: 12生肖哆啦a梦大小或花色: 自用的，无须包装</span>
+                             </div>
+                             <span class="good-icons">
+                               <a href="#" class="icon4"><img src="images/icon4.png"></a>
+                             </span>
+                           </div>
+                         </td>
+                         <td class="price">
+                          <!--  <em class="origin-price special-num">38.29</em> -->
+                           <i class="special-num">56.00</i>
+                         </td>
+                         <td class="quantity"><i class="special-num">1</i></td>
+                         <td class="item-operate">
+                           <a href="javascript:void(0)" class="J_ApplyRepayTrigger">申请售后</a>
+                           <a href="javascript:void(0)" class="J_tousuweiquan">投诉卖家</a>
+                         </td>
+                         <td class="amount">
+                           <p><em class="real-price special-num">56.00</em></p>
+                           <p class="post-type"></p>
+                           <p>(含运费:<i class="special-num">0.00</i>)</p>
+                         </td>
+                         <td class="trade-status">
+                           <a href="#" class="J_MakePoint status">交易成功</a>
+                           <span><a href="#" class="detail-link J_MakePoint">订单详情</a></span>
+                          <!--  <a href="#" class="view-logistics J_MakePoint">查看物流</a> -->
+                           <div class="remark-status"><a href="#">双方已评</a></div>
+                         </td>
+                         <td class="trade-operate">
+                           <a href="#">追加评论</a>
+                           <a href="#">再次购买</a>
+                         </td>
+                       </tr>
+                    </tbody>
+                    <tbody  class="mainOrder652066188935048successorder">
+                       <tr class="sep-row"><td colspan="7"></td></tr>
+                       <tr class="order-hd">
+                        <td class="first">
+                          <div class="summary">
+                            <span><input type="checkbox" class="J_Selector selector"></span>
+                            <span class="dealtime">2014-05-13</span>
+                            <span class="number last-item">
+                              订单号：
+                              <em>652066188935048</em>
+                            </span>
+                          </div>
+                        </td>
+                        <td class="column" colspan="2">
+                          <!-- <span class="g-u"><a href="#"><img src="images/tianmao.png"></a></span> -->
+                          <a href="#" class="J_MakePoint">wengzewu1</a>
+                        </td>
+                        <td class="column">
+                          <span class="ww-light">
+                            <a href="#" class="ww-inline ww-online"><!-- <span>旺旺在线</span> --></a>
+                          </span>
+                        </td>
+                        <td class="last" colspan="3">
+                          <div class="share-delete-makepoint">
+                            <a href="#" class="J_ShareSNS"></a>
+                            <a href="#" class="J_Resale"></a>
+                            <a href="#" class="J_DelOrder"></a>
+                            <a href="#" class="J_MakePoints"></a>
+                          </div>
+                        </td>
+                       </tr>
+                       <tr id="item652066188935048" class="order-bd">
+                         <td class="baobei">
+                           <a href="#" class="pic"><img src="images/pic8.jpg"></a>
+                           <div class="desc">
+                             <p class="baobei-name">
+                               <a href="#" class="J_MakePoint">包邮12生肖多/哆啦a梦公仔机器猫手办摆件玩偶叮当猫创意生日礼物 [交易快照]</a>
+                             </p>
+                             <div class="spec">
+                               <span>颜色分类: 12生肖哆啦a梦大小或花色: 自用的，无须包装</span>
+                             </div>
+                             <span class="good-icons">
+                               <a href="#" class="icon4"><img src="images/icon4.png"></a>
+                             </span>
+                           </div>
+                         </td>
+                         <td class="price">
+                          <!--  <em class="origin-price special-num">38.29</em> -->
+                           <i class="special-num">56.00</i>
+                         </td>
+                         <td class="quantity"><i class="special-num">1</i></td>
+                         <td class="item-operate">
+                           <a href="javascript:void(0)" class="J_ApplyRepayTrigger">申请售后</a>
+                           <a href="javascript:void(0)" class="J_tousuweiquan">投诉卖家</a>
+                         </td>
+                         <td class="amount">
+                           <p><em class="real-price special-num">56.00</em></p>
+                           <p class="post-type"></p>
+                           <p>(含运费:<i class="special-num">0.00</i>)</p>
+                         </td>
+                         <td class="trade-status">
+                           <a href="#" class="J_MakePoint status">交易成功</a>
+                           <span><a href="#" class="detail-link J_MakePoint">订单详情</a></span>
+                          <!--  <a href="#" class="view-logistics J_MakePoint">查看物流</a> -->
+                           <div class="remark-status"><a href="#">双方已评</a></div>
+                         </td>
+                         <td class="trade-operate">
+                           <a href="#">追加评论</a>
+                           <a href="#">再次购买</a>
+                         </td>
+                       </tr>
+                    </tbody>
+                    <tbody  class="mainOrder652066188935048successorder">
+                       <tr class="sep-row"><td colspan="7"></td></tr>
+                       <tr class="order-hd">
+                        <td class="first">
+                          <div class="summary">
+                            <span><input type="checkbox" class="J_Selector selector"></span>
+                            <span class="dealtime">2014-05-13</span>
+                            <span class="number last-item">
+                              订单号：
+                              <em>652066188935048</em>
+                            </span>
+                          </div>
+                        </td>
+                        <td class="column" colspan="2">
+                          <!-- <span class="g-u"><a href="#"><img src="images/tianmao.png"></a></span> -->
+                          <a href="#" class="J_MakePoint">wengzewu1</a>
+                        </td>
+                        <td class="column">
+                          <span class="ww-light">
+                            <a href="#" class="ww-inline ww-online"><!-- <span>旺旺在线</span> --></a>
+                          </span>
+                        </td>
+                        <td class="last" colspan="3">
+                          <div class="share-delete-makepoint">
+                            <a href="#" class="J_ShareSNS"></a>
+                            <a href="#" class="J_Resale"></a>
+                            <a href="#" class="J_DelOrder"></a>
+                            <a href="#" class="J_MakePoints"></a>
+                          </div>
+                        </td>
+                       </tr>
+                       <tr id="item652066188935048" class="order-bd">
+                         <td class="baobei">
+                           <a href="#" class="pic"><img src="images/pic8.jpg"></a>
+                           <div class="desc">
+                             <p class="baobei-name">
+                               <a href="#" class="J_MakePoint">包邮12生肖多/哆啦a梦公仔机器猫手办摆件玩偶叮当猫创意生日礼物 [交易快照]</a>
+                             </p>
+                             <div class="spec">
+                               <span>颜色分类: 12生肖哆啦a梦大小或花色: 自用的，无须包装</span>
+                             </div>
+                             <span class="good-icons">
+                               <a href="#" class="icon4"><img src="images/icon4.png"></a>
+                             </span>
+                           </div>
+                         </td>
+                         <td class="price">
+                          <!--  <em class="origin-price special-num">38.29</em> -->
+                           <i class="special-num">56.00</i>
+                         </td>
+                         <td class="quantity"><i class="special-num">1</i></td>
+                         <td class="item-operate">
+                           <a href="javascript:void(0)" class="J_ApplyRepayTrigger">申请售后</a>
+                           <a href="javascript:void(0)" class="J_tousuweiquan">投诉卖家</a>
+                         </td>
+                         <td class="amount">
+                           <p><em class="real-price special-num">56.00</em></p>
+                           <p class="post-type"></p>
+                           <p>(含运费:<i class="special-num">0.00</i>)</p>
+                         </td>
+                         <td class="trade-status">
+                           <a href="#" class="J_MakePoint status">交易成功</a>
+                           <span><a href="#" class="detail-link J_MakePoint">订单详情</a></span>
+                          <!--  <a href="#" class="view-logistics J_MakePoint">查看物流</a> -->
+                           <div class="remark-status"><a href="#">双方已评</a></div>
+                         </td>
+                         <td class="trade-operate">
+                           <a href="#">追加评论</a>
+                           <a href="#">再次购买</a>
+                         </td>
+                       </tr>
+                    </tbody>
+                    <tbody  class="mainOrder652066188935048successorder">
+                       <tr class="sep-row"><td colspan="7"></td></tr>
+                       <tr class="order-hd">
+                        <td class="first">
+                          <div class="summary">
+                            <span><input type="checkbox" class="J_Selector selector"></span>
+                            <span class="dealtime">2014-05-13</span>
+                            <span class="number last-item">
+                              订单号：
+                              <em>652066188935048</em>
+                            </span>
+                          </div>
+                        </td>
+                        <td class="column" colspan="2">
+                          <!-- <span class="g-u"><a href="#"><img src="images/tianmao.png"></a></span> -->
+                          <a href="#" class="J_MakePoint">wengzewu1</a>
+                        </td>
+                        <td class="column">
+                          <span class="ww-light">
+                            <a href="#" class="ww-inline ww-online"><!-- <span>旺旺在线</span> --></a>
+                          </span>
+                        </td>
+                        <td class="last" colspan="3">
+                          <div class="share-delete-makepoint">
+                            <a href="#" class="J_ShareSNS"></a>
+                            <a href="#" class="J_Resale"></a>
+                            <a href="#" class="J_DelOrder"></a>
+                            <a href="#" class="J_MakePoints"></a>
+                          </div>
+                        </td>
+                       </tr>
+                       <tr id="item652066188935048" class="order-bd">
+                         <td class="baobei">
+                           <a href="#" class="pic"><img src="images/pic8.jpg"></a>
+                           <div class="desc">
+                             <p class="baobei-name">
+                               <a href="#" class="J_MakePoint">包邮12生肖多/哆啦a梦公仔机器猫手办摆件玩偶叮当猫创意生日礼物 [交易快照]</a>
+                             </p>
+                             <div class="spec">
+                               <span>颜色分类: 12生肖哆啦a梦大小或花色: 自用的，无须包装</span>
+                             </div>
+                             <span class="good-icons">
+                               <a href="#" class="icon4"><img src="images/icon4.png"></a>
+                             </span>
+                           </div>
+                         </td>
+                         <td class="price">
+                          <!--  <em class="origin-price special-num">38.29</em> -->
+                           <i class="special-num">56.00</i>
+                         </td>
+                         <td class="quantity"><i class="special-num">1</i></td>
+                         <td class="item-operate">
+                           <a href="javascript:void(0)" class="J_ApplyRepayTrigger">申请售后</a>
+                           <a href="javascript:void(0)" class="J_tousuweiquan">投诉卖家</a>
+                         </td>
+                         <td class="amount">
+                           <p><em class="real-price special-num">56.00</em></p>
+                           <p class="post-type"></p>
+                           <p>(含运费:<i class="special-num">0.00</i>)</p>
+                         </td>
+                         <td class="trade-status">
+                           <a href="#" class="J_MakePoint status">交易成功</a>
+                           <span><a href="#" class="detail-link J_MakePoint">订单详情</a></span>
+                          <!--  <a href="#" class="view-logistics J_MakePoint">查看物流</a> -->
+                           <div class="remark-status"><a href="#">双方已评</a></div>
+                         </td>
+                         <td class="trade-operate">
+                           <a href="#">追加评论</a>
+                           <a href="#">再次购买</a>
+                         </td>
+                       </tr>
+                    </tbody>
+                    <tbody  class="mainOrder652066188935048successorder">
+                       <tr class="sep-row"><td colspan="7"></td></tr>
+                       <tr class="order-hd">
+                        <td class="first">
+                          <div class="summary">
+                            <span><input type="checkbox" class="J_Selector selector"></span>
+                            <span class="dealtime">2014-05-13</span>
+                            <span class="number last-item">
+                              订单号：
+                              <em>652066188935048</em>
+                            </span>
+                          </div>
+                        </td>
+                        <td class="column" colspan="2">
+                          <!-- <span class="g-u"><a href="#"><img src="images/tianmao.png"></a></span> -->
+                          <a href="#" class="J_MakePoint">wengzewu1</a>
+                        </td>
+                        <td class="column">
+                          <span class="ww-light">
+                            <a href="#" class="ww-inline ww-online"><!-- <span>旺旺在线</span> --></a>
+                          </span>
+                        </td>
+                        <td class="last" colspan="3">
+                          <div class="share-delete-makepoint">
+                            <a href="#" class="J_ShareSNS"></a>
+                            <a href="#" class="J_Resale"></a>
+                            <a href="#" class="J_DelOrder"></a>
+                            <a href="#" class="J_MakePoints"></a>
+                          </div>
+                        </td>
+                       </tr>
+                       <tr id="item652066188935048" class="order-bd">
+                         <td class="baobei">
+                           <a href="#" class="pic"><img src="images/pic8.jpg"></a>
+                           <div class="desc">
+                             <p class="baobei-name">
+                               <a href="#" class="J_MakePoint">包邮12生肖多/哆啦a梦公仔机器猫手办摆件玩偶叮当猫创意生日礼物 [交易快照]</a>
+                             </p>
+                             <div class="spec">
+                               <span>颜色分类: 12生肖哆啦a梦大小或花色: 自用的，无须包装</span>
+                             </div>
+                             <span class="good-icons">
+                               <a href="#" class="icon4"><img src="images/icon4.png"></a>
+                             </span>
+                           </div>
+                         </td>
+                         <td class="price">
+                          <!--  <em class="origin-price special-num">38.29</em> -->
+                           <i class="special-num">56.00</i>
+                         </td>
+                         <td class="quantity"><i class="special-num">1</i></td>
+                         <td class="item-operate">
+                           <a href="javascript:void(0)" class="J_ApplyRepayTrigger">申请售后</a>
+                           <a href="javascript:void(0)" class="J_tousuweiquan">投诉卖家</a>
+                         </td>
+                         <td class="amount">
+                           <p><em class="real-price special-num">56.00</em></p>
+                           <p class="post-type"></p>
+                           <p>(含运费:<i class="special-num">0.00</i>)</p>
+                         </td>
+                         <td class="trade-status">
+                           <a href="#" class="J_MakePoint status">交易成功</a>
+                           <span><a href="#" class="detail-link J_MakePoint">订单详情</a></span>
+                          <!--  <a href="#" class="view-logistics J_MakePoint">查看物流</a> -->
+                           <div class="remark-status"><a href="#">双方已评</a></div>
+                         </td>
+                         <td class="trade-operate">
+                           <a href="#">追加评论</a>
+                           <a href="#">再次购买</a>
+                         </td>
+                       </tr>
+                    </tbody>
+                    <tbody  class="mainOrder652066188935048successorder">
+                       <tr class="sep-row"><td colspan="7"></td></tr>
+                       <tr class="order-hd">
+                        <td class="first">
+                          <div class="summary">
+                            <span><input type="checkbox" class="J_Selector selector"></span>
+                            <span class="dealtime">2014-05-13</span>
+                            <span class="number last-item">
+                              订单号：
+                              <em>652066188935048</em>
+                            </span>
+                          </div>
+                        </td>
+                        <td class="column" colspan="2">
+                          <!-- <span class="g-u"><a href="#"><img src="images/tianmao.png"></a></span> -->
+                          <a href="#" class="J_MakePoint">wengzewu1</a>
+                        </td>
+                        <td class="column">
+                          <span class="ww-light">
+                            <a href="#" class="ww-inline ww-online"><!-- <span>旺旺在线</span> --></a>
+                          </span>
+                        </td>
+                        <td class="last" colspan="3">
+                          <div class="share-delete-makepoint">
+                            <a href="#" class="J_ShareSNS"></a>
+                            <a href="#" class="J_Resale"></a>
+                            <a href="#" class="J_DelOrder"></a>
+                            <a href="#" class="J_MakePoints"></a>
+                          </div>
+                        </td>
+                       </tr>
+                       <tr id="item652066188935048" class="order-bd">
+                         <td class="baobei">
+                           <a href="#" class="pic"><img src="images/pic8.jpg"></a>
+                           <div class="desc">
+                             <p class="baobei-name">
+                               <a href="#" class="J_MakePoint">包邮12生肖多/哆啦a梦公仔机器猫手办摆件玩偶叮当猫创意生日礼物 [交易快照]</a>
+                             </p>
+                             <div class="spec">
+                               <span>颜色分类: 12生肖哆啦a梦大小或花色: 自用的，无须包装</span>
+                             </div>
+                             <span class="good-icons">
+                               <a href="#" class="icon4"><img src="images/icon4.png"></a>
+                             </span>
+                           </div>
+                         </td>
+                         <td class="price">
+                          <!--  <em class="origin-price special-num">38.29</em> -->
+                           <i class="special-num">56.00</i>
+                         </td>
+                         <td class="quantity"><i class="special-num">1</i></td>
+                         <td class="item-operate">
+                           <a href="javascript:void(0)" class="J_ApplyRepayTrigger">申请售后</a>
+                           <a href="javascript:void(0)" class="J_tousuweiquan">投诉卖家</a>
+                         </td>
+                         <td class="amount">
+                           <p><em class="real-price special-num">56.00</em></p>
+                           <p class="post-type"></p>
+                           <p>(含运费:<i class="special-num">0.00</i>)</p>
+                         </td>
+                         <td class="trade-status">
+                           <a href="#" class="J_MakePoint status">交易成功</a>
+                           <span><a href="#" class="detail-link J_MakePoint">订单详情</a></span>
+                          <!--  <a href="#" class="view-logistics J_MakePoint">查看物流</a> -->
+                           <div class="remark-status"><a href="#">双方已评</a></div>
+                         </td>
+                         <td class="trade-operate">
+                           <a href="#">追加评论</a>
+                           <a href="#">再次购买</a>
+                         </td>
+                       </tr>
+                    </tbody>
+                    <tbody  class="mainOrder652066188935048successorder">
+                       <tr class="sep-row"><td colspan="7"></td></tr>
+                       <tr class="order-hd">
+                        <td class="first">
+                          <div class="summary">
+                            <span><input type="checkbox" class="J_Selector selector"></span>
+                            <span class="dealtime">2014-05-13</span>
+                            <span class="number last-item">
+                              订单号：
+                              <em>652066188935048</em>
+                            </span>
+                          </div>
+                        </td>
+                        <td class="column" colspan="2">
+                          <!-- <span class="g-u"><a href="#"><img src="images/tianmao.png"></a></span> -->
+                          <a href="#" class="J_MakePoint">wengzewu1</a>
+                        </td>
+                        <td class="column">
+                          <span class="ww-light">
+                            <a href="#" class="ww-inline ww-online"><!-- <span>旺旺在线</span> --></a>
+                          </span>
+                        </td>
+                        <td class="last" colspan="3">
+                          <div class="share-delete-makepoint">
+                            <a href="#" class="J_ShareSNS"></a>
+                            <a href="#" class="J_Resale"></a>
+                            <a href="#" class="J_DelOrder"></a>
+                            <a href="#" class="J_MakePoints"></a>
+                          </div>
+                        </td>
+                       </tr>
+                       <tr id="item652066188935048" class="order-bd">
+                         <td class="baobei">
+                           <a href="#" class="pic"><img src="images/pic8.jpg"></a>
+                           <div class="desc">
+                             <p class="baobei-name">
+                               <a href="#" class="J_MakePoint">包邮12生肖多/哆啦a梦公仔机器猫手办摆件玩偶叮当猫创意生日礼物 [交易快照]</a>
+                             </p>
+                             <div class="spec">
+                               <span>颜色分类: 12生肖哆啦a梦大小或花色: 自用的，无须包装</span>
+                             </div>
+                             <span class="good-icons">
+                               <a href="#" class="icon4"><img src="images/icon4.png"></a>
+                             </span>
+                           </div>
+                         </td>
+                         <td class="price">
+                          <!--  <em class="origin-price special-num">38.29</em> -->
+                           <i class="special-num">56.00</i>
+                         </td>
+                         <td class="quantity"><i class="special-num">1</i></td>
+                         <td class="item-operate">
+                           <a href="javascript:void(0)" class="J_ApplyRepayTrigger">申请售后</a>
+                           <a href="javascript:void(0)" class="J_tousuweiquan">投诉卖家</a>
+                         </td>
+                         <td class="amount">
+                           <p><em class="real-price special-num">56.00</em></p>
+                           <p class="post-type"></p>
+                           <p>(含运费:<i class="special-num">0.00</i>)</p>
+                         </td>
+                         <td class="trade-status">
+                           <a href="#" class="J_MakePoint status">交易成功</a>
+                           <span><a href="#" class="detail-link J_MakePoint">订单详情</a></span>
+                          <!--  <a href="#" class="view-logistics J_MakePoint">查看物流</a> -->
+                           <div class="remark-status"><a href="#">双方已评</a></div>
+                         </td>
+                         <td class="trade-operate">
+                           <a href="#">追加评论</a>
+                           <a href="#">再次购买</a>
+                         </td>
+                       </tr>
+                    </tbody>
+                    <tbody  class="mainOrder652066188935048successorder">
+                       <tr class="sep-row"><td colspan="7"></td></tr>
+                       <tr class="order-hd">
+                        <td class="first">
+                          <div class="summary">
+                            <span><input type="checkbox" class="J_Selector selector"></span>
+                            <span class="dealtime">2014-05-13</span>
+                            <span class="number last-item">
+                              订单号：
+                              <em>652066188935048</em>
+                            </span>
+                          </div>
+                        </td>
+                        <td class="column" colspan="2">
+                          <!-- <span class="g-u"><a href="#"><img src="images/tianmao.png"></a></span> -->
+                          <a href="#" class="J_MakePoint">wengzewu1</a>
+                        </td>
+                        <td class="column">
+                          <span class="ww-light">
+                            <a href="#" class="ww-inline ww-online"><!-- <span>旺旺在线</span> --></a>
+                          </span>
+                        </td>
+                        <td class="last" colspan="3">
+                          <div class="share-delete-makepoint">
+                            <a href="#" class="J_ShareSNS"></a>
+                            <a href="#" class="J_Resale"></a>
+                            <a href="#" class="J_DelOrder"></a>
+                            <a href="#" class="J_MakePoints"></a>
+                          </div>
+                        </td>
+                       </tr>
+                       <tr id="item652066188935048" class="order-bd">
+                         <td class="baobei">
+                           <a href="#" class="pic"><img src="images/pic8.jpg"></a>
+                           <div class="desc">
+                             <p class="baobei-name">
+                               <a href="#" class="J_MakePoint">包邮12生肖多/哆啦a梦公仔机器猫手办摆件玩偶叮当猫创意生日礼物 [交易快照]</a>
+                             </p>
+                             <div class="spec">
+                               <span>颜色分类: 12生肖哆啦a梦大小或花色: 自用的，无须包装</span>
+                             </div>
+                             <span class="good-icons">
+                               <a href="#" class="icon4"><img src="images/icon4.png"></a>
+                             </span>
+                           </div>
+                         </td>
+                         <td class="price">
+                          <!--  <em class="origin-price special-num">38.29</em> -->
+                           <i class="special-num">56.00</i>
+                         </td>
+                         <td class="quantity"><i class="special-num">1</i></td>
+                         <td class="item-operate">
+                           <a href="javascript:void(0)" class="J_ApplyRepayTrigger">申请售后</a>
+                           <a href="javascript:void(0)" class="J_tousuweiquan">投诉卖家</a>
+                         </td>
+                         <td class="amount">
+                           <p><em class="real-price special-num">56.00</em></p>
+                           <p class="post-type"></p>
+                           <p>(含运费:<i class="special-num">0.00</i>)</p>
+                         </td>
+                         <td class="trade-status">
+                           <a href="#" class="J_MakePoint status">交易成功</a>
+                           <span><a href="#" class="detail-link J_MakePoint">订单详情</a></span>
+                          <!--  <a href="#" class="view-logistics J_MakePoint">查看物流</a> -->
+                           <div class="remark-status"><a href="#">双方已评</a></div>
+                         </td>
+                         <td class="trade-operate">
+                           <a href="#">追加评论</a>
+                           <a href="#">再次购买</a>
+                         </td>
+                       </tr>
+                    </tbody>
+                    <tbody  class="mainOrder652066188935048successorder">
+                       <tr class="sep-row"><td colspan="7"></td></tr>
+                       <tr class="order-hd">
+                        <td class="first">
+                          <div class="summary">
+                            <span><input type="checkbox" class="J_Selector selector"></span>
+                            <span class="dealtime">2014-05-13</span>
+                            <span class="number last-item">
+                              订单号：
+                              <em>652066188935048</em>
+                            </span>
+                          </div>
+                        </td>
+                        <td class="column" colspan="2">
+                          <!-- <span class="g-u"><a href="#"><img src="images/tianmao.png"></a></span> -->
+                          <a href="#" class="J_MakePoint">wengzewu1</a>
+                        </td>
+                        <td class="column">
+                          <span class="ww-light">
+                            <a href="#" class="ww-inline ww-online"><!-- <span>旺旺在线</span> --></a>
+                          </span>
+                        </td>
+                        <td class="last" colspan="3">
+                          <div class="share-delete-makepoint">
+                            <a href="#" class="J_ShareSNS"></a>
+                            <a href="#" class="J_Resale"></a>
+                            <a href="#" class="J_DelOrder"></a>
+                            <a href="#" class="J_MakePoints"></a>
+                          </div>
+                        </td>
+                       </tr>
+                       <tr id="item652066188935048" class="order-bd">
+                         <td class="baobei">
+                           <a href="#" class="pic"><img src="images/pic8.jpg"></a>
+                           <div class="desc">
+                             <p class="baobei-name">
+                               <a href="#" class="J_MakePoint">包邮12生肖多/哆啦a梦公仔机器猫手办摆件玩偶叮当猫创意生日礼物 [交易快照]</a>
+                             </p>
+                             <div class="spec">
+                               <span>颜色分类: 12生肖哆啦a梦大小或花色: 自用的，无须包装</span>
+                             </div>
+                             <span class="good-icons">
+                               <a href="#" class="icon4"><img src="images/icon4.png"></a>
+                             </span>
+                           </div>
+                         </td>
+                         <td class="price">
+                          <!--  <em class="origin-price special-num">38.29</em> -->
+                           <i class="special-num">56.00</i>
+                         </td>
+                         <td class="quantity"><i class="special-num">1</i></td>
+                         <td class="item-operate">
+                           <a href="javascript:void(0)" class="J_ApplyRepayTrigger">申请售后</a>
+                           <a href="javascript:void(0)" class="J_tousuweiquan">投诉卖家</a>
+                         </td>
+                         <td class="amount">
+                           <p><em class="real-price special-num">56.00</em></p>
+                           <p class="post-type"></p>
+                           <p>(含运费:<i class="special-num">0.00</i>)</p>
+                         </td>
+                         <td class="trade-status">
+                           <a href="#" class="J_MakePoint status">交易成功</a>
+                           <span><a href="#" class="detail-link J_MakePoint">订单详情</a></span>
+                          <!--  <a href="#" class="view-logistics J_MakePoint">查看物流</a> -->
+                           <div class="remark-status"><a href="#">双方已评</a></div>
+                         </td>
+                         <td class="trade-operate">
+                           <a href="#">追加评论</a>
+                           <a href="#">再次购买</a>
+                         </td>
+                       </tr>
+                    </tbody>
+                    <tbody  class="mainOrder652066188935048successorder">
+                       <tr class="sep-row"><td colspan="7"></td></tr>
+                       <tr class="order-hd">
+                        <td class="first">
+                          <div class="summary">
+                            <span><input type="checkbox" class="J_Selector selector"></span>
+                            <span class="dealtime">2014-05-13</span>
+                            <span class="number last-item">
+                              订单号：
+                              <em>652066188935048</em>
+                            </span>
+                          </div>
+                        </td>
+                        <td class="column" colspan="2">
+                          <!-- <span class="g-u"><a href="#"><img src="images/tianmao.png"></a></span> -->
+                          <a href="#" class="J_MakePoint">wengzewu1</a>
+                        </td>
+                        <td class="column">
+                          <span class="ww-light">
+                            <a href="#" class="ww-inline ww-online"><!-- <span>旺旺在线</span> --></a>
+                          </span>
+                        </td>
+                        <td class="last" colspan="3">
+                          <div class="share-delete-makepoint">
+                            <a href="#" class="J_ShareSNS"></a>
+                            <a href="#" class="J_Resale"></a>
+                            <a href="#" class="J_DelOrder"></a>
+                            <a href="#" class="J_MakePoints"></a>
+                          </div>
+                        </td>
+                       </tr>
+                       <tr id="item652066188935048" class="order-bd">
+                         <td class="baobei">
+                           <a href="#" class="pic"><img src="images/pic8.jpg"></a>
+                           <div class="desc">
+                             <p class="baobei-name">
+                               <a href="#" class="J_MakePoint">包邮12生肖多/哆啦a梦公仔机器猫手办摆件玩偶叮当猫创意生日礼物 [交易快照]</a>
+                             </p>
+                             <div class="spec">
+                               <span>颜色分类: 12生肖哆啦a梦大小或花色: 自用的，无须包装</span>
+                             </div>
+                             <span class="good-icons">
+                               <a href="#" class="icon4"><img src="images/icon4.png"></a>
+                             </span>
+                           </div>
+                         </td>
+                         <td class="price">
+                          <!--  <em class="origin-price special-num">38.29</em> -->
+                           <i class="special-num">56.00</i>
+                         </td>
+                         <td class="quantity"><i class="special-num">1</i></td>
+                         <td class="item-operate">
+                           <a href="javascript:void(0)" class="J_ApplyRepayTrigger">申请售后</a>
+                           <a href="javascript:void(0)" class="J_tousuweiquan">投诉卖家</a>
+                         </td>
+                         <td class="amount">
+                           <p><em class="real-price special-num">56.00</em></p>
+                           <p class="post-type"></p>
+                           <p>(含运费:<i class="special-num">0.00</i>)</p>
+                         </td>
+                         <td class="trade-status">
+                           <a href="#" class="J_MakePoint status">交易成功</a>
+                           <span><a href="#" class="detail-link J_MakePoint">订单详情</a></span>
+                          <!--  <a href="#" class="view-logistics J_MakePoint">查看物流</a> -->
+                           <div class="remark-status"><a href="#">双方已评</a></div>
+                         </td>
+                         <td class="trade-operate">
+                           <a href="#">追加评论</a>
+                           <a href="#">再次购买</a>
+                         </td>
+                       </tr>
+                    </tbody>
+                    <tbody  class="mainOrder652066188935048successorder">
+                       <tr class="sep-row"><td colspan="7"></td></tr>
+                       <tr class="order-hd">
+                        <td class="first">
+                          <div class="summary">
+                            <span><input type="checkbox" class="J_Selector selector"></span>
+                            <span class="dealtime">2014-05-13</span>
+                            <span class="number last-item">
+                              订单号：
+                              <em>652066188935048</em>
+                            </span>
+                          </div>
+                        </td>
+                        <td class="column" colspan="2">
+                          <!-- <span class="g-u"><a href="#"><img src="images/tianmao.png"></a></span> -->
+                          <a href="#" class="J_MakePoint">wengzewu1</a>
+                        </td>
+                        <td class="column">
+                          <span class="ww-light">
+                            <a href="#" class="ww-inline ww-online"><!-- <span>旺旺在线</span> --></a>
+                          </span>
+                        </td>
+                        <td class="last" colspan="3">
+                          <div class="share-delete-makepoint">
+                            <a href="#" class="J_ShareSNS"></a>
+                            <a href="#" class="J_Resale"></a>
+                            <a href="#" class="J_DelOrder"></a>
+                            <a href="#" class="J_MakePoints"></a>
+                          </div>
+                        </td>
+                       </tr>
+                       <tr id="item652066188935048" class="order-bd">
+                         <td class="baobei">
+                           <a href="#" class="pic"><img src="images/pic8.jpg"></a>
+                           <div class="desc">
+                             <p class="baobei-name">
+                               <a href="#" class="J_MakePoint">包邮12生肖多/哆啦a梦公仔机器猫手办摆件玩偶叮当猫创意生日礼物 [交易快照]</a>
+                             </p>
+                             <div class="spec">
+                               <span>颜色分类: 12生肖哆啦a梦大小或花色: 自用的，无须包装</span>
+                             </div>
+                             <span class="good-icons">
+                               <a href="#" class="icon4"><img src="images/icon4.png"></a>
+                             </span>
+                           </div>
+                         </td>
+                         <td class="price">
+                          <!--  <em class="origin-price special-num">38.29</em> -->
+                           <i class="special-num">56.00</i>
+                         </td>
+                         <td class="quantity"><i class="special-num">1</i></td>
+                         <td class="item-operate">
+                           <a href="javascript:void(0)" class="J_ApplyRepayTrigger">申请售后</a>
+                           <a href="javascript:void(0)" class="J_tousuweiquan">投诉卖家</a>
+                         </td>
+                         <td class="amount">
+                           <p><em class="real-price special-num">56.00</em></p>
+                           <p class="post-type"></p>
+                           <p>(含运费:<i class="special-num">0.00</i>)</p>
+                         </td>
+                         <td class="trade-status">
+                           <a href="#" class="J_MakePoint status">交易成功</a>
+                           <span><a href="#" class="detail-link J_MakePoint">订单详情</a></span>
+                          <!--  <a href="#" class="view-logistics J_MakePoint">查看物流</a> -->
+                           <div class="remark-status"><a href="#">双方已评</a></div>
+                         </td>
+                         <td class="trade-operate">
+                           <a href="#">追加评论</a>
+                           <a href="#">再次购买</a>
+                         </td>
+                       </tr>
+                    </tbody>
+                    <tfoot>
+                       <tr class="sep-row"></tr>
+                       <tr class="toolbar toolbar-bottom">
+                          <td colspan="7">
+                             <div class="operates">
+                                <label><input type="checkbox" class="J_AllSelector">全选</label>
+                                <a href="javascript:void(0)" class="J_CombinPay">合并付款</a>
+                                <a href="javascript:void(0)" class="J_CombinAgentPay">合并代付</a>
+                                <a href="javascript:void(0)" class="J_BatchReceive">批量确认收货</a>
+                             </div>
+                             <div class="paging-box paging-full" id="J_trade_pagenation">
+                               <ul class="items">
+                                 <li class="item prev  prev-disabled ">
+                                   <a class="num"><span class="iconn"></span></a>
+                                 </li>
+                                 <li class="item active">1</li>
+                                 <li class="item active2">
+                                   <a class="num">2</a>
+                                 </li>
+                                 <li class="item next">
+                                    <a class="num J_MakePoint"><span class="iconn2"></span></a>
+                                 </li>
+                               </ul>
+                               <div class="total">共 2 页，</div>
+                               <div class="form">
+                                 <span class="text">到第</span>
+                                 <input class="input" type="number" value="1" min="1">
+                                 <span class="text">页</span>
+                                 <span class="button-sure">确定</span>
+                               </div>
+                             </div>
+                          </td>
+                       </tr>
+                    </tfoot>
+                  </table>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
 
         <!-- 内容的左侧 -->
         <div class="col_sub">
@@ -241,7 +1810,7 @@
                 <dd id="mt-menu-sub">
                   <b class="mt-indicator2">+</b>
                   <a id="bought">退款维权</a>
-                  <ul class="mt-menu-sub-content cont2">
+                  <ul class="mt-menu-sub-content cont2" isopen="false">
                     <li id="refundList"><a href="#">退款管理</a></li>
                     <li id="rightManager"><a href="#">售后管理</a></li>
                     <li id="rulesManager"><a href="#">投诉管理</a></li>
@@ -262,8 +1831,64 @@
           </aside>
         </div>
       </div>
-      <div id="content_bottom"></div>
+
+      <!-- 广告的图片 -->
+      <div id="content_bottom">
+        <div id="p4p_ad">
+           <div id="tbcc">
+             <div class="global">
+               <div class="global-title-bar">
+                 <h3><a href="#">掌柜热卖</a></h3>
+                 <a href="#" class="global-title-bar-more">更多</a>
+                 <div href="#" class="global-title-bar-textlink">
+                   <ul>
+                     <li><a href="#">面膜</a></li>
+                     <li><a href="#">护肤品</a></li>
+                     <li><a href="#">冻干粉</a></li>
+                     <li><a href="#">俏十岁</a></li>
+                     <li><a href="#">面膜贴</a></li>
+                     <li><a href="#">蒙古包</a></li>
+                     <li><a href="#">电容麦</a></li>
+                     <li><a href="#">麦克风</a></li>
+                     <li><a href="#">猪鼻贴</a></li>
+                     <li><a href="#">dc面膜</a></li>
+                     <li><a href="#">百雀羚</a></li>
+                     <li><a href="#">猪鼻子</a></li>
+                     <li><a href="#">泊莱雅</a></li>
+                     <li><a href="#">精华液</a></li>
+                   </ul>
+                 </div>
+               </div>
+               <div class="global-items">
+                 <div class="global-items-container">
+                   <div class="global-items-group" id="f0"></div>
+                   <div class="global-items-group" id="f1"></div>
+                   <div class="global-items-group" id="f2"></div>
+                   <div class="global-items-group" id="f3"></div>
+                   <div class="global-items-group" id="f4"></div>
+                 </div>
+               </div>
+               <div class="global-butons">
+                 <div class="pagination">
+                   <div class="global-triggers">
+                     <a href="javascript:void(0)" class="j-trigger" id="page1" index="0"><i>•</i></a>
+                     <a href="javascript:void(0)" class="j-trigger" id="page2" index="1"><i>•</i></a>
+                     <a href="javascript:void(0)" class="j-trigger" id="page3" index="2"><i>•</i></a>
+                     <a href="javascript:void(0)" class="j-trigger" id="page4" index="3"><i>•</i></a>
+                     <a href="javascript:void(0)" class="j-trigger" id="page5" index="4"><i>•</i></a>
+                   </div>
+                   <a href="javascript:void(0);" id="next2"></a>
+                   <a href="javascript:void(0);" id="prev2"></a>
+                   <a href="javascript:void(0);" id="reload">换一组</a>
+                 </div>
+               </div>
+               <a href="javascript:void(0);" class="global-prev" style="display:none;"></a>
+               <a href="javascript:void(0);" class="global-next" style="display:none;"></a>
+             </div>
+           </div>
+        </div>
+      </div>
     </div>
-    <div id="footer"></div>
+    <div id="footer">1</div>
 </body>
 </html>
