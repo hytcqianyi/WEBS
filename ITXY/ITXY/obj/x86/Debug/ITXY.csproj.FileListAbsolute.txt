@@ -1,0 +1,9 @@
+C:\Users\Student\Desktop\ITXY\ITXY\obj\x86\Debug\ITXY.FrmMain.resources
+C:\Users\Student\Desktop\ITXY\ITXY\obj\x86\Debug\ITXY.Properties.Resources.resources
+C:\Users\Student\Desktop\ITXY\ITXY\obj\x86\Debug\ITXY.UcFriend.resources
+C:\Users\Student\Desktop\ITXY\ITXY\obj\x86\Debug\ITXY.csproj.GenerateResource.Cache
+C:\Users\Student\Desktop\ITXY\ITXY\bin\Debug\ITXY.exe
+C:\Users\Student\Desktop\ITXY\ITXY\bin\Debug\ITXY.pdb
+C:\Users\Student\Desktop\ITXY\ITXY\obj\x86\Debug\ITXY.exe
+C:\Users\Student\Desktop\ITXY\ITXY\obj\x86\Debug\ITXY.pdb
+C:\Users\Student\Desktop\ITXY\ITXY\obj\x86\Debug\ITXY.csprojResolveAssemblyReference.cache

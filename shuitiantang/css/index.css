@@ -1,0 +1,131 @@
+*{margin: 0;padding: 0;}
+ul,li{list-style:none;}
+img{border:0;}
+
+#color{background-image: url("../images/beige.jpg");background-repeat: no-repeat;background-position: center top;background-color: #f6f6ee;text-align: center;padding: 0;margin: 0 0 10px 0;font-family: 微软雅黑,Georgia,"Times New Roman",Times,serif;color: #3a4046;line-height: 18px;display: block; }
+/*标题*/
+#centertop{font-size: 11px;width: 960px;text-align: left;margin: 0 auto;display: block;}
+#top_menu{font-size: 11px;background-image: url("../images/topmenu_bline.gif");background-repeat: repeat-x;background-position: left bottom;width: 100%;margin: 0 auto;display: block;position: relative;z-index: 10000;}
+#horiznav{background: none;font-weight: bold;height: 42px;z-index: 500;float: none;display: block;}
+.menunav{list-style: none;line-height: 42px;padding-top: 0px;margin: 0px;padding: 0px;}
+#current{background-image: url("../images/active_r.gif");background-repeat: no-repeat;background-position: right center;position: relative;margin: 0;font-weight: bold;float: left;padding: 0px 42px 0px 0px;font-family: Verdana,Arial,Helvetica, sans-serif;font-size: 12px;text-decoration: none;display: list-item;text-align: -webkit-match-parent;}
+.active a{color: #ad0000;background-repeat: no-repeat;background-position: left center;background-image: url("../images/active_l.gif");display: block;cursor: pointer;height: 42px;padding: 0px 0px 0px 44px;margin: 0px 0px 0px 0px;font: bold 10px/42px Georgia,"Times New Roman",Times,serif;text-shadow: 1px 1px #fff;text-decoration: none;}
+#horiznav ul li a span{font-size: 12px;font-family: 微软雅黑;}
+#currentN{position: relative;margin: 0;background-image: url("../images/normal_r.gif");background-repeat: no-repeat;background-position: right center;font-weight: bold;float: left;padding: 0px 42px 0px 0px;font-family: Verdana,Arial,Helvetica, sans-serif;font-size: 12px;text-decoration: none;display: list-item;text-align: -webkit-match-parent;}
+#currentN a{color: #343434;background-repeat: no-repeat;background-position: left center;display: block;cursor: pointer;height: 42px;padding: 0px 0px 0px 44px;margin: 0px 0px 0px 0px;font: bold 10px/42px Georgia,"Times New Roman",Times,serif;text-shadow: 1px 1px #fff;text-decoration: none; }
+#currentN a span{font-size: 12px;font-family: 微软雅黑;}
+#currentN a span:hover{color: #ad0000;}
+
+#header{text-align: left;height: 90px;position: relative;display: block;}
+#logo{height: 90px;width: 960px;float: left;text-align: left;display: block;background-image: url("../images/logo.png");background-position: 0 1px;background-repeat: no-repeat;display: block;}
+#tags{width: 280px;height: 90px;float: left;overflow: hidden;margin: 0;padding: 0;}
+#tags h1{padding: 0;font-size: 3em;color: #333;font-family: "Trebuchet MS", Verdana, sans-serif;margin: 0 0 10px 0;letter-spacing: -1px;line-height: 1.0em;}
+#tags h1 a{text-indent: -7500px;display: block;width: 280px;height: 90px;text-decoration: none;color: #ad0000;}
+
+/*大图*/
+#slidewrapper{width: 100%;overflow: hidden;display: block;position: relative;}
+.content{display: block;position: relative;width: 960px;margin: 0px auto 0px;}
+.contentN{position: relative;display: block;width: 951px;height: 370px;}
+.contentNN{position: absolute;top: 0px;left: 0px;}
+.slider{display: block;position: relative;clear: both;width: 960px;}
+.over_div{display: block;position: absolute;top: 0px;left: -17px;z-index: 1000;width: 995px;height: 374px;background-image: url("../images/sliders_bg.png");background-repeat: no-repeat;background-position: center center;}
+.placement{display: block;position: absolute;top: 13px;left: 17px;margin: 0px;padding: 0px;list-style-type: none;background: none;height: 347px;width: 960px;overflow: hidden;list-style: none;}
+.slide1{font-family: Verdana,Arial,Helvetica, sans-serif;font-size: 12px;text-decoration: none;list-style-type: none;background: none;margin: 0px;padding: 0px;display: list-item;text-align: -webkit-match-parent;}
+.slidetitle{position: absolute;z-index: 3000;width: 458px;text-align: left;margin: 25px 0 0 430px;padding: 10px;overflow: hidden;display: none;background-image: url("../images/slide_title_bg.png");background-repeat: no-repeat;background-position: left top;font: 30px 微软雅黑,Georgia,"Times New Roman",Times,serif;color: #fff;}
+.slide1 a{text-decoration: none;color: #ad0000;}
+
+.slides{display: block;position: relative;width: 100%;height: 347px;}
+#ImageSlider{left: -960px;display: block;position: relative;width: 9999px;list-style-type: none;margin: 0px;padding: 0px;height: 347px;z-index: 1;list-style: none;}
+#ImageSlider li{float: left;width: 960px;height: 347px;overflow: hidden;color: #FFF;margin: 13px 0 0 0;padding: 0px;list-style-type: none;background: none;font: italic 30px Georgia,"Times New Roman",Times,serif;}
+
+.navigation{display: none;position: relative;width: 160px;margin: 10px auto 0px;}
+.navigation a{width: 15px;height: 15px;line-height: 15px;font-size: 15px;display: block;position: relative;float: left;margin-right: 5px;background-image: url("../images/slider-btn.png");background-repeat: no-repeat;background-position: top center;text-decoration: none;color: #ad0000;}
+.selected{background-image: url("../images/slider-btn.png");background-repeat: no-repeat;background-position: bottom center;}
+
+#prev{position: absolute;top: 140px;left: 0;background-image: url("../images/prev.png");background-repeat: no-repeat;background-position: left top;z-index: 2000;width: 60px;height: 62px;text-indent: -999px;overflow: hidden;display: block;text-decoration: none;color: #ad0000;}
+#next{position: absolute;left: auto;right: 0;background-image: url("../images/next.png");background-repeat: no-repeat;background-position: left top;z-index: 2000;width: 60px;height: 62px;text-indent: -999px;overflow: hidden;display: block;text-decoration: none;color: #ad0000;top:140;}
+
+/*介绍*/
+#centerbottom{width: 960px;background: none;padding: 10px 0;font-size: 12px !important;text-align: left;margin: 0 auto;overflow: hidden;display: block;height: 405px;}
+#holder{height: 100% !Important;overflow: hidden;text-align: center;margin: 0 0px;display: block;font-size: 12px !important;}
+#leftblock{width: 32%;float: left;height: 100% !Important;overflow: hidden;text-align: left;position: relative;display: block;}
+.inside{padding: 5px;overflow: hidden;display: block;}
+.yjsquare{margin: 5px 0 7px 0px;padding: 0px;clear: both;display: block;height: 100% !Important;overflow: hidden;}
+.yjsquare h3{color: #ad0000;background-image: url("../images/title_bg.gif");background-repeat: repeat-x;background-position: left bottom;overflow: hidden;padding: 0 0 18px 0;margin: 0px 5px 0 5px;font: 20px Georgia,"Times New Roman",Times,serif;text-shadow: 1px 1px #fff;}
+.yjsquare h3 span{color: #ad0000;font-family: 微软雅黑;overflow: hidden;text-shadow: 1px 1px #fff;}
+.yjsquare_in{overflow: hidden;padding: 10px;}
+#readmore{position: absolute;top: 32px;right: 15px;text-decoration: none;color: #ad0000;}
+#readmore:hover{color: black;cursor: pointer;}
+.k2ItemsBlock ul{padding: 0;margin: 0;list-style: none;}
+.k2ItemsBlock ul li{position: relative;overflow: hidden;height: 59px;background: none;border: none;margin: 0px;padding: 8px 0;font-family: Verdana,Arial,Helvetica, sans-serif;font-size: 12px;text-decoration: none;display: list-item;text-align: -webkit-match-parent;}
+.even{border-bottom: 1px solid #DEDECC;border-top: 1px solid #F6F6F1;border: none !important;}
+.k2ItemsBlock ul li a{display: block;float: left;width: 91px;font-weight: bold;text-decoration: none;color: #ad0000;cursor: pointer;}
+.moduleItemImage img{margin: 4px 10px 4px 0;padding: 2px;border: 1px solid #ddd;}
+#itmetext{float: left;width: 180px;}
+#itmetext a{float: none !important;width: 180px;text-decoration: none;color: #ad0000;}
+#itmetext a:hover{color: black;}
+#itmetext p{margin: 0px;padding: 0px;overflow: hidden;font-size: 12px;}
+.odd{border-bottom: 1px solid #DEDECC;border-top: 1px solid #F6F6F1;}
+.clearList{display: none;}
+.k2FeedIcon{padding: 4px 8px;display: block;}
+
+#midblock{width: 68%;float: left;height: 100% !Important;overflow: hidden;text-align: left;display: block;}
+.insidem{padding: 5px;display: block;}
+#topmodule{margin: 0 auto;text-align: left;overflow: hidden;text-shadow: 1px 1px #fff;display: block;}
+#frontpage_default{display: block;}
+.yjsquare{margin: 5px 0 7px 0px;padding: 0px;clear: both;display: block;height: 100% !Important;overflow: hidden;}
+.yjsquare h3{color: #ad0000;background-image: url("../images/title_bg.gif");background-repeat: repeat-x;background-position: left bottom;overflow: hidden;padding: 0 0 18px 0;margin: 0px 5px 0 5px;font: 20px Georgia,"Times New Roman",Times,serif;text-shadow: 1px 1px #fff;}
+.yjsquare h3 span{color: #ad0000;font-family: 微软雅黑;overflow: hidden;text-shadow: 1px 1px #fff;}
+.yjsquare_in{padding: 10px 10px 0 10px;overflow: hidden;display: block;}
+.yjsquare_in p{font-size: 14px;overflow: hidden;padding: 3px;margin: 0.5em 0;}
+.yjsquare_in p img{float: left;margin: 10px;border: 0;padding: 0;width: 159px;height: 123px;}
+
+
+/*每月推荐*/
+#bottom_shelf{width: 100%;overflow: hidden!important;margin: 0 auto;text-align: center;background-image: url("../images/bottom.jpg");background-repeat: repeat;display: block;height: 235px;}
+#bottom_bord{width: 100%;overflow: hidden!important;margin: 0 auto;padding: 2px 0 0 0;text-align: center;background-image: url("../images/bottom_bord.jpg");background-repeat: repeat-x;background-position: left top;display: block;}
+#bottomshelf_inwr{font-size: 11px;width: 960px;margin: 10px auto 0 auto;text-align: center;overflow: hidden;display: block;}
+#user5{width: 65% !important;float: left;clear: right;text-align: left;color: #fff;background-image: url("../images/bot_mod_bor.jpg");background-repeat: no-repeat;background-position: right center;display: block;}
+.bot_in{margin: 0 0px 0 0;display: block;}
+.yjsquaree{margin: 5px 0 7px 0px;padding: 0px;clear: both;display: block;height: 100% !Important;overflow: hidden;}
+.yjsquaree h3{background-image: url("../images/bottom_h4.jpg");background-repeat: no-repeat;background-position: left bottom!important;height: 24px;font: bold 20px Georgia,"微软雅黑",Times,serif;color: #fff;padding: 3px 0 16px 0;margin: 0 0 0 10px;text-shadow: none;font-weight: normal;font-size: 18px;overflow: hidden;}
+.yjsquaree h3 span{float: left;padding: 0;font: bold 20px Georgia,"微软雅黑",Times,serif;color: #fff;margin: 0 0 0 10px;background-image: url("../images/bottom_h3.jpg");background-repeat: no-repeat;background-position: left bottom;text-shadow: none;font-weight: normal;font-size: 18px;overflow: hidden;}
+#more_mt{float: right;font-size: 12px;margin-right: 37px;margin-top: 7px;text-decoration: none;color: #ad0000;}
+
+.yjsquare_inin{color: #fff;overflow: hidden;padding: 10px;display: block;}
+.yjsquare_inin p{float: left;overflow: hidden;padding: 3px;font-size: 12px;margin: 0.5em 0;display: block;}
+.yjsquare_inin p img{width: 260px;height: 120px;padding: 3px;background: #333;border: 1px solid #414141;margin: 2px 8px 0 0;}
+
+.inin{position: relative;height: 148px;float: left;width: 316px;display: block;color: #fff;}
+.inin p{position: absolute;bottom: 0pt;width: 316px;overflow: hidden;padding: 3px;font-size: 12px;margin: 0.5em 0;}
+.title{color: red;}
+
+#user7{width: 35% !important;float: left;clear: right;text-align: left;color: #fff;background-image: url("../images/bot_mod_bor.jpg");background-repeat: no-repeat;background-position: right center;display: block;}
+.pp{overflow: hidden;padding: 3px;font-size: 12px;margin: 0.5em 0;width: 310px;height:18px; }
+.pp a{color: white;cursor: pointer;text-decoration: none;}
+
+/*底部*/
+#footer{width: 960px;clear: both;text-align: center;overflow: hidden;margin: 0 auto;padding: 5px 0 20px 0;font-size: 12px !important;display: block;height: 50px;}
+#youjoomla{color: #171717;clear: both;text-align: left;padding: 5px 0px;overflow: hidden;display: block;}
+#cp{text-align: right;padding: 2px 0px;overflow: hidden;display: block;}
+#cp .center{display: block;text-align: -webkit-center;}
+.yjlink{color: #171717;text-decoration: none;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
