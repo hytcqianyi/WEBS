@@ -69,43 +69,52 @@ $(function(){
 
 $(function(){
    $("#prevslide").click(function(){
-   		$("#prevslide").attr("isopen","open");
-  		showFlashImage();
-  		
+     direction=0;//改变运动方向
+  	 showFlashImage();	
   });
     $("#nextslide").click(function(){
-    	$("#prevslide").attr("isopen","close");
+    	direction=1;//改变运动方向
   		showFlashImage();
   });
 
   $("#homeSlides").hover(function(){
   	clearInterval(timeHandle);
   },function(){
-  	$("#nextslide").attr("isopen","close");
+  //	$("#nextslide").attr("isopen","close");
   	timeHandle= setInterval("showFlashImage()",2000);
   });
   timeHandle= setInterval("showFlashImage()",2000);
 });
 
 var timeHandle;
-var currIndex=0;
+var currIndex=1;
+var clicktimeSetting=1;
+var direction=1;
+
 function showFlashImage(){
-
-	$("#homeSlides").stop(true).animate({"left":"-"+currIndex+"00%"},800);
-
-
-	if( $("#nextslide").attr("isopen")=="close"){
-		currIndex++;
-		if(currIndex>4){
-			currIndex=0;
-		}
-	}else{
-		currIndex--;
-		if(currIndex<0){
-			currIndex=4;
-		}
-	}
-	
-	
+   if(clicktimeSetting==1){//如果当前可以切换图片，则..
+    clicktimeSetting=0;//开始切换前，先将其置为不可用，完成图片切换操作后再将其置为可用
+    if(direction==1){//向右方向运动
+      $("#homeSlides .homeSlide").eq(4).animate({"left":"100%"},800);
+      $("#homeSlides .homeSlide").eq(3).animate({"left":"0%"},800);
+      $("#homeSlides .homeSlide").eq(2).animate({"left":"-100%"},800);//分别将前四张图片向右移动960px,即一张图片的距离
+      $("#homeSlides .homeSlide").eq(1).animate({"left":"-200%"},800,function(){
+           clicktimeSetting=1;//完成图片切换操作后再将其置为可用
+      });
+      var className=$("#homeSlides .homeSlide").eq(0).attr("class");//先将最后一个元素中的内容取出来
+      $("#homeSlides .homeSlide").eq(0).remove();//取出内容之后就将它移除
+      $("#homeSlides").append('<div class="'+className+'" style="left:200%"></div>');
+    }else if(direction==0){//向左方向运动
+      $("#homeSlides .homeSlide").eq(3).animate({"left":"200%"},800);
+      $("#homeSlides .homeSlide").eq(2).animate({"left":"100%"},800);
+      $("#homeSlides .homeSlide").eq(1).animate({"left":"0"},800);//分别将前四张图片向右移动960px,即一张图片的距离
+      $("#homeSlides .homeSlide").eq(0).animate({"left":"-100%"},800,function(){
+          clicktimeSetting=1;//完成图片切换操作后再将其置为可用
+      });
+      var className=$("#homeSlides .homeSlide").eq(4).attr("class");//先将最后一个元素中的内容取出来
+      $("#homeSlides .homeSlide").eq(4).remove();//取出内容之后就将它移除
+      $("#homeSlides").prepend('<div class="'+className+'" style="left:-200%"></div>');
+      }
+    }
 }
 

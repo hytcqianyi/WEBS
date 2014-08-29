@@ -17,6 +17,7 @@ body{font-size: 12px;font-family: "microsoft yahei";}
 .retailer{width: 46px;background-position: 0px -190px;}
 .search{width: 37px;background-position: 0px -228px;}
 .tianmao{width: 61px;background-position: 0px -266px;}
+
 .fn-hide{display: none;top: 18px;position: absolute;width: 200px;left: -60px;background: #000;z-index: 100;opacity: 0.8;padding: 15px 10px 60px 10px;border-radius: 10px;z-index: 100;}
 .fn-hide ul{border-top: 1px solid #df101d;padding-top: 8px;list-style: none;}
 .fn-hide ul a{display: block;color: #fff;height: 20px;padding-left: 5px;line-height: 20px;text-decoration: none;cursor: auto;text-align: -webkit-match-parent;}
@@ -70,7 +71,7 @@ body{font-size: 12px;font-family: "microsoft yahei";}
 
 /*背景图片*/
 .slide{display: block;width: 1349px;height: 800px;overflow: hidden;position: absolute;top: 0;left: 0;z-index: 1;}
-.homeSlide{left: 0;/*background-image: url("../images/1.jpg");*/background-repeat: no-repeat;background-position: 50% 0%;z-index: 1;background-size: cover!important;position: absolute;top: 0;width: 100%;height: 100%;overflow: hidden;}
+.homeSlide{left: 0;background-image: url("../images/1.jpg");background-repeat: no-repeat;background-position: 50% 0%;z-index: 1;background-size: cover!important;position: absolute;top: 0;width: 100%;height: 100%;overflow: hidden;}
 .h1{background-image: url("../images/1.jpg");}
 .h2{background-image: url("../images/2.jpg");}
 .h3{background-image: url("../images/3.jpg");}
@@ -78,5 +79,5 @@ body{font-size: 12px;font-family: "microsoft yahei";}
 .h5{background-image: url("../images/5.jpg");}
 
 
-.prevslide{background-image: url("../images/sprite_icons2.png");background-position: -8px -41px;height: 102px;left: 0;margin-top: -72px;position: absolute;top: 50%;width: 27px;z-index: 100;text-decoration: none;cursor: auto;}
-.nextslide{background-image: url("../images/sprite_icons2.png");background-position:-35px -41px;height: 102px;margin-top: -72px;position: absolute;right: 0;top: 50%;width: 27px;z-index: 100;}
+.prevslide{background-image: url("../images/sprite_icons2.png");background-position: -8px -41px;height: 102px;left: 0;margin-top: -72px;position: fixed;top: 50%;width: 27px;z-index: 100;text-decoration: none;cursor: auto;}
+.nextslide{background-image: url("../images/sprite_icons2.png");background-position:-35px -41px;height: 102px;margin-top: -72px;position: fixed;right: 0;top: 50%;width: 27px;z-index: 100;}
