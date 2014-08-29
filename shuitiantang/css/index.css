@@ -30,12 +30,12 @@ img{border:0;}
 .slider{display: block;position: relative;clear: both;width: 960px;}
 .over_div{display: block;position: absolute;top: 0px;left: -17px;z-index: 1000;width: 995px;height: 374px;background-image: url("../images/sliders_bg.png");background-repeat: no-repeat;background-position: center center;}
 .placement{display: block;position: absolute;top: 13px;left: 17px;margin: 0px;padding: 0px;list-style-type: none;background: none;height: 347px;width: 960px;overflow: hidden;list-style: none;}
-.slide1{font-family: Verdana,Arial,Helvetica, sans-serif;font-size: 12px;text-decoration: none;list-style-type: none;background: none;margin: 0px;padding: 0px;display: list-item;text-align: -webkit-match-parent;}
+.slideItem{font-family: Verdana,Arial,Helvetica, sans-serif;font-size: 12px;text-decoration: none;list-style-type: none;background: none;margin: 0px;padding: 0px;display: list-item;text-align: -webkit-match-parent; position: absolute;top: 0;z-index: 100;}
 .slidetitle{position: absolute;z-index: 3000;width: 458px;text-align: left;margin: 25px 0 0 430px;padding: 10px;overflow: hidden;display: none;background-image: url("../images/slide_title_bg.png");background-repeat: no-repeat;background-position: left top;font: 30px 微软雅黑,Georgia,"Times New Roman",Times,serif;color: #fff;}
-.slide1 a{text-decoration: none;color: #ad0000;}
+.slideItem a{text-decoration: none;color: #ad0000;}
 
 .slides{display: block;position: relative;width: 100%;height: 347px;}
-#ImageSlider{left: -960px;display: block;position: relative;width: 9999px;list-style-type: none;margin: 0px;padding: 0px;height: 347px;z-index: 1;list-style: none;}
+#ImageSlider{display: block;position: relative;width: 9999px;list-style-type: none;margin: 0px;padding: 0px;height: 347px;z-index: 1;list-style: none;}
 #ImageSlider li{float: left;width: 960px;height: 347px;overflow: hidden;color: #FFF;margin: 13px 0 0 0;padding: 0px;list-style-type: none;background: none;font: italic 30px Georgia,"Times New Roman",Times,serif;}
 
 .navigation{display: none;position: relative;width: 160px;margin: 10px auto 0px;}
