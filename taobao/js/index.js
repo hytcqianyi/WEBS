@@ -1,4 +1,5 @@
 $(function(){
+
       $(".menubdA").hover(function(){
               $(".menubdAmore").show();
       },function(){
@@ -86,4 +87,60 @@ $(function(){
                $(".share-delete-makepoint").hide();
                $(this).parent().find(".mainOrder723505153175048successorder").css("border","");
        });
+       $(".tuijian-item").hover(function(){
+              $(this).attr("border","1px solid rgb(255,68,0)")
+              $(this).find(".btn-360").show();
+       },function(){
+              $(this).attr("border","")
+              $(this).find(".btn-360").hide();
+       });
 });
+
+$(function(){
+  $(".global-triggers .j-trigger").click(function(){
+      $(".global .global-prev").attr("isopen","close");
+      clearInterval(timeHandle);
+      currIndex=$(this).attr("index");
+      showFlashImage();
+  });
+   $(".global .global-prev").click(function(){
+      $(".global .global-prev").attr("isopen","open");
+      showFlashImage();
+      
+  });
+    $(".global .global-next").click(function(){
+      $(".global .global-prev").attr("isopen","close");
+      showFlashImage();
+  });
+
+  $(".global").hover(function(){
+    clearInterval(timeHandle);
+  },function(){
+    $(".global .global-prev").attr("isopen","close");
+    timeHandle= setInterval("showFlashImage()",2000);
+  });
+  timeHandle= setInterval("showFlashImage()",2000);
+});
+
+var timeHandle;
+var currIndex=0;
+function showFlashImage(){
+  $(".global .global-butons .global-triggers").find(".cur").removeClass("cur");
+  $(".global .global-butons .global-trigger").eq(currIndex).addClass("cur");
+  $(".global .global-items-container").stop(true).animate({"left":"-"+currIndex+"00%"},800);
+  if( $(".global .global-prev").attr("isopen")=="close"){
+    currIndex++;
+    if(currIndex>4){
+      currIndex=0;
+    }
+  }else{
+    currIndex--;
+    if(currIndex<0){
+      currIndex=4;
+    }
+  }
+$("#date_3").datepicker({
+    minDate: -30,
+    maxDate: 0
+  });
+}

@@ -6,6 +6,8 @@
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <script type="text/javascript" src="js/jquery-1.11.1.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/jquery-ui-datepicker.js"></script>
 	<title>淘宝网</title>
 </head>
 <body>
@@ -142,7 +144,7 @@
                      <a href="#" class="fenlei">商品分类</a>
                   </div>
                </li>
-               <li class="line">|</li>
+               <li class="title-line">|</li>
                <li class="maijia">
                  <div class="menuhd">
                      <a href="#" id="zhongxin">卖家中心</a>
@@ -277,19 +279,29 @@
                     <ul>
                       <li class="col1">
                         <label>订单类型：</label>
-                        <div id="component" class="bf-select">
-                          <div id="component630">保险订单</div>
+                        <!-- <div id="component" class="bf-select">
+                          <div id="component630">全部订单</div>
                           <div class="bf-select-dropdown">
                             <div class="bf-select-dropdown-inner"></div>
                           </div>
-                        </div>
-                        <!-- <select name="queryBizType" class="J_NiceSelect"></select> -->
+                        </div> -->
+                        <select name="queryBizType" class="J_NiceSelect">
+                          <option>全部订单</option>
+                          <option>机票订单</option>
+                          <option>数字订单</option>
+                          <option>理财订单</option>
+                          <option>网游订单</option>
+                          <option>酒店订单</option>
+                          <option>保险订单</option>
+                        </select>
                       </li>
-                      <li class="col2">
+                      <li class="col2 col2top">
                         <label>成交时间：</label>
-                        <input type="text" size="10" id="trade-time">
+                        <input type="text" id="date_3" readonly />
+                        <!-- <input type="text" size="10" id="trade-time"> -->
                         到
-                        <input type="text" size="10" id="trade-time">
+                        <input type="text" id="date_3" readonly />
+                       <!--  <input type="text" size="10" id="trade-time"> -->
                       </li>
                       <li class="col3">
                         <label> 卖家昵称：</label>
@@ -297,30 +309,51 @@
                       </li>
                       <li class="col1">
                         <label>评价状态：</label>
-                        <div id="component" class="bf-select">
+                        <!-- <div id="component" class="bf-select">
                           <div id="component630">全部</div>
                           <div class="bf-select-dropdown">
                             <div class="bf-select-dropdown-inner"></div>
                           </div>
-                        </div>
+                        </div> -->
+                        <select name="queryBizType" class="J_NiceSelect">
+                          <option>全部</option>
+                          <option>需我评价</option>
+                          <option>我已评价</option>
+                          <option>对方已评</option>
+                          <option>双方已评</option>
+                        </select>
                       </li>
                       <li class="col2">
-                        <label>交易状态：</label>
-                        <div id="component" class="bf-select">
+                        <label class="col2bottom">交易状态：</label>
+                        <!-- <div id="component" class="bf-select">
                           <div id="component">全部</div>
                           <div class="bf-select-dropdown">
                             <div class="bf-select-dropdown-inner"></div>
                           </div>
-                        </div>
+                        </div> -->
+                        <select name="queryBizType" class="J_NiceSelect">
+                          <option>全部</option>
+                          <option>等待买家付款</option>
+                          <option>买家已付款</option>
+                          <option>卖家已发货</option>
+                          <option>交易成功</option>
+                          <option>交易关闭</option>
+                          <option>退款中的订单</option>
+                        </select>
                       </li>
                       <li class="col3">
-                        <label>售后服务：</label>
-                        <div id="component" class="bf-select">
+                        <label class="col3bottom">售后服务：</label>
+                        <!-- <div id="component" class="bf-select">
                           <div id="component630">全部</div>
                           <div class="bf-select-dropdown">
                             <div class="bf-select-dropdown-inner"></div>
                           </div>
-                        </div>
+                        </div> -->
+                        <select name="queryBizType" class="J_NiceSelect">
+                          <option>全部</option>
+                          <option>已投诉</option>
+                          <option>退款中</option>
+                        </select>
                       </li>
                     </ul>
                     <button id="SearchBox_Submmit">搜索</button>
@@ -1741,6 +1774,150 @@
                          </td>
                        </tr>
                     </tbody>
+                    <tbody  class="mainOrder652066188935048successorder">
+                       <tr class="sep-row"><td colspan="7"></td></tr>
+                       <tr class="order-hd">
+                        <td class="first">
+                          <div class="summary">
+                            <span><input type="checkbox" class="J_Selector selector"></span>
+                            <span class="dealtime">2014-05-13</span>
+                            <span class="number last-item">
+                              订单号：
+                              <em>652066188935048</em>
+                            </span>
+                          </div>
+                        </td>
+                        <td class="column" colspan="2">
+                          <!-- <span class="g-u"><a href="#"><img src="images/tianmao.png"></a></span> -->
+                          <a href="#" class="J_MakePoint">wengzewu1</a>
+                        </td>
+                        <td class="column">
+                          <span class="ww-light">
+                            <a href="#" class="ww-inline ww-online"><!-- <span>旺旺在线</span> --></a>
+                          </span>
+                        </td>
+                        <td class="last" colspan="3">
+                          <div class="share-delete-makepoint">
+                            <a href="#" class="J_ShareSNS"></a>
+                            <a href="#" class="J_Resale"></a>
+                            <a href="#" class="J_DelOrder"></a>
+                            <a href="#" class="J_MakePoints"></a>
+                          </div>
+                        </td>
+                       </tr>
+                       <tr id="item652066188935048" class="order-bd">
+                         <td class="baobei">
+                           <a href="#" class="pic"><img src="images/pic8.jpg"></a>
+                           <div class="desc">
+                             <p class="baobei-name">
+                               <a href="#" class="J_MakePoint">包邮12生肖多/哆啦a梦公仔机器猫手办摆件玩偶叮当猫创意生日礼物 [交易快照]</a>
+                             </p>
+                             <div class="spec">
+                               <span>颜色分类: 12生肖哆啦a梦大小或花色: 自用的，无须包装</span>
+                             </div>
+                             <span class="good-icons">
+                               <a href="#" class="icon4"><img src="images/icon4.png"></a>
+                             </span>
+                           </div>
+                         </td>
+                         <td class="price">
+                          <!--  <em class="origin-price special-num">38.29</em> -->
+                           <i class="special-num">56.00</i>
+                         </td>
+                         <td class="quantity"><i class="special-num">1</i></td>
+                         <td class="item-operate">
+                           <a href="javascript:void(0)" class="J_ApplyRepayTrigger">申请售后</a>
+                           <a href="javascript:void(0)" class="J_tousuweiquan">投诉卖家</a>
+                         </td>
+                         <td class="amount">
+                           <p><em class="real-price special-num">56.00</em></p>
+                           <p class="post-type"></p>
+                           <p>(含运费:<i class="special-num">0.00</i>)</p>
+                         </td>
+                         <td class="trade-status">
+                           <a href="#" class="J_MakePoint status">交易成功</a>
+                           <span><a href="#" class="detail-link J_MakePoint">订单详情</a></span>
+                          <!--  <a href="#" class="view-logistics J_MakePoint">查看物流</a> -->
+                           <div class="remark-status"><a href="#">双方已评</a></div>
+                         </td>
+                         <td class="trade-operate">
+                           <a href="#">追加评论</a>
+                           <a href="#">再次购买</a>
+                         </td>
+                       </tr>
+                    </tbody>
+                    <tbody  class="mainOrder652066188935048successorder">
+                       <tr class="sep-row"><td colspan="7"></td></tr>
+                       <tr class="order-hd">
+                        <td class="first">
+                          <div class="summary">
+                            <span><input type="checkbox" class="J_Selector selector"></span>
+                            <span class="dealtime">2014-05-13</span>
+                            <span class="number last-item">
+                              订单号：
+                              <em>652066188935048</em>
+                            </span>
+                          </div>
+                        </td>
+                        <td class="column" colspan="2">
+                          <!-- <span class="g-u"><a href="#"><img src="images/tianmao.png"></a></span> -->
+                          <a href="#" class="J_MakePoint">wengzewu1</a>
+                        </td>
+                        <td class="column">
+                          <span class="ww-light">
+                            <a href="#" class="ww-inline ww-online"><!-- <span>旺旺在线</span> --></a>
+                          </span>
+                        </td>
+                        <td class="last" colspan="3">
+                          <div class="share-delete-makepoint">
+                            <a href="#" class="J_ShareSNS"></a>
+                            <a href="#" class="J_Resale"></a>
+                            <a href="#" class="J_DelOrder"></a>
+                            <a href="#" class="J_MakePoints"></a>
+                          </div>
+                        </td>
+                       </tr>
+                       <tr id="item652066188935048" class="order-bd">
+                         <td class="baobei">
+                           <a href="#" class="pic"><img src="images/pic8.jpg"></a>
+                           <div class="desc">
+                             <p class="baobei-name">
+                               <a href="#" class="J_MakePoint">包邮12生肖多/哆啦a梦公仔机器猫手办摆件玩偶叮当猫创意生日礼物 [交易快照]</a>
+                             </p>
+                             <div class="spec">
+                               <span>颜色分类: 12生肖哆啦a梦大小或花色: 自用的，无须包装</span>
+                             </div>
+                             <span class="good-icons">
+                               <a href="#" class="icon4"><img src="images/icon4.png"></a>
+                             </span>
+                           </div>
+                         </td>
+                         <td class="price">
+                          <!--  <em class="origin-price special-num">38.29</em> -->
+                           <i class="special-num">56.00</i>
+                         </td>
+                         <td class="quantity"><i class="special-num">1</i></td>
+                         <td class="item-operate">
+                           <a href="javascript:void(0)" class="J_ApplyRepayTrigger">申请售后</a>
+                           <a href="javascript:void(0)" class="J_tousuweiquan">投诉卖家</a>
+                         </td>
+                         <td class="amount">
+                           <p><em class="real-price special-num">56.00</em></p>
+                           <p class="post-type"></p>
+                           <p>(含运费:<i class="special-num">0.00</i>)</p>
+                         </td>
+                         <td class="trade-status">
+                           <a href="#" class="J_MakePoint status">交易成功</a>
+                           <span><a href="#" class="detail-link J_MakePoint">订单详情</a></span>
+                          <!--  <a href="#" class="view-logistics J_MakePoint">查看物流</a> -->
+                           <div class="remark-status"><a href="#">双方已评</a></div>
+                         </td>
+                         <td class="trade-operate">
+                           <a href="#">追加评论</a>
+                           <a href="#">再次购买</a>
+                         </td>
+                       </tr>
+                    </tbody>
                     <tfoot>
                        <tr class="sep-row"></tr>
                        <tr class="toolbar toolbar-bottom">
@@ -1861,34 +2038,666 @@
                </div>
                <div class="global-items">
                  <div class="global-items-container">
-                   <div class="global-items-group" id="f0"></div>
-                   <div class="global-items-group" id="f1"></div>
-                   <div class="global-items-group" id="f2"></div>
-                   <div class="global-items-group" id="f3"></div>
-                   <div class="global-items-group" id="f4"></div>
+                   <div class="global-items-group g1">
+                      <div class="citem">
+                        <div class="cimage">
+                          <a href="#"><img src="images/2.jpg"></a>
+                        </div>
+                        <div class="cdetails">
+                          <ul>
+                             <li class="cpricebox">
+                               <a href="#">
+                                 <span class="item-price">¥<em>59.00</em></span>
+                                 <span class="price-old">¥<em>126</em></span>
+                                 <span class="hidden"></span>
+                                 <span class="item-sales">销量<em>318</em></span>
+                               </a>
+                             </li>
+                             <li class="ctitle"><a href="#">我发誓!用1次 就会爱一辈子!玻尿酸补水精华</a></li>
+                             <li>
+                              <a href="#" class="lia">
+                                <span class="item-shop">梵贞旗舰店</span>
+                              </a>
+                            </li>
+                             <!-- <li class="cwangwangbox"></li> -->
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="citem">
+                        <div class="cimage">
+                          <a href="#"><img src="images/2.jpg"></a>
+                        </div>
+                        <div class="cdetails">
+                          <ul>
+                             <li class="cpricebox">
+                               <a href="#">
+                                 <span class="item-price">¥<em>59.00</em></span>
+                                 <span class="price-old">¥<em>126</em></span>
+                                 <span class="hidden"></span>
+                                 <span class="item-sales">销量<em>318</em></span>
+                               </a>
+                             </li>
+                             <li class="ctitle"><a href="#">我发誓!用1次 就会爱一辈子!玻尿酸补水精华</a></li>
+                             <li>
+                              <a href="#" class="lia">
+                                <span class="item-shop">梵贞旗舰店</span>
+                              </a>
+                            </li>
+                             <!-- <li class="cwangwangbox"></li> -->
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="citem">
+                        <div class="cimage">
+                          <a href="#"><img src="images/2.jpg"></a>
+                        </div>
+                        <div class="cdetails">
+                          <ul>
+                             <li class="cpricebox">
+                               <a href="#">
+                                 <span class="item-price">¥<em>59.00</em></span>
+                                 <span class="price-old">¥<em>126</em></span>
+                                 <span class="hidden"></span>
+                                 <span class="item-sales">销量<em>318</em></span>
+                               </a>
+                             </li>
+                             <li class="ctitle"><a href="#">我发誓!用1次 就会爱一辈子!玻尿酸补水精华</a></li>
+                             <li>
+                              <a href="#" class="lia">
+                                <span class="item-shop">梵贞旗舰店</span>
+                              </a>
+                            </li>
+                             <!-- <li class="cwangwangbox"></li> -->
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="citem" style="margin-right:0;">
+                        <div class="cimage">
+                          <a href="#"><img src="images/2.jpg"></a>
+                        </div>
+                        <div class="cdetails">
+                          <ul>
+                             <li class="cpricebox">
+                               <a href="#">
+                                 <span class="item-price">¥<em>59.00</em></span>
+                                 <span class="price-old">¥<em>126</em></span>
+                                 <span class="hidden"></span>
+                                 <span class="item-sales">销量<em>318</em></span>
+                               </a>
+                             </li>
+                             <li class="ctitle"><a href="#">我发誓!用1次 就会爱一辈子!玻尿酸补水精华</a></li>
+                             <li>
+                              <a href="#" class="lia">
+                                <span class="item-shop">梵贞旗舰店</span>
+                              </a>
+                            </li>
+                             <!-- <li class="cwangwangbox"></li> -->
+                          </ul>
+                        </div>
+                      </div>
+                   </div>
+                   <div class="global-items-group g2">
+                     <div class="citem">
+                        <div class="cimage">
+                          <a href="#"><img src="images/3.jpg"></a>
+                        </div>
+                        <div class="cdetails">
+                          <ul>
+                             <li class="cpricebox">
+                               <a href="#">
+                                 <span class="item-price">¥<em>59.00</em></span>
+                                 <span class="price-old">¥<em>126</em></span>
+                                 <span class="hidden"></span>
+                                 <span class="item-sales">销量<em>318</em></span>
+                               </a>
+                             </li>
+                             <li class="ctitle"><a href="#">我发誓!用1次 就会爱一辈子!玻尿酸补水精华</a></li>
+                             <li>
+                              <a href="#" class="lia">
+                                <span class="item-shop">梵贞旗舰店</span>
+                              </a>
+                            </li>
+                             <!-- <li class="cwangwangbox"></li> -->
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="citem">
+                        <div class="cimage">
+                          <a href="#"><img src="images/3.jpg"></a>
+                        </div>
+                        <div class="cdetails">
+                          <ul>
+                             <li class="cpricebox">
+                               <a href="#">
+                                 <span class="item-price">¥<em>59.00</em></span>
+                                 <span class="price-old">¥<em>126</em></span>
+                                 <span class="hidden"></span>
+                                 <span class="item-sales">销量<em>318</em></span>
+                               </a>
+                             </li>
+                             <li class="ctitle"><a href="#">我发誓!用1次 就会爱一辈子!玻尿酸补水精华</a></li>
+                             <li>
+                              <a href="#" class="lia">
+                                <span class="item-shop">梵贞旗舰店</span>
+                              </a>
+                            </li>
+                             <!-- <li class="cwangwangbox"></li> -->
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="citem">
+                        <div class="cimage">
+                          <a href="#"><img src="images/3.jpg"></a>
+                        </div>
+                        <div class="cdetails">
+                          <ul>
+                             <li class="cpricebox">
+                               <a href="#">
+                                 <span class="item-price">¥<em>59.00</em></span>
+                                 <span class="price-old">¥<em>126</em></span>
+                                 <span class="hidden"></span>
+                                 <span class="item-sales">销量<em>318</em></span>
+                               </a>
+                             </li>
+                             <li class="ctitle"><a href="#">我发誓!用1次 就会爱一辈子!玻尿酸补水精华</a></li>
+                             <li>
+                              <a href="#" class="lia">
+                                <span class="item-shop">梵贞旗舰店</span>
+                              </a>
+                            </li>
+                             <!-- <li class="cwangwangbox"></li> -->
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="citem" style="margin-right:0;">
+                        <div class="cimage">
+                          <a href="#"><img src="images/3.jpg"></a>
+                        </div>
+                        <div class="cdetails">
+                          <ul>
+                             <li class="cpricebox">
+                               <a href="#">
+                                 <span class="item-price">¥<em>59.00</em></span>
+                                 <span class="price-old">¥<em>126</em></span>
+                                 <span class="hidden"></span>
+                                 <span class="item-sales">销量<em>318</em></span>
+                               </a>
+                             </li>
+                             <li class="ctitle"><a href="#">我发誓!用1次 就会爱一辈子!玻尿酸补水精华</a></li>
+                             <li>
+                              <a href="#" class="lia">
+                                <span class="item-shop">梵贞旗舰店</span>
+                              </a>
+                            </li>
+                             <!-- <li class="cwangwangbox"></li> -->
+                          </ul>
+                        </div>
+                      </div>
+                   </div>
+                   <div class="global-items-group g3">
+                     <div class="citem">
+                        <div class="cimage">
+                          <a href="#"><img src="images/4.jpg"></a>
+                        </div>
+                        <div class="cdetails">
+                          <ul>
+                             <li class="cpricebox">
+                               <a href="#">
+                                 <span class="item-price">¥<em>59.00</em></span>
+                                 <span class="price-old">¥<em>126</em></span>
+                                 <span class="hidden"></span>
+                                 <span class="item-sales">销量<em>318</em></span>
+                               </a>
+                             </li>
+                             <li class="ctitle"><a href="#">我发誓!用1次 就会爱一辈子!玻尿酸补水精华</a></li>
+                             <li>
+                              <a href="#" class="lia">
+                                <span class="item-shop">梵贞旗舰店</span>
+                              </a>
+                            </li>
+                             <!-- <li class="cwangwangbox"></li> -->
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="citem">
+                        <div class="cimage">
+                          <a href="#"><img src="images/4.jpg"></a>
+                        </div>
+                        <div class="cdetails">
+                          <ul>
+                             <li class="cpricebox">
+                               <a href="#">
+                                 <span class="item-price">¥<em>59.00</em></span>
+                                 <span class="price-old">¥<em>126</em></span>
+                                 <span class="hidden"></span>
+                                 <span class="item-sales">销量<em>318</em></span>
+                               </a>
+                             </li>
+                             <li class="ctitle"><a href="#">我发誓!用1次 就会爱一辈子!玻尿酸补水精华</a></li>
+                             <li>
+                              <a href="#" class="lia">
+                                <span class="item-shop">梵贞旗舰店</span>
+                              </a>
+                            </li>
+                             <!-- <li class="cwangwangbox"></li> -->
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="citem">
+                        <div class="cimage">
+                          <a href="#"><img src="images/4.jpg"></a>
+                        </div>
+                        <div class="cdetails">
+                          <ul>
+                             <li class="cpricebox">
+                               <a href="#">
+                                 <span class="item-price">¥<em>59.00</em></span>
+                                 <span class="price-old">¥<em>126</em></span>
+                                 <span class="hidden"></span>
+                                 <span class="item-sales">销量<em>318</em></span>
+                               </a>
+                             </li>
+                             <li class="ctitle"><a href="#">我发誓!用1次 就会爱一辈子!玻尿酸补水精华</a></li>
+                             <li>
+                              <a href="#" class="lia">
+                                <span class="item-shop">梵贞旗舰店</span>
+                              </a>
+                            </li>
+                             <!-- <li class="cwangwangbox"></li> -->
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="citem" style="margin-right:0;">
+                        <div class="cimage">
+                          <a href="#"><img src="images/4.jpg"></a>
+                        </div>
+                        <div class="cdetails">
+                          <ul>
+                             <li class="cpricebox">
+                               <a href="#">
+                                 <span class="item-price">¥<em>59.00</em></span>
+                                 <span class="price-old">¥<em>126</em></span>
+                                 <span class="hidden"></span>
+                                 <span class="item-sales">销量<em>318</em></span>
+                               </a>
+                             </li>
+                             <li class="ctitle"><a href="#">我发誓!用1次 就会爱一辈子!玻尿酸补水精华</a></li>
+                             <li>
+                              <a href="#" class="lia">
+                                <span class="item-shop">梵贞旗舰店</span>
+                              </a>
+                            </li>
+                             <!-- <li class="cwangwangbox"></li> -->
+                          </ul>
+                        </div>
+                      </div>
+                   </div>
+                   <div class="global-items-group g4">
+                     <div class="citem">
+                        <div class="cimage">
+                          <a href="#"><img src="images/5.jpg"></a>
+                        </div>
+                        <div class="cdetails">
+                          <ul>
+                             <li class="cpricebox">
+                               <a href="#">
+                                 <span class="item-price">¥<em>59.00</em></span>
+                                 <span class="price-old">¥<em>126</em></span>
+                                 <span class="hidden"></span>
+                                 <span class="item-sales">销量<em>318</em></span>
+                               </a>
+                             </li>
+                             <li class="ctitle"><a href="#">我发誓!用1次 就会爱一辈子!玻尿酸补水精华</a></li>
+                             <li>
+                              <a href="#" class="lia">
+                                <span class="item-shop">梵贞旗舰店</span>
+                              </a>
+                            </li>
+                             <!-- <li class="cwangwangbox"></li> -->
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="citem">
+                        <div class="cimage">
+                          <a href="#"><img src="images/5.jpg"></a>
+                        </div>
+                        <div class="cdetails">
+                          <ul>
+                             <li class="cpricebox">
+                               <a href="#">
+                                 <span class="item-price">¥<em>59.00</em></span>
+                                 <span class="price-old">¥<em>126</em></span>
+                                 <span class="hidden"></span>
+                                 <span class="item-sales">销量<em>318</em></span>
+                               </a>
+                             </li>
+                             <li class="ctitle"><a href="#">我发誓!用1次 就会爱一辈子!玻尿酸补水精华</a></li>
+                             <li>
+                              <a href="#" class="lia">
+                                <span class="item-shop">梵贞旗舰店</span>
+                              </a>
+                            </li>
+                             <!-- <li class="cwangwangbox"></li> -->
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="citem">
+                        <div class="cimage">
+                          <a href="#"><img src="images/5.jpg"></a>
+                        </div>
+                        <div class="cdetails">
+                          <ul>
+                             <li class="cpricebox">
+                               <a href="#">
+                                 <span class="item-price">¥<em>59.00</em></span>
+                                 <span class="price-old">¥<em>126</em></span>
+                                 <span class="hidden"></span>
+                                 <span class="item-sales">销量<em>318</em></span>
+                               </a>
+                             </li>
+                             <li class="ctitle"><a href="#">我发誓!用1次 就会爱一辈子!玻尿酸补水精华</a></li>
+                             <li>
+                              <a href="#" class="lia">
+                                <span class="item-shop">梵贞旗舰店</span>
+                              </a>
+                            </li>
+                             <!-- <li class="cwangwangbox"></li> -->
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="citem" style="margin-right:0;">
+                        <div class="cimage">
+                          <a href="#"><img src="images/5.jpg"></a>
+                        </div>
+                        <div class="cdetails">
+                          <ul>
+                             <li class="cpricebox">
+                               <a href="#">
+                                 <span class="item-price">¥<em>59.00</em></span>
+                                 <span class="price-old">¥<em>126</em></span>
+                                 <span class="hidden"></span>
+                                 <span class="item-sales">销量<em>318</em></span>
+                               </a>
+                             </li>
+                             <li class="ctitle"><a href="#">我发誓!用1次 就会爱一辈子!玻尿酸补水精华</a></li>
+                             <li>
+                              <a href="#" class="lia">
+                                <span class="item-shop">梵贞旗舰店</span>
+                              </a>
+                            </li>
+                             <!-- <li class="cwangwangbox"></li> -->
+                          </ul>
+                        </div>
+                      </div>
+                   </div>
+                   <div class="global-items-group g5">
+                     <div class="citem">
+                        <div class="cimage">
+                          <a href="#"><img src="images/6.jpg"></a>
+                        </div>
+                        <div class="cdetails">
+                          <ul>
+                             <li class="cpricebox">
+                               <a href="#">
+                                 <span class="item-price">¥<em>59.00</em></span>
+                                 <span class="price-old">¥<em>126</em></span>
+                                 <span class="hidden"></span>
+                                 <span class="item-sales">销量<em>318</em></span>
+                               </a>
+                             </li>
+                             <li class="ctitle"><a href="#">我发誓!用1次 就会爱一辈子!玻尿酸补水精华</a></li>
+                             <li>
+                              <a href="#" class="lia">
+                                <span class="item-shop">梵贞旗舰店</span>
+                              </a>
+                            </li>
+                             <!-- <li class="cwangwangbox"></li> -->
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="citem">
+                        <div class="cimage">
+                          <a href="#"><img src="images/6.jpg"></a>
+                        </div>
+                        <div class="cdetails">
+                          <ul>
+                             <li class="cpricebox">
+                               <a href="#">
+                                 <span class="item-price">¥<em>59.00</em></span>
+                                 <span class="price-old">¥<em>126</em></span>
+                                 <span class="hidden"></span>
+                                 <span class="item-sales">销量<em>318</em></span>
+                               </a>
+                             </li>
+                             <li class="ctitle"><a href="#">我发誓!用1次 就会爱一辈子!玻尿酸补水精华</a></li>
+                             <li>
+                              <a href="#" class="lia">
+                                <span class="item-shop">梵贞旗舰店</span>
+                              </a>
+                            </li>
+                             <!-- <li class="cwangwangbox"></li> -->
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="citem">
+                        <div class="cimage">
+                          <a href="#"><img src="images/6.jpg"></a>
+                        </div>
+                        <div class="cdetails">
+                          <ul>
+                             <li class="cpricebox">
+                               <a href="#">
+                                 <span class="item-price">¥<em>59.00</em></span>
+                                 <span class="price-old">¥<em>126</em></span>
+                                 <span class="hidden"></span>
+                                 <span class="item-sales">销量<em>318</em></span>
+                               </a>
+                             </li>
+                             <li class="ctitle"><a href="#">我发誓!用1次 就会爱一辈子!玻尿酸补水精华</a></li>
+                             <li>
+                              <a href="#" class="lia">
+                                <span class="item-shop">梵贞旗舰店</span>
+                              </a>
+                            </li>
+                             <!-- <li class="cwangwangbox"></li> -->
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="citem" style="margin-right:0;">
+                        <div class="cimage">
+                          <a href="#"><img src="images/6.jpg"></a>
+                        </div>
+                        <div class="cdetails">
+                          <ul>
+                             <li class="cpricebox">
+                               <a href="#">
+                                 <span class="item-price">¥<em>59.00</em></span>
+                                 <span class="price-old">¥<em>126</em></span>
+                                 <span class="hidden"></span>
+                                 <span class="item-sales">销量<em>318</em></span>
+                               </a>
+                             </li>
+                             <li class="ctitle"><a href="#">我发誓!用1次 就会爱一辈子!玻尿酸补水精华</a></li>
+                             <li>
+                              <a href="#" class="lia">
+                                <span class="item-shop">梵贞旗舰店</span>
+                              </a>
+                            </li>
+                             <!-- <li class="cwangwangbox"></li> -->
+                          </ul>
+                        </div>
+                      </div>
+                   </div>
                  </div>
                </div>
                <div class="global-butons">
                  <div class="pagination">
                    <div class="global-triggers">
-                     <a href="javascript:void(0)" class="j-trigger" id="page1" index="0"><i>•</i></a>
+                     <a href="javascript:void(0)" class="j-trigger cur" id="page1" index="0"><i>•</i></a>
                      <a href="javascript:void(0)" class="j-trigger" id="page2" index="1"><i>•</i></a>
                      <a href="javascript:void(0)" class="j-trigger" id="page3" index="2"><i>•</i></a>
                      <a href="javascript:void(0)" class="j-trigger" id="page4" index="3"><i>•</i></a>
                      <a href="javascript:void(0)" class="j-trigger" id="page5" index="4"><i>•</i></a>
                    </div>
-                   <a href="javascript:void(0);" id="next2"></a>
+                   <a href="javascript:void(0);" id="next2" ></a>
                    <a href="javascript:void(0);" id="prev2"></a>
                    <a href="javascript:void(0);" id="reload">换一组</a>
                  </div>
                </div>
-               <a href="javascript:void(0);" class="global-prev" style="display:none;"></a>
-               <a href="javascript:void(0);" class="global-next" style="display:none;"></a>
+               <a href="javascript:void(0);" class="global-prev" style="display:block;" isopen="close">
+                 <i></i>
+               </a>
+               <a href="javascript:void(0);" class="global-next" style="display:block;">
+                 <i></i>
+               </a>
              </div>
            </div>
         </div>
       </div>
+
+      <!-- 猜你喜欢 -->
+      <div id="interest">
+         <div class="tuijian-module">
+            <div class="tuijian-hd">
+               <div class="tuijian-l">
+                  <p class="tuijian-label">
+                     <i class="tuijian-sprite"></i>猜你喜欢
+                  </p>
+               </div>
+               <div class="tuijian-r"><a href="#" class="tuijian-feed">反馈意见&nbsp;></a></div>
+            </div>
+            <div class="tuijian-bd">
+              <ul>
+                 <li class="tuijian-item">
+                   <div class="tuijian-img">
+                     <div class="pic-con">
+                       <a href="#" class="img-con"><img src="images/interest1.jpg"></a>
+                     </div>
+                   </div>
+                   <div class="tuijian-extra">
+                     <p class="tuijian-info">
+                       <b class="yen">¥</b>
+                       <b class="price">20.00</b>
+                       <span class="tuijian-sell">月销439</span>
+                     </p>
+                     <div class="desc"><a id="side-item">C++javaVCC#代写管理软件开发制作定制定做安卓系统网站程序源码</a></div>                
+                       <a href="#" class="btn-360">360推荐</a>
+                   </div>
+                 </li>
+                 <li class="tuijian-item">
+                    <div class="tuijian-img">
+                     <div class="pic-con">
+                       <a href="#" class="img-con"><img src="images/interest2.jpg"></a>
+                     </div>
+                   </div>
+                   <div class="tuijian-extra">
+                     <p class="tuijian-info">
+                       <b class="yen">¥</b>
+                       <b class="price">20.00</b>
+                       <span class="tuijian-sell">月销439</span>
+                     </p>
+                     <div class="desc"><a id="side-item">C++javaVCC#代写管理软件开发制作定制定做安卓系统网站程序源码</a></div>                
+                       <a href="#" class="btn-360">360推荐</a>
+                   </div>
+                 </li>
+                 <li class="tuijian-item">
+                    <div class="tuijian-img">
+                     <div class="pic-con">
+                       <a href="#" class="img-con"><img src="images/interest3.jpg"></a>
+                     </div>
+                   </div>
+                   <div class="tuijian-extra">
+                     <p class="tuijian-info">
+                       <b class="yen">¥</b>
+                       <b class="price">20.00</b>
+                       <span class="tuijian-sell">月销439</span>
+                     </p>
+                     <div class="desc"><a id="side-item">C++javaVCC#代写管理软件开发制作定制定做安卓系统网站程序源码</a></div>                
+                       <a href="#" class="btn-360">360推荐</a>
+                   </div>
+                 </li>
+                 <li class="tuijian-item" style="margin-right:0px;">
+                    <div class="tuijian-img">
+                     <div class="pic-con">
+                       <a href="#" class="img-con"><img src="images/interest4.jpg"></a>
+                     </div>
+                   </div>
+                   <div class="tuijian-extra">
+                     <p class="tuijian-info">
+                       <b class="yen">¥</b>
+                       <b class="price">20.00</b>
+                       <span class="tuijian-sell">月销439</span>
+                     </p>
+                     <div class="desc"><a id="side-item">C++javaVCC#代写管理软件开发制作定制定做安卓系统网站程序源码</a></div>                
+                       <a href="#" class="btn-360">360推荐</a>
+                   </div>
+                 </li>
+              </ul>
+            </div>
+         </div>
+      </div>
+      <div id="interesthou">
+          <img src="images/T1.png">
+           我对已买到的宝贝有建议或意见，
+           <a href="#">跟淘宝说两句</a>
+           <span>20140821.01</span>
+      </div>
     </div>
-    <div id="footer">1</div>
+    <div id="footer">
+       <div class="footer-hd">
+         <a href="#">阿里巴巴集团</a>
+         <b>|</b>
+         <a href="#">淘宝网</a>
+         <b>|</b>
+         <a href="#">天猫</a>
+         <b>|</b>
+         <a href="#">聚划算</a>
+         <b>|</b>
+         <a href="#">全球速卖通</a>
+         <b>|</b>
+         <a href="#">阿里巴巴国际交易市场</a>
+         <b>|</b>
+         <a href="#">1688</a>
+         <b>|</b>
+         <a href="#">阿里妈妈</a>
+         <b>|</b>
+         <a href="#">阿里云计算</a>
+         <b>|</b>
+         <a href="#">YunOS</a>
+         <b>|</b>
+         <a href="#">万网</a>
+         <b>|</b>
+         <a href="#">淘宝旅行</a>
+         <b>|</b>
+         <a href="#">虾米</a>
+         <b>|</b>
+         <a href="#">来往</a>
+         <b>|</b>
+         <a href="#">支付宝</a>
+         <b>|</b>
+       </div>
+       <div class="footer-bd">
+         <p>
+           <a href="#">关于淘宝</a>
+           <a href="#">合作伙伴</a>
+           <a href="#">营销中心</a>
+           <a href="#">廉正举报</a>
+           <a href="#">联系客服</a>
+           <a href="#">开放平台</a>
+           <a href="#">诚征英才</a>
+           <a href="#">联系我们</a>
+           <a href="#">网站地图</a>
+           <a href="#">法律声明</a>
+           <em>© 2003-2014 Taobao.com 版权所有</em>
+         </p>
+         <p>
+           <span>网络文化经营许可证：<a href="#">文网文[2010]040号</a></span>
+           <b>|</b>
+           <span>增值电信业务经营许可证：浙B2-20080224-1</span>
+           <b>|</b>
+           <span>信息网络传播视听节目许可证：1109364号</span>
+         </p>
+       </div>
+    </div>
 </body>
 </html>
