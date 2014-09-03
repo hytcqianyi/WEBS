@@ -3,7 +3,7 @@ ul,li{list-style:none;}
 img{border:0;}
 body{font-size: 12px;font-family: "microsoft yahei";}
 
-.wrapper{margin: 0;padding: 0;height: 800px;position: relative;}
+.wrapper{/*margin: 0;*/padding: 0;height: 800px;position: relative;margin: 0 200px 0 200px;z-index: 100;}
 .header{z-index: 1000;position: relative;width: 926px;margin: 0 auto;width: 926px;height: 120px;}
 .logo{float: left;width: 185px;height: 120px;display: block;font-size: 2em;}
 .logo a{display: block;height: 100px;background-position: right -41px;text-indent: -9999px;background-image: url("../images/sprite_icons2.png");background-repeat: no-repeat;text-decoration: none;}
@@ -19,7 +19,7 @@ body{font-size: 12px;font-family: "microsoft yahei";}
 .tianmao{width: 61px;background-position: 0px -266px;}
 
 .fn-hide{display: none;top: 18px;position: absolute;width: 200px;left: -60px;background: #000;z-index: 100;opacity: 0.8;padding: 15px 10px 60px 10px;border-radius: 10px;z-index: 100;}
-.fn-hide ul{border-top: 1px solid #df101d;padding-top: 8px;list-style: none;}
+.fn-hide ul{border-top: 1px solid #df101d;padding-top: 8px;list-style: none;border-radius: 10px;}
 .fn-hide ul a{display: block;color: #fff;height: 20px;padding-left: 5px;line-height: 20px;text-decoration: none;cursor: auto;text-align: -webkit-match-parent;}
 .fn-hide ul li:hover{background-color: #df101d;}
 
@@ -34,6 +34,17 @@ body{font-size: 12px;font-family: "microsoft yahei";}
 
 .content{margin-bottom: 60px;position: relative;z-index: 10;min-height: 500px;width: 960px;margin: 0 auto;color: #fff;}
 .homeCallouts{display: block;margin: 30px 0 0 26px;height: 300px;list-style: none;}
+.homeCallout{width: 687px;height: 322px;position: relative;top: 83px;margin: 0 auto;}
+.homeCallout h2{background-image: url("../images/adventure.png");z-index: 1000;width: 687px;height: 322px;opacity: 0.6;}
+
+
+
+
+
+
+
+
+
 .fn-clear{background: none;zoom: 1;list-style: none;} 
 .show-wrap{margin-bottom: 70px;width: 960px;height: 280px;}
 .show-wrap li{position: relative;}
@@ -55,19 +66,22 @@ body{font-size: 12px;font-family: "microsoft yahei";}
 
 /*底部*/
 .footer{width: 100%;position: fixed;bottom: -1px;left: 0;height: 70px;z-index: 100;background-image: url("../images/bg_footer.png");background-repeat: repeat-x;background-position: 0 0;}
-.grid990{width: 990px;margin: 0 auto;} 
+.grid990{width: 990px;/*margin: 0 auto;*/margin: 0 200px 0 200px;} 
 .fn-clear{zoom: 1;}
 .grid990 ul{list-style: none;}
 .copyright{float: left;height: 40px;padding-left: 100px;margin-top: 25px;width: 230px;background-position: 0 -485px;background-image: url("../images/sprite_icons2.png");background-repeat: no-repeat;}
-.copyright li{line-height: 14px;height: 14px;color: #666;}
+.copyright li{line-height: 14px;height: 14px;color: #666;width: 230px;height: 14px;}
 .copyright li a{color: #666;text-decoration: none;cursor: auto;}
 
-.links{float: left;margin-top: 13px;}
-.links li{float: left;margin: 0;padding: 0;display: list-item;text-align: -webkit-match-parent;}
+.links{float: left;margin-top: 13px;width: 597px;height: 58px;display: block;}
+.links li{float: left;/*margin: 0;*/padding: 0;/*display: list-item;*/text-align: -webkit-match-parent;height: 58px;display: block;}
 .links li a{display: block;border-left: 1px solid #333;margin-left: 10px;padding-left: 10px;height: 58px;color: #626262;line-height: 58px;text-decoration: none;}
 .zippo-encode{background-image: url("../images/sprite_icons2.png");background-repeat: no-repeat;background-position: -186px -43px;display: block;border-left: 1px solid #333;margin-left: 10px;padding-left: 10px;height: 58px;color: #626262;line-height: 58px;width: 43px;}
 .weibo{text-indent: -9999px;background-image: url("../images/sprite_icons2.png");background-repeat: no-repeat;background-position: -69px -542px;width: 86px;}
-
+.zippo_logo{width: 64px;height: 58px;}
+.zippo_wei{width: 107px;height: 58px;}
+.law{width: 81px;}
+.protect{width: 69px;height: 58px;}
 
 /*背景图片*/
 .slide{display: block;width: 1349px;height: 800px;overflow: hidden;position: absolute;top: 0;left: 0;z-index: 1;}
@@ -79,5 +93,5 @@ body{font-size: 12px;font-family: "microsoft yahei";}
 .h5{background-image: url("../images/5.jpg");}
 
 
-.prevslide{background-image: url("../images/sprite_icons2.png");background-position: -8px -41px;height: 102px;left: 0;margin-top: -72px;position: fixed;top: 50%;width: 27px;z-index: 100;text-decoration: none;cursor: auto;}
-.nextslide{background-image: url("../images/sprite_icons2.png");background-position:-35px -41px;height: 102px;margin-top: -72px;position: fixed;right: 0;top: 50%;width: 27px;z-index: 100;}
+.prevslide{background-image: url("../images/sprite_icons2.png");background-position: -8px -41px;height: 102px;left: 0;margin-top: -72px;position: absolute;top: 50%;width: 27px;z-index: 100;text-decoration: none;cursor: auto;}
+.nextslide{background-image: url("../images/sprite_icons2.png");background-position:-35px -41px;height: 102px;margin-top: -72px;position: absolute;right: 0;top: 50%;width: 27px;z-index: 100;}

@@ -4,36 +4,36 @@ $(function(){
         $(".service").css("background-position"," 0 -57px");
    },function(){
         $(this).find(".fn-hide").hide();
-        $(".service").css("background-position","");
+        $(".service").css("background-position","0 -38px");
    });
    $(".current2").hover(function(){
         $(this).find(".fn-hide").show();
         $(".activity").css("background-position"," 0 -95px");
    },function(){
         $(this).find(".fn-hide").hide();
-        $(".activity").css("background-position","");
+        $(".activity").css("background-position","0 -76px");
    });
    $(".current3").hover(function(){
         $(this).find(".fn-hide").show();
         $(".about").css("background-position"," 0 -133px");
    },function(){
         $(this).find(".fn-hide").hide();
-        $(".about").css("background-position","");
+        $(".about").css("background-position","0 -114px");
    });
    $(".current4").hover(function(){
         $(".retailer").css("background-position"," 0 -209px");
    },function(){
-        $(".retailer").css("background-position","");
+        $(".retailer").css("background-position","0 -190px");
    });
    $(".current5").hover(function(){
         $(".search").css("background-position"," 0 -247px");
    },function(){
-        $(".search").css("background-position","");
+        $(".search").css("background-position","0 -228px");
    });
    $(".current6").hover(function(){
         $(".tianmao").css("background-position"," 0 -285px");
    },function(){
-        $(".tianmao").css("background-position","");
+        $(".tianmao").css("background-position","0 -266px");
    });
    $(".current11").hover(function(){
         $(this).find(".fn-hide").show();
@@ -63,6 +63,7 @@ $(function(){
         $(this).find(".fn-hide").hide();
         $(".HOMES").css("background-position","");
    });
+   
 });
 
 
@@ -118,3 +119,5 @@ function showFlashImage(){
     }
 }
 
+//$(".homeCallout h2").animate({"opacity","0"},800);
+  
